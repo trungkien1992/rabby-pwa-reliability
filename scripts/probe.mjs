@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { deflateSync } from 'node:zlib';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -12,7 +13,7 @@ const flags = Object.fromEntries(process.argv.slice(2).reduce((out, arg, index, 
   return out;
 }, []));
 if (!flags.browser || !flags.extension || !flags.output) {
-  console.error('Usage: node probe.mjs --browser EXECUTABLE --extension UNPACKED_DIR --output RESULT.json [--mode natural|worker-stop|freeze] [--wait-ms 180000] [--request-timeout-ms 5000]');
+  console.error('Usage: node probe.mjs --browser EXECUTABLE --extension UNPACKED_DIR --output RESULT.json [--mode natural|worker-stop|freeze] [--wait-ms 180000] [--request-timeout-ms 5000] [--ui-smoke true] [--expected-assets INVENTORY.json]');
   process.exit(2);
 }
 const mode = flags.mode ?? 'natural';
@@ -30,6 +31,8 @@ const result = {
   mode,
   waitMs,
   requestTimeoutMs,
+  initialSetupTimeoutMs: 5000,
+  uiSmoke: {requested: flags['ui-smoke'] === 'true', passed: null},
   observationTimingSchema: 1,
   walletState: 'isolated watch-only account 0x0000000000000000000000000000000000000001; no signing key',
   proofScope: mode === 'natural' ? 'Local installed standalone PWA with native window minimization; platform recorded separately.' : 'Controlled browser lifecycle fault; not a natural Linux PWA reproduction.',
@@ -39,6 +42,51 @@ const result = {
   browserEvents: [],
   cleanup: {},
 };
+
+async function readExtensionAssetInventory(directory) {
+  const rootState = await fs.lstat(directory);
+  if (!rootState.isDirectory() || rootState.isSymbolicLink()) throw new Error('Extension asset root must be a directory, not a symlink');
+  const inventory = Object.create(null);
+  const visit = async (current, relative) => {
+    const entries = (await fs.readdir(current)).sort();
+    for (const name of entries) {
+      const absolute = path.join(current, name);
+      const key = relative ? relative + '/' + name : name;
+      const before = await fs.lstat(absolute);
+      if (before.isSymbolicLink()) throw new Error('Extension asset symlink is forbidden: ' + key);
+      if (before.isDirectory()) { await visit(absolute, key); continue; }
+      if (!before.isFile()) throw new Error('Extension asset is not a regular file: ' + key);
+      const bytes = await fs.readFile(absolute);
+      const after = await fs.lstat(absolute);
+      if (!after.isFile() || after.isSymbolicLink() || before.dev !== after.dev || before.ino !== after.ino || before.size !== after.size || before.mtimeMs !== after.mtimeMs || before.ctimeMs !== after.ctimeMs || bytes.length !== after.size) throw new Error('Extension asset changed while hashing: ' + key);
+      inventory[key] = {bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex')};
+    }
+  };
+  await visit(directory, '');
+  return inventory;
+}
+
+function validateExpectedAssetInventory(expected) {
+  if (!expected || typeof expected !== 'object' || Array.isArray(expected) || !Object.keys(expected).length) throw new Error('Expected extension inventory must be a nonempty file map');
+  for (const [key, info] of Object.entries(expected)) {
+    if (!key || key.includes('\\') || key.startsWith('/') || key.split('/').some(part => !part || part === '.' || part === '..') || !info || typeof info !== 'object' || !Number.isSafeInteger(info.bytes) || info.bytes < 0 || typeof info.sha256 !== 'string' || !/^[0-9a-f]{64}$/.test(info.sha256)) throw new Error('Invalid expected extension asset record: ' + key);
+  }
+  for (const key of ['background.js', 'ui.js', 'manifest.json']) if (!expected[key]) throw new Error('Expected extension inventory omits required runtime asset: ' + key);
+}
+
+async function verifyExtensionAssetInventory(directory, expected) {
+  validateExpectedAssetInventory(expected);
+  const actual = await readExtensionAssetInventory(directory);
+  const actualKeys = Object.keys(actual).sort();
+  const expectedKeys = Object.keys(expected).sort();
+  const missing = expectedKeys.filter(key => !Object.hasOwn(actual, key));
+  const unexpected = actualKeys.filter(key => !Object.hasOwn(expected, key));
+  const changed = expectedKeys.filter(key => Object.hasOwn(actual, key) && (actual[key].bytes !== expected[key].bytes || actual[key].sha256 !== expected[key].sha256));
+  const matched = !missing.length && !unexpected.length && !changed.length;
+  const check = {at: new Date().toISOString(), matched, checkedFileCount: actualKeys.length, expectedFileCount: expectedKeys.length, inventorySha256: createHash('sha256').update(JSON.stringify(actual)).digest('hex'), backgroundSha256: actual['background.js']?.sha256 ?? null, uiSha256: actual['ui.js']?.sha256 ?? null, manifestSha256: actual['manifest.json']?.sha256 ?? null, missing, unexpected, changed};
+  if (!matched) throw Object.assign(new Error('Extension asset inventory mismatch: ' + JSON.stringify({missing, unexpected, changed})), {assetCheck: check});
+  return check;
+}
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const validResponse = item => item.status === 'resolved' && typeof item.value === 'string' && /^0x[0-9a-f]+$/i.test(item.value);
@@ -89,9 +137,27 @@ const pageSource = `<!doctype html>
     const channel = p?._bcm?._channel;
     const waitingMap = p?._bcm?._waitingMap;
     const waitingMethods = typeof waitingMap?.values === 'function' ? Array.from(waitingMap.values(), entry => entry?.data?.method).filter(method => typeof method === 'string') : null;
-    return {loadId, standalone: matchMedia('(display-mode: standalone)').matches, href: location.href, navigationType: performance.getEntriesByType('navigation')[0]?.type ?? null, visibility: document.visibilityState, wasDiscarded: document.wasDiscarded, hasRabby: !!p, isConnected: connected, waitingCount: waitingMap?.size ?? null, waitingMethods, channel: channel ? {readable: channel.readable, writable: channel.writable, destroyed: channel.destroyed} : null, events: [...events]};
+    return {loadId, standalone: matchMedia('(display-mode: standalone)').matches, href: location.href, navigationType: performance.getEntriesByType('navigation')[0]?.type ?? null, visibility: document.visibilityState, documentReadyState: document.readyState, wasDiscarded: document.wasDiscarded, hasRabby: !!p, isConnected: connected, providerReady: typeof p?._isReady === 'boolean' ? p._isReady : null, providerInitialized: typeof p?._initialized === 'boolean' ? p._initialized : null, stateInitialized: typeof p?._state?.initialized === 'boolean' ? p._state.initialized : null, cachedRequestCount: Array.isArray(p?._cacheRequestsBeforeReady) ? p._cacheRequestsBeforeReady.length : null, waitingCount: waitingMap?.size ?? null, waitingMethods, channel: channel ? {readable: channel.readable, writable: channel.writable, destroyed: channel.destroyed} : null, events: [...events]};
   };
-  window.__rabbyProbe = {snapshot, async request(label, timeoutMs) {
+  window.__rabbyProbe = {snapshot, async waitForInitialReady(timeoutMs) {
+    const start = performance.now();
+    const deadline = start + timeoutMs;
+    const startedAt = new Date().toISOString();
+    const samples = [];
+    let initialSnapshot;
+    for (;;) {
+      const state = snapshot();
+      initialSnapshot ??= state;
+      const now = performance.now();
+      const elapsedMs = now - start;
+      const ready = state.documentReadyState === 'complete' && state.providerReady === true && state.providerInitialized === true && state.stateInitialized === true && state.cachedRequestCount === 0 && state.waitingCount === 0;
+      samples.push({at: new Date().toISOString(), elapsedMs, documentReadyState: state.documentReadyState, providerReady: state.providerReady, providerInitialized: state.providerInitialized, stateInitialized: state.stateInitialized, cachedRequestCount: state.cachedRequestCount, waitingCount: state.waitingCount, waitingMethods: state.waitingMethods, visibility: state.visibility});
+      if ((ready && now <= deadline) || now >= deadline) {
+        return {status: ready && now <= deadline ? 'ready' : 'deadline', timeoutMs, startedAt, finishedAt: new Date().toISOString(), elapsedMs, samples, initialSnapshot, finalSnapshot: state};
+      }
+      await new Promise(resolve => setTimeout(resolve, Math.min(20, Math.ceil(deadline - now))));
+    }
+  }, async request(label, timeoutMs) {
     const p = provider();
     if (!p) throw new Error('No Rabby injected provider found');
     const start = performance.now();
@@ -135,7 +201,7 @@ const server = http.createServer((request, response) => {
 
 class CDP {
   constructor(socket) {
-    this.socket = socket; this.nextId = 0; this.pending = new Map();
+    this.socket = socket; this.nextId = 0; this.pending = new Map(); this.eventListeners = new Set();
     socket.addEventListener('message', event => {
       const message = JSON.parse(event.data);
       if (message.id) {
@@ -143,14 +209,19 @@ class CDP {
         if (!item) return;
         this.pending.delete(message.id); clearTimeout(item.timer);
         if (message.error) item.reject(new Error(JSON.stringify(message.error))); else item.resolve(message.result ?? {});
-      } else if (message.method?.startsWith('Target.')) {
-        result.browserEvents.push({at: new Date().toISOString(), method: message.method, params: message.params});
+      } else {
+        if (message.method?.startsWith('Target.')) result.browserEvents.push({at: new Date().toISOString(), method: message.method, params: message.params});
+        for (const listener of this.eventListeners) listener(message);
       }
     });
     socket.addEventListener('close', () => {
       for (const item of this.pending.values()) { clearTimeout(item.timer); item.reject(new Error('CDP socket closed')); }
       this.pending.clear();
     });
+  }
+  onEvent(listener) {
+    this.eventListeners.add(listener);
+    return () => this.eventListeners.delete(listener);
   }
   send(method, params = {}, sessionId, timeoutMs = 15000) {
     return new Promise((resolve, reject) => {
@@ -167,9 +238,20 @@ class CDP {
   }
 }
 
-let browserProcess, cdp, sessionId, installed = false, profile;
+let browserProcess, cdp, sessionId, installed = false, profile, expectedAssetInventory;
 try {
   await fs.mkdir(path.dirname(output), {recursive: true});
+  if (Object.hasOwn(flags, 'expected-assets')) {
+    if (typeof flags['expected-assets'] !== 'string' || !flags['expected-assets']) throw new Error('--expected-assets requires a nonempty inventory path');
+    result.extensionAssets = {expectedManifestPath: path.resolve(flags['expected-assets']), matchedBefore: false, matchedAfter: false};
+    const inventoryBytes = await fs.readFile(result.extensionAssets.expectedManifestPath);
+    result.extensionAssets.expectedManifestSha256 = createHash('sha256').update(inventoryBytes).digest('hex');
+    expectedAssetInventory = JSON.parse(inventoryBytes);
+    try {
+      result.extensionAssets.before = await verifyExtensionAssetInventory(result.extensionPath, expectedAssetInventory);
+      Object.assign(result.extensionAssets, {matchedBefore: true, checkedFileCount: result.extensionAssets.before.checkedFileCount, backgroundSha256: result.extensionAssets.before.backgroundSha256, uiSha256: result.extensionAssets.before.uiSha256, manifestSha256: result.extensionAssets.before.manifestSha256});
+    } catch (error) { result.extensionAssets.before = error.assetCheck ?? null; result.extensionAssets.beforeError = String(error); throw error; }
+  }
   result.extensionManifest = JSON.parse(await fs.readFile(path.join(result.extensionPath, 'manifest.json'), 'utf8'));
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   origin = 'http://127.0.0.1:' + server.address().port;
@@ -263,6 +345,105 @@ try {
   await cdp.send('Target.detachFromTarget', {sessionId: bootstrapSession});
   await cdp.send('Target.closeTarget', {targetId: bootstrapTarget.targetId});
   console.log(JSON.stringify({stage:'watch-only-setup-complete', at:new Date().toISOString()}));
+  if (result.uiSmoke.requested) {
+    const smoke = result.uiSmoke;
+    smoke.passed = false;
+    smoke.startedAt = new Date().toISOString();
+    smoke.timeoutMs = 30000;
+    smoke.samples = [];
+    smoke.uncaughtExceptions = [];
+    smoke.consoleErrors = [];
+    smoke.closedUiTargets = [];
+    let uiSessionId;
+    let unsubscribe = () => {};
+    let smokeError;
+    const smokeTarget = await cdp.send('Target.createTarget', {url: 'about:blank'});
+    smoke.targetId = smokeTarget.targetId;
+    const uiStateExpression = `(() => {
+      const visible = element => {
+        if (!element) return false;
+        const box = element.getBoundingClientRect();
+        const style = getComputedStyle(element);
+        return box.width > 0 && box.height > 0 && style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity) !== 0;
+      };
+      const dashboard = document.querySelector('#root .dashboard');
+      const address = document.querySelector('.dashboard .address-viewer-text[title="0x0000000000000000000000000000000000000001"]');
+      const panels = Array.from(document.querySelectorAll('.dashboard .rabby-dashboard-panel-container .dashboard-panel-grid .panel-item.group'));
+      const errorHeadings = Array.from(document.querySelectorAll('h2')).map(element => element.textContent.trim()).filter(text => text === 'Something went wrong' || text === 'Rabby failed to start');
+      return {at: new Date().toISOString(), href: location.href, hash: location.hash, readyState: document.readyState, visibility: document.visibilityState, title: document.title, dashboardVisible: visible(dashboard), watchAddressVisible: visible(address), enabledPanelsVisible: panels.filter(visible).length, errorHeadings, bodyText: document.body?.innerText?.slice(0,12000) ?? ''};
+    })()`;
+    try {
+      uiSessionId = (await cdp.send('Target.attachToTarget', {targetId: smokeTarget.targetId, flatten: true})).sessionId;
+      unsubscribe = cdp.onEvent(message => {
+        if (message.sessionId !== uiSessionId) return;
+        if (message.method === 'Runtime.exceptionThrown') smoke.uncaughtExceptions.push({at: new Date().toISOString(), details: message.params.exceptionDetails});
+        if (message.method === 'Runtime.consoleAPICalled' && message.params.type === 'error') smoke.consoleErrors.push({at: new Date().toISOString(), args: message.params.args.map(arg => ({type: arg.type, value: arg.value, description: arg.description})), stackTrace: message.params.stackTrace});
+      });
+      await cdp.send('Runtime.enable', {}, uiSessionId);
+      await cdp.send('Page.enable', {}, uiSessionId);
+      await cdp.send('Page.navigate', {url: 'chrome-extension://' + result.extensionId + '/index.html#/'}, uiSessionId);
+      await cdp.send('Page.bringToFront', {}, uiSessionId);
+      const started = performance.now();
+      const deadline = started + smoke.timeoutMs;
+      for (;;) {
+        const state = await cdp.evaluate(uiStateExpression, uiSessionId);
+        smoke.finalSnapshot = state;
+        const {bodyText, ...sample} = state;
+        smoke.samples.push({...sample, elapsedMs: performance.now() - started});
+        if (state.errorHeadings.length) throw new Error('Real wallet UI rendered an error fallback: ' + state.errorHeadings.join(', '));
+        if (smoke.uncaughtExceptions.length) throw new Error('Real wallet UI raised an uncaught JavaScript exception');
+        const ready = state.readyState === 'complete' && state.visibility === 'visible' && state.hash === '#/dashboard' && state.dashboardVisible && state.watchAddressVisible && state.enabledPanelsVisible >= 1;
+        if (ready && performance.now() <= deadline) { smoke.renderedAt = new Date().toISOString(); break; }
+        if (performance.now() >= deadline) throw new Error('Real wallet UI did not render its visible watch-only dashboard within thirty seconds');
+        await sleep(Math.min(100, Math.ceil(deadline - performance.now())));
+      }
+    } catch (error) { smokeError = error; smoke.error = String(error); }
+    finally {
+      if (uiSessionId) {
+        try {
+          smoke.finalSnapshot = await cdp.evaluate(uiStateExpression, uiSessionId);
+          smoke.dom = output + '.ui-smoke.html';
+          await fs.writeFile(smoke.dom, await cdp.evaluate('document.documentElement.outerHTML', uiSessionId));
+          const screenshot = await cdp.send('Page.captureScreenshot', {format: 'png'}, uiSessionId);
+          smoke.screenshot = output + '.ui-smoke.png';
+          await fs.writeFile(smoke.screenshot, Buffer.from(screenshot.data, 'base64'));
+        } catch (error) { smoke.captureError = String(error); smokeError ??= error; }
+        unsubscribe();
+        try { await cdp.send('Target.detachFromTarget', {sessionId: uiSessionId}); } catch (error) { smoke.detachError = String(error); smokeError ??= error; }
+      }
+      const ownUiPage = target => {
+        if (target.type !== 'page') return false;
+        try {
+          const url = new URL(target.url);
+          return url.protocol === 'chrome-extension:' && url.host === result.extensionId && ['/index.html', '/popup.html', '/welcome.html'].includes(url.pathname);
+        } catch { return false; }
+      };
+      try {
+        const ownUiTargets = (await cdp.send('Target.getTargets')).targetInfos.filter(target => target.targetId === smokeTarget.targetId || ownUiPage(target));
+        for (const target of ownUiTargets) {
+          const closeResult = await cdp.send('Target.closeTarget', {targetId: target.targetId});
+          smoke.closedUiTargets.push({targetId: target.targetId, url: target.url, closeResult});
+          if (!closeResult.success) throw new Error('Browser did not confirm closure of wallet UI target ' + target.targetId);
+        }
+        const cleanupStarted = performance.now();
+        const cleanupDeadline = cleanupStarted + 5000;
+        smoke.uiClosureSamples = [];
+        for (;;) {
+          smoke.remainingUiTargets = (await cdp.send('Target.getTargets')).targetInfos.filter(target => target.targetId === smokeTarget.targetId || ownUiPage(target)).map(target => ({targetId: target.targetId, url: target.url}));
+          for (const target of smoke.closedUiTargets) target.targetDestroyedObserved = result.browserEvents.some(event => event.method === 'Target.targetDestroyed' && event.params.targetId === target.targetId);
+          smoke.uiClosureSamples.push({at: new Date().toISOString(), elapsedMs: performance.now() - cleanupStarted, remainingTargetIds: smoke.remainingUiTargets.map(target => target.targetId), destroyedTargetIds: smoke.closedUiTargets.filter(target => target.targetDestroyedObserved).map(target => target.targetId)});
+          if (!smoke.remainingUiTargets.length && smoke.closedUiTargets.every(target => target.targetDestroyedObserved)) break;
+          if (performance.now() >= cleanupDeadline) throw new Error('Wallet UI target destruction was not confirmed within five seconds before lifecycle measurement');
+          await sleep(Math.min(20, Math.ceil(cleanupDeadline - performance.now())));
+        }
+      } catch (error) { smoke.cleanupError = String(error); smokeError ??= error; }
+      smoke.finishedAt = new Date().toISOString();
+    }
+    if (smoke.uncaughtExceptions.length) smokeError ??= new Error('Real wallet UI raised an uncaught JavaScript exception');
+    if (smokeError) throw smokeError;
+    smoke.passed = true;
+    console.log(JSON.stringify({stage:'real-wallet-ui-smoke-complete', at:new Date().toISOString()}));
+  }
   const normalTarget = await cdp.send('Target.createTarget', {url: origin + '/'});
   result.regularControl = {targetId: normalTarget.targetId, observations: []};
   sessionId = (await cdp.send('Target.attachToTarget', {targetId: normalTarget.targetId, flatten: true})).sessionId;
@@ -276,6 +457,9 @@ try {
   result.regularControl.before = result.regularControl.pageState.probe;
   if (!result.regularControl.before?.hasRabby) throw new Error('Rabby provider was not injected into regular control tab: ' + JSON.stringify(result.regularControl.pageState));
   await cdp.evaluate('navigator.serviceWorker.ready.then(() => true)', sessionId);
+  result.regularControl.initialSetup = await cdp.evaluate('window.__rabbyProbe.waitForInitialReady(5000)', sessionId);
+  if (result.regularControl.initialSetup.status !== 'ready') throw new Error('Regular control initial-page setup did not become ready within five seconds');
+  result.regularControl.before = result.regularControl.initialSetup.finalSnapshot;
   result.regularControl.observations.push(await cdp.evaluate('window.__rabbyProbe.request("control-before", ' + requestTimeoutMs + ')', sessionId, requestTimeoutMs + 5000));
   if (!validResponse(result.regularControl.observations[0])) throw new Error('Regular control baseline eth_chainId did not return a valid response; lifecycle test not started');
   result.installability = await cdp.send('Page.getInstallabilityErrors', {}, sessionId).catch(error => ({error: String(error)}));
@@ -303,7 +487,10 @@ try {
     if (ready) break;
     await sleep(100);
   }
-  result.before = await cdp.evaluate('window.__rabbyProbe.snapshot()', sessionId);
+  await cdp.send('Page.bringToFront', {}, sessionId);
+  result.initialSetup = await cdp.evaluate('window.__rabbyProbe.waitForInitialReady(5000)', sessionId);
+  if (result.initialSetup.status !== 'ready') throw new Error('PWA initial-page setup did not become ready within five seconds');
+  result.before = result.initialSetup.finalSnapshot;
   if (!result.before.standalone) throw new Error('PWA did not launch in standalone display mode');
   if (result.before.href !== origin + '/?surface=pwa') throw new Error('PWA did not honor the unique launch URL');
   if (!result.before.hasRabby) throw new Error('Rabby provider was not injected into installed PWA');
@@ -474,6 +661,23 @@ try {
     }
   }
   result.cleanup.childExitObserved = !!result.cleanup.childExit;
+  if (result.extensionAssets?.matchedBefore) {
+    try {
+      if (!result.cleanup.childExitObserved) throw new Error('Browser child exit must be confirmed before the final asset check');
+      const inventoryBytes = await fs.readFile(result.extensionAssets.expectedManifestPath);
+      const afterManifestSha256 = createHash('sha256').update(inventoryBytes).digest('hex');
+      result.extensionAssets.expectedManifestSha256After = afterManifestSha256;
+      if (afterManifestSha256 !== result.extensionAssets.expectedManifestSha256) throw new Error('Expected asset inventory file changed during the browser run');
+      result.extensionAssets.after = await verifyExtensionAssetInventory(result.extensionPath, expectedAssetInventory);
+      result.extensionAssets.matchedAfter = true;
+    } catch (error) {
+      result.extensionAssets.after = error.assetCheck ?? null;
+      result.extensionAssets.afterError = String(error);
+      result.status = 'harness-error';
+      result.error = [result.error, 'Post-run extension asset check: ' + String(error)].filter(Boolean).join('\n');
+      process.exitCode = 1;
+    }
+  }
   await new Promise(resolve => server.close(resolve));
   result.finishedAt = new Date().toISOString();
   await fs.mkdir(path.dirname(output), {recursive: true});

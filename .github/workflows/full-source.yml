@@ -1,0 +1,155 @@
+name: Full source production comparison
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  full-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      DISPLAY: ':99'
+      XDG_CURRENT_DESKTOP: OPENBOX
+      XDG_SESSION_TYPE: x11
+      RABBY_TEST_CHROME_VERSION: '151.0.7922.34'
+    steps:
+      - name: Check out evidence
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          persist-credentials: false
+
+      - name: Check out pinned Rabby source
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          repository: RabbyHub/Rabby
+          ref: c3aed73f4c5f1e7c88c31331b0b0b72c6e8f2f4a
+          path: artifacts/rabby-source
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node 24
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+
+      - name: Pin strict verifier and record runner resources
+        run: |
+          mkdir -p artifacts/full-source
+          printf '%s  %s\n' 3743f77a252562c73121ba3d1272d5bf7b402ed83c9c10ce2b830f3e9a952397 scripts/verify-results.mjs | sha256sum --check --strict
+          python3 - <<'PYTHON'
+          import json,os,platform,shutil
+          from pathlib import Path
+          Path('artifacts/full-source/system.json').write_text(json.dumps({'platform':platform.platform(),'cpus':os.cpu_count(),'meminfo':Path('/proc/meminfo').read_text(),'disk':list(shutil.disk_usage('.'))},indent=2)+'\n')
+          PYTHON
+
+      - name: Test setup synchronization and asset binding
+        run: node --test scripts/*.test.mjs
+
+      - name: Install display tools
+        run: |
+          mkdir -p artifacts/full-source/runtime "$RUNNER_TEMP/rabby-repro-assets"
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends openbox xvfb x11-utils wmctrl xdg-utils dbus-x11 fonts-liberation unzip curl python3
+
+      - name: Download pinned Chrome for Testing
+        run: |
+          curl --fail --location --retry 2 "https://googlechromelabs.github.io/chrome-for-testing/${RABBY_TEST_CHROME_VERSION}.json" --output artifacts/full-source/runtime/cft-metadata.json
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const expected = process.env.RABBY_TEST_CHROME_VERSION;
+          const metadata = JSON.parse(fs.readFileSync('artifacts/full-source/runtime/cft-metadata.json', 'utf8'));
+          if (metadata.version !== expected) throw new Error('Unexpected Chrome metadata version');
+          const matches = metadata.downloads?.chrome?.filter(item => item.platform === 'linux64');
+          if (matches?.length !== 1) throw new Error('Expected exactly one linux64 Chrome download');
+          const url = new URL(matches[0].url);
+          if (url.protocol !== 'https:' || url.hostname !== 'storage.googleapis.com' || url.pathname !== `/chrome-for-testing-public/${expected}/linux64/chrome-linux64.zip` || url.search || url.hash) throw new Error('Unexpected Chrome download URL');
+          fs.writeFileSync('artifacts/full-source/runtime/cft-linux64-url.txt', url.href + '\n');
+          JS
+          read -r rabby_test_chrome_url < artifacts/full-source/runtime/cft-linux64-url.txt
+          curl --fail --location --retry 2 "$rabby_test_chrome_url" --output "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64.zip"
+          sha256sum artifacts/full-source/runtime/cft-metadata.json "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64.zip" > artifacts/full-source/runtime/cft-download-sha256.txt
+          unzip -q "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64.zip" -d "$RUNNER_TEMP/rabby-repro-assets"
+          test -s "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64/deb.deps"
+          while IFS= read -r rabby_test_dependency; do
+            if [[ -z "$rabby_test_dependency" || "$rabby_test_dependency" == \#* ]]; then continue; fi
+            sudo apt-get satisfy -y --no-install-recommends "$rabby_test_dependency"
+          done < "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64/deb.deps"
+          "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64/chrome" --version > artifacts/full-source/runtime/chrome-version.txt
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const version = fs.readFileSync('artifacts/full-source/runtime/chrome-version.txt', 'utf8');
+          if (!version.includes(process.env.RABBY_TEST_CHROME_VERSION)) throw new Error('Chrome executable version mismatch');
+          fs.appendFileSync(process.env.GITHUB_ENV, `RABBY_TEST_BROWSER=${process.env.RUNNER_TEMP}/rabby-repro-assets/chrome-linux64/chrome\n`);
+          JS
+
+      - name: Build both complete production extensions and check candidate
+        run: |
+          python3 scripts/run-full-source-pair.py --source "$PWD/artifacts/rabby-source" --output "$PWD/artifacts/full-source/build" > artifacts/full-source/build-runner.log 2>&1
+
+      - name: Start headed X11 desktop
+        run: |
+          Xvfb "$DISPLAY" -screen 0 1280x1024x24 -nolisten tcp > artifacts/full-source/runtime/xvfb.log 2>&1 &
+          printf '%s\n' "$!" > artifacts/full-source/runtime/xvfb.pid
+          for rabby_test_attempt in {1..50}; do
+            if xdpyinfo -display "$DISPLAY" > artifacts/full-source/runtime/display.txt 2>&1; then break; fi
+            sleep 0.1
+          done
+          xdpyinfo -display "$DISPLAY" > artifacts/full-source/runtime/display.txt
+          openbox --sm-disable > artifacts/full-source/runtime/openbox.log 2>&1 &
+          printf '%s\n' "$!" > artifacts/full-source/runtime/openbox.pid
+          for rabby_test_attempt in {1..50}; do
+            if wmctrl -m > artifacts/full-source/runtime/window-manager.txt 2>&1; then break; fi
+            sleep 0.1
+          done
+          wmctrl -m > artifacts/full-source/runtime/window-manager.txt
+
+      - name: Run three fresh source-built browser pairs
+        id: compare
+        continue-on-error: true
+        run: |
+          mkdir -p artifacts/full-source/runtime
+          set +e
+          for rabby_pair in 1 2 3; do
+            for rabby_variant in baseline candidate; do
+              node scripts/probe.mjs --browser "$RABBY_TEST_BROWSER" --extension "$PWD/artifacts/full-source-${rabby_variant}-extension" --output "$PWD/artifacts/full-source/runtime/pair-${rabby_pair}-${rabby_variant}.json" --mode worker-stop --wait-ms 10000 --request-timeout-ms 5000 --no-sandbox true --ui-smoke true --expected-assets "$PWD/artifacts/full-source/build/${rabby_variant}/tested-dist.json" > "artifacts/full-source/runtime/pair-${rabby_pair}-${rabby_variant}.stdout.log" 2>&1
+              printf '%s\n' "$?" > "artifacts/full-source/runtime/pair-${rabby_pair}-${rabby_variant}.exitcode"
+            done
+            node scripts/verify-results.mjs "artifacts/full-source/runtime/pair-${rabby_pair}-baseline.json" "artifacts/full-source/runtime/pair-${rabby_pair}-candidate.json" > "artifacts/full-source/runtime/pair-${rabby_pair}-comparison.json"
+            printf '%s\n' "$?" > "artifacts/full-source/runtime/pair-${rabby_pair}-comparison.exitcode"
+          done
+          set -e
+          python3 scripts/verify-full-source.py artifacts/full-source > artifacts/full-source/acceptance.json
+
+      - name: Require all three strict comparisons
+        if: always()
+        env:
+          RABBY_COMPARE_OUTCOME: ${{ steps.compare.outcome }}
+        run: |
+          test "$RABBY_COMPARE_OUTCOME" = success
+          python3 - <<'PYTHON'
+          import json
+          from pathlib import Path
+          assert json.loads(Path('artifacts/full-source/acceptance.json').read_text())['passed'] is True
+          PYTHON
+
+      - name: Stop test display
+        if: always()
+        run: |
+          for rabby_test_pid_file in artifacts/full-source/runtime/openbox.pid artifacts/full-source/runtime/xvfb.pid; do
+            if [[ -f "$rabby_test_pid_file" ]]; then
+              read -r rabby_test_pid < "$rabby_test_pid_file"
+              if [[ "$rabby_test_pid" =~ ^[0-9]+$ ]]; then kill "$rabby_test_pid" 2>/dev/null || true; fi
+            fi
+          done
+
+      - name: Upload full source builds and all observations
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: full-source-comparison-${{ github.run_id }}-${{ github.run_attempt }}
+          path: artifacts/full-source
+          if-no-files-found: error
+          retention-days: 14
