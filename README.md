@@ -19,6 +19,8 @@ These are three requests within **one restart per variant**, not three independe
 
 **Scope:** native minimization was not confirmed on this Mac. This is a forced worker-restart reproduction, not proof of the original natural Linux minimize/resume trigger. The timings describe this fixture, not production performance. A deadline means the promise remained pending for the observation window, not proof that it can never settle.
 
+The later [Linux CI run passed](https://github.com/trungkien1992/rabby-pwa-reliability/actions/runs/39540217125) on Ubuntu 24.04 x64 with Xvfb/Openbox and the same Chrome/Rabby versions. After one forced worker restart per variant, the baseline missed three five-second deadlines and the edited-release candidate returned `0x1` in 1.7 / 1.5 / 1.6 ms, with zero pending requests and no reload. Visible regular-tab controls passed; both variants confirmed native minimization. Its separate, single three-minute natural minimize/restoration observation did not reproduce the hang. [Raw Linux records and pins](results/linux-verified/run.json) retain both outcomes; the original natural trigger remains unconfirmed.
+
 ## Run the browser comparison
 
 Requires Node 24, Python 3, and a Chrome for Testing executable. Use fresh output paths. The harness creates its own browser profiles, local HTTP server, watch-only wallet and installed PWA. It requests only `eth_chainId`, then uninstalls the PWA and closes the browser.

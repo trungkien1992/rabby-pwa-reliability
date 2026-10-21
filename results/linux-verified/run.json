@@ -1,0 +1,26 @@
+{
+  "url": "https://github.com/trungkien1992/rabby-pwa-reliability/actions/runs/39540217125",
+  "commit": "12c24232a6c84ce67a95d52c1dae0c2eb82a2a21",
+  "conclusion": "success",
+  "scope": "One paired controlled worker-restart experiment on Ubuntu 24.04 x64/Xvfb/Openbox, Chrome for Testing 151.0.7922.34, Rabby 0.94.12. Candidate is the official released bundle with one READY-query filter removed; this is not a full source-built extension.",
+  "observations": "Baseline: three five-second deadlines and eth_chainId queues 1/2/3. Candidate: three correct 0x1 replies in 1.7/1.5/1.6 ms, immediate/final queues zero, no PWA reload. Visible regular controls passed. Both variants confirmed native minimization; worker termination was forced.",
+  "naturalObservation": "One 180-second minimize/restoration cycle completed with three correct post-resume responses. The original natural trigger remains unconfirmed.",
+  "filesSha256": {
+    "natural-baseline.json": "0f4b8da41e42739981438ffe1251f13d43cfdf142a2a9a9d37fe1240c465f528",
+    "natural-summary.json": "9ff7ea76a06a604f05f9adb1eb6450df73fb6bcc0a915c55b0837dd2538cda48",
+    "worker-baseline.json": "dbebfafb946a65593da42527aeca99fad846b355dcf7c221918c02441aa7cbb7",
+    "worker-candidate.json": "d8f8845763e138a9a7a52df950ed82c556f4c57d5aa2a58b7f659aa274246334",
+    "comparison.json": "3a5bb210a17e506a7d4fac1f23c2603c7664e89297afe57fa3f0520ef5755f7f",
+    "workflow-outcomes.json": "f0f46750d1e789de64f35980d06feb68ab5f248693b396d95433017f828fc766",
+    "baseline.manifest.json": "e732835ce3243113288baa85df1a2192776a75df40fedfc70ddf81e26ae45b48",
+    "candidate.manifest.json": "c38a0cf77123d13b779bc25fb3fcf04d390aec631270f7b87dd153e10de78063",
+    "chrome-version.txt": "2d44e8c7507ca1c7cefc2fff277ee234d5d87be645dd56bee1b3ffca6564e529",
+    "cft-metadata.json": "fabbb413bc61deccd5ca5731a84737937dfaffafdb033c3f392db2964c96f98e",
+    "cft-download-sha256.txt": "0b6e2c26235584952e4eafa9a245636a10813a5ecd394b8bb4ff600ab459d02e",
+    "rabby-download-sha256.txt": "67e4e2415550d60b4dc3ded445b7572f2789f92916bd0a6bb8a56f44dea32ff1",
+    "natural-baseline.stdout.log": "d655320165644dbdeb08cd737f61b58f80ccabfcacceb6f10a9b859954e36bd9",
+    "worker-baseline.stdout.log": "b70d3589cf0e7fe613c40935287c22a9b964426e2f05c747272eee79864f8728",
+    "worker-candidate.stdout.log": "e70bb634ee657a9db643d3799b852d64e365501751610d718a2fd544c2c774fe",
+    "natural-baseline.exitcode": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  }
+}

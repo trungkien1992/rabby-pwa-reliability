@@ -1,0 +1,3 @@
+{"stage":"watch-only-setup-complete","at":"2026-10-21T03:49:01.301Z"}
+{"stage":"detached-minimized-wait","mode":"worker-stop","waitMs":10000,"at":"2026-10-21T03:49:02.342Z"}
+{"status":"responses-settled-without-reload","mode":"worker-stop","output":"/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/linux/worker-candidate.json","observations":[{"label":"before","status":"resolved","elapsedMs":4.5},{"label":"after-1","status":"resolved","elapsedMs":1.6999999999534339},{"label":"after-2","status":"resolved","elapsedMs":1.5},{"label":"after-3","status":"resolved","elapsedMs":1.6000000000349246}],"error":null}

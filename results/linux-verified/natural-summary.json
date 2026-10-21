@@ -1,0 +1,33 @@
+{
+  "experimentCompleted": true,
+  "walletOutcome": "responses-settled-without-reload",
+  "nativeMinimizeConfirmed": true,
+  "sameDocument": true,
+  "requests": [
+    {
+      "label": "before",
+      "status": "resolved",
+      "value": "0x1",
+      "elapsedMs": 4.800000000017462
+    },
+    {
+      "label": "after-1",
+      "status": "resolved",
+      "value": "0x1",
+      "elapsedMs": 2.3999999999650754
+    },
+    {
+      "label": "after-2",
+      "status": "resolved",
+      "value": "0x1",
+      "elapsedMs": 1.599999999976717
+    },
+    {
+      "label": "after-3",
+      "status": "resolved",
+      "value": "0x1",
+      "elapsedMs": 1.3999999999650754
+    }
+  ],
+  "scope": "One observed Linux Xvfb/Openbox minimize/restoration cycle; success does not establish that the original reporter configuration is unaffected."
+}
