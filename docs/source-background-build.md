@@ -2,8 +2,9 @@
 
 This supplements the edited-release experiment with two backgrounds compiled
 from Rabby source commit `c3aed73f4c5f1e7c88c31331b0b0b72c6e8f2f4a`.
-It records successful builds and their byte-level comparison. Browser outcomes
-for these source-built backgrounds are a separate verification step.
+It records successful builds and their byte-level comparison. The separate
+[browser observations](source-runtime-observations.md) show candidate read
+recovery, with explicit conditions that prevented a strict comparison pass.
 
 ## Recorded build results
 

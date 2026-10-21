@@ -2,6 +2,8 @@
 
 Runnable evidence for the READY-notification gap related to [Rabby #3346](https://github.com/RabbyHub/Rabby/issues/3346).
 
+Source contribution: [Rabby PR #4189](https://github.com/RabbyHub/Rabby/pull/4189).
+
 Chrome reported the installed standalone PWA as an `app` window. Rabby's startup notification queries only `normal` windows, so the PWA misses READY after its background worker restarts. Removing that filter repaired the measured case; the injectable-URL filter stays in place.
 
 One paired experiment on macOS arm64, Chrome for Testing **151.0.7922.34**, Rabby **0.94.12**:
@@ -66,4 +68,8 @@ The [Linux workflow](.github/workflows/reproduce.yml) runs a fresh worker-restar
 
 The [first Linux run](results/linux-first-run/run.json) failed its comparison gate because the regular-tab controls were hidden. Their requests were held by the provider's visibility gate. The corrected harness restores each control before measuring it; the original failure records are retained. The natural three-minute observation completed without reproducing the hang in that one configuration.
 
+The [second Linux run](results/linux-second-run/run.json) restored the controls correctly and recorded the expected baseline failures and candidate replies. Its strict gate still failed because a 10-second timer woke 0.09 ms early. The harness now enforces the full monotonic wait deadline; the verifier's duration and outcome requirements are unchanged. This run is retained as a failed comparison, with its raw observations.
+
 Both [source background builds](docs/source-background-build.md) also completed successfully; only the intended background code differs. This remains a component/hybrid build, with full UI compatibility a separate check.
+
+The [source-background browser observations](docs/source-runtime-observations.md) show three baseline deadline misses and three candidate replies. Their strict comparison did not pass: initialization requests overlapped some successful replies, and native-minimize confirmation differed. The raw observations and failed checks are retained separately from the passing edited-release comparison above.

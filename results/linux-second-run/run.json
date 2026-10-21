@@ -1,0 +1,21 @@
+{
+  "url": "https://github.com/trungkien1992/rabby-pwa-reliability/actions/runs/39539525510",
+  "commit": "e47924fc7b9591bcf27dde133fba952c5e0cac5d",
+  "conclusion": "failure",
+  "reason": "Strict comparison failed: baseline monotonic detached wait measured 9999.908433 ms against a required 10000 ms. The timer woke fractionally early. This run is not a passing strict comparison. The harness now loops against the monotonic deadline instead of assuming one timer guarantees the duration. No verifier criterion was relaxed.",
+  "observations": "Baseline PWA reads reached three 5-second deadlines and queued eth_chainId 1/2/3. Candidate reads returned 0x1 in 1.8/1.5/1.2 ms with immediate and final pending count zero. All initial and post-restart regular-control reads were visible, correct and zero-pending. Both variants confirmed native minimization.",
+  "naturalObservation": "One 180-second native minimize/restoration cycle completed with three correct post-resume responses; a bounded non-reproduction.",
+  "filesSha256": {
+    "natural-baseline.json": "f9f1a0440a3c418140cbaf2f22358de7315bd27cca5431d88c07d21f45412c6a",
+    "natural-summary.json": "44ac84bff474be017f49aaf485c3080447a6bfa6560c2fa86748b74d02d3ff36",
+    "worker-baseline.json": "b180ae299d1dacbae12dfc83aa7910b2879b395e21cff72504b4fe6898df9330",
+    "worker-candidate.json": "ddaafbf1806a5b51a7dae905aad3ae416781f856dbf2848beb8ccf0333e458f7",
+    "comparison.json": "1db0446c82c31d3410ae7fac937858b9eca60cbcd55f05be5ca7b672e339b6ab",
+    "workflow-outcomes.json": "edd16eeaf818bb01912ea2ed048cb1568a4e640418eb737e43485bcf1c601bad",
+    "baseline.manifest.json": "e732835ce3243113288baa85df1a2192776a75df40fedfc70ddf81e26ae45b48",
+    "candidate.manifest.json": "c38a0cf77123d13b779bc25fb3fcf04d390aec631270f7b87dd153e10de78063",
+    "chrome-version.txt": "2d44e8c7507ca1c7cefc2fff277ee234d5d87be645dd56bee1b3ffca6564e529",
+    "cft-download-sha256.txt": "0b6e2c26235584952e4eafa9a245636a10813a5ecd394b8bb4ff600ab459d02e",
+    "rabby-download-sha256.txt": "67e4e2415550d60b4dc3ded445b7572f2789f92916bd0a6bb8a56f44dea32ff1"
+  }
+}

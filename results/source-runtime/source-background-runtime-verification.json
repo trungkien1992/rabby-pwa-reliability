@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "passed": false,
+  "checkedAt": "2026-10-21T03:26:49.117Z",
+  "checks": 88,
+  "verifierSha256": "ed3db3e40233d21b3cab71e127ff394b8a12a50578844c1b1459016b97be177c",
+  "inputs": [
+    {
+      "file": "source-worker-baseline-13.json",
+      "sha256": "b1f244c6c6b8cf8fc0738d1b74742470267be104fc987e9d12607638754e1694"
+    },
+    {
+      "file": "source-worker-candidate-14.json",
+      "sha256": "f45a0a0f7a8ebb502964e78a1913dbba564408ab44469cbe9e4ce3d81666ccee"
+    }
+  ],
+  "error": "baseline: a distinct unattached Rabby worker was not restarted before measurements"
+}

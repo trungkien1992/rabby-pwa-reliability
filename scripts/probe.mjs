@@ -359,7 +359,11 @@ try {
   console.log(JSON.stringify({stage:'detached-minimized-wait', mode, waitMs, at:new Date().toISOString()}));
   result.waitStartedAt = new Date().toISOString();
   const waitedAt = performance.now();
-  await sleep(waitMs);
+  // A timer can wake fractionally early; measure and enforce the full interval.
+  const waitDeadline = waitedAt + waitMs;
+  while (performance.now() < waitDeadline) {
+    await sleep(Math.ceil(waitDeadline - performance.now()));
+  }
   result.actualDetachedWaitMs = performance.now() - waitedAt;
   result.waitFinishedAt = new Date().toISOString();
   await cdp.send('Browser.setWindowBounds', {windowId: windowInfo.windowId, bounds: {windowState: 'normal'}});

@@ -1,0 +1,2883 @@
+{
+  "schema": 1,
+  "startedAt": "2026-10-21T03:41:15.812Z",
+  "platform": "linux",
+  "architecture": "x64",
+  "node": "v24.22.0",
+  "mode": "worker-stop",
+  "waitMs": 10000,
+  "requestTimeoutMs": 5000,
+  "observationTimingSchema": 1,
+  "walletState": "isolated watch-only account 0x0000000000000000000000000000000000000001; no signing key",
+  "proofScope": "Controlled browser lifecycle fault; not a natural Linux PWA reproduction.",
+  "browserExecutable": "/home/runner/work/_temp/rabby-repro-assets/chrome-linux64/chrome",
+  "extensionPath": "/home/runner/work/_temp/rabby-repro-assets/candidate",
+  "observations": [
+    {
+      "label": "before",
+      "status": "resolved",
+      "value": "0x1",
+      "startedAt": "2026-10-21T03:41:23.233Z",
+      "finishedAt": "2026-10-21T03:41:23.237Z",
+      "elapsedMs": 3.900000000023283,
+      "snapshot": {
+        "loadId": "44750524-b0ec-469a-9555-ce748701bea2",
+        "standalone": true,
+        "href": "http://127.0.0.1:41967/?surface=pwa",
+        "navigationType": "navigate",
+        "visibility": "visible",
+        "wasDiscarded": false,
+        "hasRabby": true,
+        "isConnected": true,
+        "waitingCount": 0,
+        "waitingMethods": [],
+        "channel": {
+          "readable": true,
+          "writable": true,
+          "destroyed": false
+        },
+        "events": [
+          {
+            "type": "boot",
+            "at": 1792554083221,
+            "sinceLoadMs": 42.5,
+            "visibility": "visible"
+          },
+          {
+            "type": "pageshow",
+            "at": 1792554083221,
+            "sinceLoadMs": 43.20000000001164,
+            "visibility": "visible",
+            "persisted": false
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554083233,
+            "sinceLoadMs": 54.90000000002328,
+            "visibility": "visible",
+            "label": "before",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554083237,
+            "sinceLoadMs": 58.800000000046566,
+            "visibility": "visible",
+            "label": "before",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554083237,
+            "sinceLoadMs": 58.800000000046566,
+            "visibility": "visible",
+            "label": "before",
+            "status": "resolved"
+          }
+        ]
+      }
+    },
+    {
+      "label": "after-1",
+      "status": "resolved",
+      "value": "0x1",
+      "startedAt": "2026-10-21T03:41:33.472Z",
+      "finishedAt": "2026-10-21T03:41:33.474Z",
+      "elapsedMs": 1.7999999999883585,
+      "snapshot": {
+        "loadId": "44750524-b0ec-469a-9555-ce748701bea2",
+        "standalone": true,
+        "href": "http://127.0.0.1:41967/?surface=pwa",
+        "navigationType": "navigate",
+        "visibility": "visible",
+        "wasDiscarded": false,
+        "hasRabby": true,
+        "isConnected": true,
+        "waitingCount": 0,
+        "waitingMethods": [],
+        "channel": {
+          "readable": true,
+          "writable": true,
+          "destroyed": false
+        },
+        "events": [
+          {
+            "type": "boot",
+            "at": 1792554083221,
+            "sinceLoadMs": 42.5,
+            "visibility": "visible"
+          },
+          {
+            "type": "pageshow",
+            "at": 1792554083221,
+            "sinceLoadMs": 43.20000000001164,
+            "visibility": "visible",
+            "persisted": false
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554083233,
+            "sinceLoadMs": 54.90000000002328,
+            "visibility": "visible",
+            "label": "before",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554083237,
+            "sinceLoadMs": 58.800000000046566,
+            "visibility": "visible",
+            "label": "before",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554083237,
+            "sinceLoadMs": 58.800000000046566,
+            "visibility": "visible",
+            "label": "before",
+            "status": "resolved"
+          },
+          {
+            "type": "blur",
+            "at": 1792554083249,
+            "sinceLoadMs": 71.20000000001164,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "focus",
+            "at": 1792554083249,
+            "sinceLoadMs": 71.20000000001164,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "visibilitychange",
+            "at": 1792554083251,
+            "sinceLoadMs": 73,
+            "visibility": "hidden"
+          },
+          {
+            "type": "blur",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.40000000002328,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "focus",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.5,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "blur",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.5,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "visibilitychange",
+            "at": 1792554093454,
+            "sinceLoadMs": 10275.800000000047,
+            "visibility": "visible"
+          },
+          {
+            "type": "focus",
+            "at": 1792554093465,
+            "sinceLoadMs": 10287.100000000035,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554093472,
+            "sinceLoadMs": 10294,
+            "visibility": "visible",
+            "label": "after-1",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554093474,
+            "sinceLoadMs": 10295.700000000012,
+            "visibility": "visible",
+            "label": "after-1",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554093474,
+            "sinceLoadMs": 10295.700000000012,
+            "visibility": "visible",
+            "label": "after-1",
+            "status": "resolved"
+          }
+        ]
+      }
+    },
+    {
+      "label": "after-2",
+      "status": "resolved",
+      "value": "0x1",
+      "startedAt": "2026-10-21T03:41:33.475Z",
+      "finishedAt": "2026-10-21T03:41:33.477Z",
+      "elapsedMs": 1.5,
+      "snapshot": {
+        "loadId": "44750524-b0ec-469a-9555-ce748701bea2",
+        "standalone": true,
+        "href": "http://127.0.0.1:41967/?surface=pwa",
+        "navigationType": "navigate",
+        "visibility": "visible",
+        "wasDiscarded": false,
+        "hasRabby": true,
+        "isConnected": true,
+        "waitingCount": 0,
+        "waitingMethods": [],
+        "channel": {
+          "readable": true,
+          "writable": true,
+          "destroyed": false
+        },
+        "events": [
+          {
+            "type": "boot",
+            "at": 1792554083221,
+            "sinceLoadMs": 42.5,
+            "visibility": "visible"
+          },
+          {
+            "type": "pageshow",
+            "at": 1792554083221,
+            "sinceLoadMs": 43.20000000001164,
+            "visibility": "visible",
+            "persisted": false
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554083233,
+            "sinceLoadMs": 54.90000000002328,
+            "visibility": "visible",
+            "label": "before",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554083237,
+            "sinceLoadMs": 58.800000000046566,
+            "visibility": "visible",
+            "label": "before",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554083237,
+            "sinceLoadMs": 58.800000000046566,
+            "visibility": "visible",
+            "label": "before",
+            "status": "resolved"
+          },
+          {
+            "type": "blur",
+            "at": 1792554083249,
+            "sinceLoadMs": 71.20000000001164,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "focus",
+            "at": 1792554083249,
+            "sinceLoadMs": 71.20000000001164,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "visibilitychange",
+            "at": 1792554083251,
+            "sinceLoadMs": 73,
+            "visibility": "hidden"
+          },
+          {
+            "type": "blur",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.40000000002328,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "focus",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.5,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "blur",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.5,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "visibilitychange",
+            "at": 1792554093454,
+            "sinceLoadMs": 10275.800000000047,
+            "visibility": "visible"
+          },
+          {
+            "type": "focus",
+            "at": 1792554093465,
+            "sinceLoadMs": 10287.100000000035,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554093472,
+            "sinceLoadMs": 10294,
+            "visibility": "visible",
+            "label": "after-1",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554093474,
+            "sinceLoadMs": 10295.700000000012,
+            "visibility": "visible",
+            "label": "after-1",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554093474,
+            "sinceLoadMs": 10295.700000000012,
+            "visibility": "visible",
+            "label": "after-1",
+            "status": "resolved"
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554093475,
+            "sinceLoadMs": 10297,
+            "visibility": "visible",
+            "label": "after-2",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554093477,
+            "sinceLoadMs": 10298.5,
+            "visibility": "visible",
+            "label": "after-2",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554093477,
+            "sinceLoadMs": 10298.5,
+            "visibility": "visible",
+            "label": "after-2",
+            "status": "resolved"
+          }
+        ]
+      }
+    },
+    {
+      "label": "after-3",
+      "status": "resolved",
+      "value": "0x1",
+      "startedAt": "2026-10-21T03:41:33.477Z",
+      "finishedAt": "2026-10-21T03:41:33.478Z",
+      "elapsedMs": 1.2000000000116415,
+      "snapshot": {
+        "loadId": "44750524-b0ec-469a-9555-ce748701bea2",
+        "standalone": true,
+        "href": "http://127.0.0.1:41967/?surface=pwa",
+        "navigationType": "navigate",
+        "visibility": "visible",
+        "wasDiscarded": false,
+        "hasRabby": true,
+        "isConnected": true,
+        "waitingCount": 0,
+        "waitingMethods": [],
+        "channel": {
+          "readable": true,
+          "writable": true,
+          "destroyed": false
+        },
+        "events": [
+          {
+            "type": "boot",
+            "at": 1792554083221,
+            "sinceLoadMs": 42.5,
+            "visibility": "visible"
+          },
+          {
+            "type": "pageshow",
+            "at": 1792554083221,
+            "sinceLoadMs": 43.20000000001164,
+            "visibility": "visible",
+            "persisted": false
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554083233,
+            "sinceLoadMs": 54.90000000002328,
+            "visibility": "visible",
+            "label": "before",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554083237,
+            "sinceLoadMs": 58.800000000046566,
+            "visibility": "visible",
+            "label": "before",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554083237,
+            "sinceLoadMs": 58.800000000046566,
+            "visibility": "visible",
+            "label": "before",
+            "status": "resolved"
+          },
+          {
+            "type": "blur",
+            "at": 1792554083249,
+            "sinceLoadMs": 71.20000000001164,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "focus",
+            "at": 1792554083249,
+            "sinceLoadMs": 71.20000000001164,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "visibilitychange",
+            "at": 1792554083251,
+            "sinceLoadMs": 73,
+            "visibility": "hidden"
+          },
+          {
+            "type": "blur",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.40000000002328,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "focus",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.5,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "blur",
+            "at": 1792554083257,
+            "sinceLoadMs": 78.5,
+            "visibility": "hidden",
+            "persisted": null
+          },
+          {
+            "type": "visibilitychange",
+            "at": 1792554093454,
+            "sinceLoadMs": 10275.800000000047,
+            "visibility": "visible"
+          },
+          {
+            "type": "focus",
+            "at": 1792554093465,
+            "sinceLoadMs": 10287.100000000035,
+            "visibility": "visible",
+            "persisted": null
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554093472,
+            "sinceLoadMs": 10294,
+            "visibility": "visible",
+            "label": "after-1",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554093474,
+            "sinceLoadMs": 10295.700000000012,
+            "visibility": "visible",
+            "label": "after-1",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554093474,
+            "sinceLoadMs": 10295.700000000012,
+            "visibility": "visible",
+            "label": "after-1",
+            "status": "resolved"
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554093475,
+            "sinceLoadMs": 10297,
+            "visibility": "visible",
+            "label": "after-2",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554093477,
+            "sinceLoadMs": 10298.5,
+            "visibility": "visible",
+            "label": "after-2",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554093477,
+            "sinceLoadMs": 10298.5,
+            "visibility": "visible",
+            "label": "after-2",
+            "status": "resolved"
+          },
+          {
+            "type": "requestStarted",
+            "at": 1792554093477,
+            "sinceLoadMs": 10299.100000000035,
+            "visibility": "visible",
+            "label": "after-3",
+            "method": "eth_chainId"
+          },
+          {
+            "type": "requestResolved",
+            "at": 1792554093478,
+            "sinceLoadMs": 10300.300000000047,
+            "visibility": "visible",
+            "label": "after-3",
+            "value": "0x1"
+          },
+          {
+            "type": "requestFinished",
+            "at": 1792554093478,
+            "sinceLoadMs": 10300.300000000047,
+            "visibility": "visible",
+            "label": "after-3",
+            "status": "resolved"
+          }
+        ]
+      }
+    }
+  ],
+  "browserEvents": [
+    {
+      "at": "2026-10-21T03:41:16.215Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "16A3698359CBC257E6EA0743BF2090A1",
+          "type": "page",
+          "title": "",
+          "url": "about:blank",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.215Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "E8D8A89FC3492A54C1BEEEC6B0109E89",
+          "type": "browser_ui",
+          "title": "",
+          "url": "chrome://webui-toolbar.top-chrome/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.231Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "E8D8A89FC3492A54C1BEEEC6B0109E89",
+          "type": "browser_ui",
+          "title": "chrome://webui-toolbar.top-chrome",
+          "url": "chrome://webui-toolbar.top-chrome/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.262Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "315DF671A970ABE4FC0873BD673DA6FD",
+          "type": "service_worker",
+          "title": "Service Worker chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/thunk.js",
+          "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/thunk.js",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.262Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "55D14FBE8DD19AEEB36D7B99ED625736",
+          "type": "service_worker",
+          "title": "Service Worker chrome-extension://admccjkmockfdflocgggjfgdacdodkdf/background.js",
+          "url": "chrome-extension://admccjkmockfdflocgggjfgdacdodkdf/background.js",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.267Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "5A8A45A479C3824919476B6FE12FC45A",
+          "type": "service_worker",
+          "title": "Service Worker chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/sw.js",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/sw.js",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.279Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "16A3698359CBC257E6EA0743BF2090A1",
+          "type": "page",
+          "title": "about:blank",
+          "url": "about:blank",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.378Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "1EC007464827B97D4FE161F703A408DA",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/reliability-probe.html",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.409Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "1EC007464827B97D4FE161F703A408DA",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/reliability-probe.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.409Z",
+      "method": "Target.attachedToTarget",
+      "params": {
+        "sessionId": "1F8BAB212B5C1C6BD85667E36DEF71B0",
+        "targetInfo": {
+          "targetId": "1EC007464827B97D4FE161F703A408DA",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/reliability-probe.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        },
+        "waitingForDebugger": false
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:16.434Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "1EC007464827B97D4FE161F703A408DA",
+          "type": "page",
+          "title": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/reliability-probe.html",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/reliability-probe.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:19.689Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "290E42C5F23BEDDB30E469267D2FD279",
+          "type": "other",
+          "title": "",
+          "url": "",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:19.701Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "DA44A5150C593ECBF50A1C70C1BE14E6",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/index.html#/new-user/guide",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:19.737Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "290E42C5F23BEDDB30E469267D2FD279",
+          "type": "background_page",
+          "title": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/offscreen.html",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/offscreen.html",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:19.757Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "DA44A5150C593ECBF50A1C70C1BE14E6",
+          "type": "page",
+          "title": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/index.html#/new-user/guide",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/index.html#/new-user/guide",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.307Z",
+      "method": "Target.detachedFromTarget",
+      "params": {
+        "sessionId": "1F8BAB212B5C1C6BD85667E36DEF71B0",
+        "targetId": "1EC007464827B97D4FE161F703A408DA"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.307Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "1EC007464827B97D4FE161F703A408DA",
+          "type": "page",
+          "title": "Local Rabby test setup",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/reliability-probe.html",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.316Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "E3847200A9E94A4CDC66298694178074",
+          "type": "page",
+          "title": "",
+          "url": "http://127.0.0.1:41967/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.331Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "1EC007464827B97D4FE161F703A408DA"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.343Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "E3847200A9E94A4CDC66298694178074",
+          "type": "page",
+          "title": "",
+          "url": "http://127.0.0.1:41967/",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.343Z",
+      "method": "Target.attachedToTarget",
+      "params": {
+        "sessionId": "81E8947DC098011D179E196474C22939",
+        "targetInfo": {
+          "targetId": "E3847200A9E94A4CDC66298694178074",
+          "type": "page",
+          "title": "",
+          "url": "http://127.0.0.1:41967/",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        },
+        "waitingForDebugger": false
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.359Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "E3847200A9E94A4CDC66298694178074",
+          "type": "page",
+          "title": "127.0.0.1:41967",
+          "url": "http://127.0.0.1:41967/",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.491Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "F6E125777AEDF2817DE0E3DE9D4C8678",
+          "type": "service_worker",
+          "title": "Service Worker http://127.0.0.1:41967/sw.js",
+          "url": "http://127.0.0.1:41967/sw.js",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.594Z",
+      "method": "Target.detachedFromTarget",
+      "params": {
+        "sessionId": "81E8947DC098011D179E196474C22939",
+        "targetId": "E3847200A9E94A4CDC66298694178074"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:22.596Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "E3847200A9E94A4CDC66298694178074",
+          "type": "page",
+          "title": "Rabby lifecycle probe",
+          "url": "http://127.0.0.1:41967/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:23.183Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "23C6E5DD4F160487B469FB199DF53931",
+          "type": "page",
+          "title": "",
+          "url": "http://127.0.0.1:41967/?surface=pwa",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:23.201Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "23C6E5DD4F160487B469FB199DF53931",
+          "type": "page",
+          "title": "127.0.0.1:41967/?surface=pwa",
+          "url": "http://127.0.0.1:41967/?surface=pwa",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:23.211Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "23C6E5DD4F160487B469FB199DF53931",
+          "type": "page",
+          "title": "127.0.0.1:41967/?surface=pwa",
+          "url": "http://127.0.0.1:41967/?surface=pwa",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:23.211Z",
+      "method": "Target.attachedToTarget",
+      "params": {
+        "sessionId": "597668DEBBFFDF7EC5B385E2B26A35B3",
+        "targetInfo": {
+          "targetId": "23C6E5DD4F160487B469FB199DF53931",
+          "type": "page",
+          "title": "127.0.0.1:41967/?surface=pwa",
+          "url": "http://127.0.0.1:41967/?surface=pwa",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        },
+        "waitingForDebugger": false
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:23.348Z",
+      "method": "Target.detachedFromTarget",
+      "params": {
+        "sessionId": "597668DEBBFFDF7EC5B385E2B26A35B3",
+        "targetId": "23C6E5DD4F160487B469FB199DF53931"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:23.348Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "23C6E5DD4F160487B469FB199DF53931",
+          "type": "page",
+          "title": "Rabby lifecycle probe",
+          "url": "http://127.0.0.1:41967/?surface=pwa",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:23.366Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "5A8A45A479C3824919476B6FE12FC45A"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:23.451Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "69E6D4C65B9364DE7CBAD1C742D84A9B",
+          "type": "service_worker",
+          "title": "Service Worker chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/sw.js",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/sw.js",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.466Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "23C6E5DD4F160487B469FB199DF53931",
+          "type": "page",
+          "title": "Rabby lifecycle probe",
+          "url": "http://127.0.0.1:41967/?surface=pwa",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.466Z",
+      "method": "Target.attachedToTarget",
+      "params": {
+        "sessionId": "88ACF66288B7EB60E0168C6F840C29A0",
+        "targetInfo": {
+          "targetId": "23C6E5DD4F160487B469FB199DF53931",
+          "type": "page",
+          "title": "Rabby lifecycle probe",
+          "url": "http://127.0.0.1:41967/?surface=pwa",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        },
+        "waitingForDebugger": false
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.565Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "E3847200A9E94A4CDC66298694178074",
+          "type": "page",
+          "title": "Rabby lifecycle probe",
+          "url": "http://127.0.0.1:41967/",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.565Z",
+      "method": "Target.attachedToTarget",
+      "params": {
+        "sessionId": "577020D02C83CA479D25CBF0499A592F",
+        "targetInfo": {
+          "targetId": "E3847200A9E94A4CDC66298694178074",
+          "type": "page",
+          "title": "Rabby lifecycle probe",
+          "url": "http://127.0.0.1:41967/",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        },
+        "waitingForDebugger": false
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.677Z",
+      "method": "Target.detachedFromTarget",
+      "params": {
+        "sessionId": "577020D02C83CA479D25CBF0499A592F",
+        "targetId": "E3847200A9E94A4CDC66298694178074"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.677Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "E3847200A9E94A4CDC66298694178074",
+          "type": "page",
+          "title": "Rabby lifecycle probe",
+          "url": "http://127.0.0.1:41967/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.684Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "4445F812F58CE17EDC8D2E48A318D2EC",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/popup.html",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.696Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "4445F812F58CE17EDC8D2E48A318D2EC",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/popup.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.696Z",
+      "method": "Target.attachedToTarget",
+      "params": {
+        "sessionId": "EFEBA56DB07A49F7494C0A04781EC0BD",
+        "targetInfo": {
+          "targetId": "4445F812F58CE17EDC8D2E48A318D2EC",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/popup.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        },
+        "waitingForDebugger": false
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.712Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "4445F812F58CE17EDC8D2E48A318D2EC",
+          "type": "page",
+          "title": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/popup.html",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/popup.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.978Z",
+      "method": "Target.detachedFromTarget",
+      "params": {
+        "sessionId": "EFEBA56DB07A49F7494C0A04781EC0BD",
+        "targetId": "4445F812F58CE17EDC8D2E48A318D2EC"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.978Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "4445F812F58CE17EDC8D2E48A318D2EC",
+          "type": "page",
+          "title": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/popup.html",
+          "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/popup.html",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:33.994Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "4445F812F58CE17EDC8D2E48A318D2EC"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:34.205Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "23C6E5DD4F160487B469FB199DF53931",
+          "type": "page",
+          "title": "Rabby lifecycle probe",
+          "url": "http://127.0.0.1:41967/?surface=pwa",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:34.205Z",
+      "method": "Target.detachedFromTarget",
+      "params": {
+        "sessionId": "88ACF66288B7EB60E0168C6F840C29A0",
+        "targetId": "23C6E5DD4F160487B469FB199DF53931"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:34.205Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "23C6E5DD4F160487B469FB199DF53931"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:34.231Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "E3847200A9E94A4CDC66298694178074"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:34.236Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "DA44A5150C593ECBF50A1C70C1BE14E6"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:34.239Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "16A3698359CBC257E6EA0743BF2090A1"
+      }
+    },
+    {
+      "at": "2026-10-21T03:41:34.244Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "E8D8A89FC3492A54C1BEEEC6B0109E89"
+      }
+    }
+  ],
+  "cleanup": {
+    "profileIsolated": true,
+    "pwaUninstalled": true,
+    "browserCloseRequested": true,
+    "childExit": {
+      "at": "2026-10-21T03:41:34.353Z",
+      "code": 0,
+      "signal": null
+    },
+    "childExitObserved": true
+  },
+  "extensionManifest": {
+    "manifest_version": 3,
+    "name": "__MSG_appName__",
+    "short_name": "__MSG_appName__",
+    "version": "0.94.12",
+    "default_locale": "en",
+    "description": "__MSG_appDescription__",
+    "icons": {
+      "16": "images/icon-16.png",
+      "19": "images/icon-19.png",
+      "32": "images/icon-32.png",
+      "38": "images/icon-38.png",
+      "48": "images/icon-48.png",
+      "64": "images/icon-64.png",
+      "128": "images/icon-128.png",
+      "512": "images/icon-512.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "images/icon-16.png",
+        "19": "images/icon-19.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      },
+      "default_title": "Rabby",
+      "default_popup": "popup.html"
+    },
+    "author": "https://rabby.io/",
+    "background": {
+      "service_worker": "sw.js"
+    },
+    "content_scripts": [
+      {
+        "all_frames": true,
+        "js": [
+          "webextension-polyfill.js",
+          "content-script.js"
+        ],
+        "matches": [
+          "file://*/*",
+          "http://*/*",
+          "https://*/*"
+        ],
+        "run_at": "document_start"
+      },
+      {
+        "matches": [
+          "*://connect.trezor.io/*/popup.html*",
+          "https://connect.onekey.so/popup.html"
+        ],
+        "js": [
+          "vendor/trezor/trezor-content-script.js"
+        ]
+      }
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; frame-ancestors 'none'"
+    },
+    "permissions": [
+      "scripting",
+      "storage",
+      "unlimitedStorage",
+      "alarms",
+      "activeTab",
+      "notifications",
+      "offscreen",
+      "contextMenus",
+      "webRequest"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "pageProvider.js"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ],
+    "externally_connectable": {
+      "ids": []
+    }
+  },
+  "origin": "http://127.0.0.1:41967",
+  "manifestId": "http://127.0.0.1:41967/",
+  "profile": "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/scripts/profile/run-ZSAfrg",
+  "browserFlags": [
+    "--user-data-dir=/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/scripts/profile/run-ZSAfrg",
+    "--remote-debugging-pipe",
+    "--enable-devtools-pwa-handler",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--no-sandbox",
+    "--disable-extensions-except=/home/runner/work/_temp/rabby-repro-assets/candidate",
+    "--load-extension=/home/runner/work/_temp/rabby-repro-assets/candidate",
+    "about:blank"
+  ],
+  "browserVersion": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/151.0.7922.34",
+    "revision": "@782af9cb30a53f54487e5d2e44738645a8ec457c",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+    "jsVersion": "15.1.206.8"
+  },
+  "extensionId": "hhilkglkhokjdanjckpcmfjobhnafpdl",
+  "providerRegisteredBeforeNavigation": true,
+  "watchOnlySetup": {
+    "alreadyBooted": false,
+    "accounts": [
+      {
+        "address": "0x0000000000000000000000000000000000000001",
+        "type": "Watch Address",
+        "brandName": "Watch Address"
+      }
+    ]
+  },
+  "regularControl": {
+    "targetId": "E3847200A9E94A4CDC66298694178074",
+    "observations": [
+      {
+        "label": "control-before",
+        "status": "resolved",
+        "value": "0x1",
+        "startedAt": "2026-10-21T03:41:22.589Z",
+        "finishedAt": "2026-10-21T03:41:22.591Z",
+        "elapsedMs": 2.099999999976717,
+        "snapshot": {
+          "loadId": "d0f5833b-5b9a-4ff9-a6a5-6f31a3983893",
+          "standalone": false,
+          "href": "http://127.0.0.1:41967/",
+          "navigationType": "navigate",
+          "visibility": "visible",
+          "wasDiscarded": false,
+          "hasRabby": true,
+          "isConnected": true,
+          "waitingCount": 0,
+          "waitingMethods": [],
+          "channel": {
+            "readable": true,
+            "writable": true,
+            "destroyed": false
+          },
+          "events": [
+            {
+              "type": "boot",
+              "at": 1792554082487,
+              "sinceLoadMs": 178,
+              "visibility": "visible"
+            },
+            {
+              "type": "pageshow",
+              "at": 1792554082489,
+              "sinceLoadMs": 179.79999999998836,
+              "visibility": "visible",
+              "persisted": false
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554082589,
+              "sinceLoadMs": 279.5,
+              "visibility": "visible",
+              "label": "control-before",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554082591,
+              "sinceLoadMs": 281.3999999999651,
+              "visibility": "visible",
+              "label": "control-before",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554082591,
+              "sinceLoadMs": 281.3999999999651,
+              "visibility": "visible",
+              "label": "control-before",
+              "status": "resolved"
+            }
+          ]
+        }
+      },
+      {
+        "label": "control-after-1",
+        "status": "resolved",
+        "value": "0x1",
+        "startedAt": "2026-10-21T03:41:33.669Z",
+        "finishedAt": "2026-10-21T03:41:33.671Z",
+        "elapsedMs": 1.7000000000116415,
+        "snapshot": {
+          "loadId": "d0f5833b-5b9a-4ff9-a6a5-6f31a3983893",
+          "standalone": false,
+          "href": "http://127.0.0.1:41967/",
+          "navigationType": "navigate",
+          "visibility": "visible",
+          "wasDiscarded": false,
+          "hasRabby": true,
+          "isConnected": true,
+          "waitingCount": 0,
+          "waitingMethods": [],
+          "channel": {
+            "readable": true,
+            "writable": true,
+            "destroyed": false
+          },
+          "events": [
+            {
+              "type": "boot",
+              "at": 1792554082487,
+              "sinceLoadMs": 178,
+              "visibility": "visible"
+            },
+            {
+              "type": "pageshow",
+              "at": 1792554082489,
+              "sinceLoadMs": 179.79999999998836,
+              "visibility": "visible",
+              "persisted": false
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554082589,
+              "sinceLoadMs": 279.5,
+              "visibility": "visible",
+              "label": "control-before",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554082591,
+              "sinceLoadMs": 281.3999999999651,
+              "visibility": "visible",
+              "label": "control-before",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554082591,
+              "sinceLoadMs": 281.3999999999651,
+              "visibility": "visible",
+              "label": "control-before",
+              "status": "resolved"
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554083194,
+              "sinceLoadMs": 884.5,
+              "visibility": "hidden"
+            },
+            {
+              "type": "blur",
+              "at": 1792554083194,
+              "sinceLoadMs": 884.7000000000116,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554083251,
+              "sinceLoadMs": 942.0999999999767,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554083251,
+              "sinceLoadMs": 942.2000000000116,
+              "visibility": "visible"
+            },
+            {
+              "type": "blur",
+              "at": 1792554083252,
+              "sinceLoadMs": 942.8999999999651,
+              "visibility": "visible",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554083254,
+              "sinceLoadMs": 944.7000000000116,
+              "visibility": "visible",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554093464,
+              "sinceLoadMs": 11154.700000000012,
+              "visibility": "hidden"
+            },
+            {
+              "type": "blur",
+              "at": 1792554093465,
+              "sinceLoadMs": 11155.599999999977,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554093566,
+              "sinceLoadMs": 11256.799999999988,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554093567,
+              "sinceLoadMs": 11257.599999999977,
+              "visibility": "visible"
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554093669,
+              "sinceLoadMs": 11359.899999999965,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554093671,
+              "sinceLoadMs": 11361.599999999977,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554093671,
+              "sinceLoadMs": 11361.599999999977,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "status": "resolved"
+            }
+          ]
+        }
+      },
+      {
+        "label": "control-after-2",
+        "status": "resolved",
+        "value": "0x1",
+        "startedAt": "2026-10-21T03:41:33.672Z",
+        "finishedAt": "2026-10-21T03:41:33.674Z",
+        "elapsedMs": 1.5,
+        "snapshot": {
+          "loadId": "d0f5833b-5b9a-4ff9-a6a5-6f31a3983893",
+          "standalone": false,
+          "href": "http://127.0.0.1:41967/",
+          "navigationType": "navigate",
+          "visibility": "visible",
+          "wasDiscarded": false,
+          "hasRabby": true,
+          "isConnected": true,
+          "waitingCount": 0,
+          "waitingMethods": [],
+          "channel": {
+            "readable": true,
+            "writable": true,
+            "destroyed": false
+          },
+          "events": [
+            {
+              "type": "boot",
+              "at": 1792554082487,
+              "sinceLoadMs": 178,
+              "visibility": "visible"
+            },
+            {
+              "type": "pageshow",
+              "at": 1792554082489,
+              "sinceLoadMs": 179.79999999998836,
+              "visibility": "visible",
+              "persisted": false
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554082589,
+              "sinceLoadMs": 279.5,
+              "visibility": "visible",
+              "label": "control-before",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554082591,
+              "sinceLoadMs": 281.3999999999651,
+              "visibility": "visible",
+              "label": "control-before",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554082591,
+              "sinceLoadMs": 281.3999999999651,
+              "visibility": "visible",
+              "label": "control-before",
+              "status": "resolved"
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554083194,
+              "sinceLoadMs": 884.5,
+              "visibility": "hidden"
+            },
+            {
+              "type": "blur",
+              "at": 1792554083194,
+              "sinceLoadMs": 884.7000000000116,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554083251,
+              "sinceLoadMs": 942.0999999999767,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554083251,
+              "sinceLoadMs": 942.2000000000116,
+              "visibility": "visible"
+            },
+            {
+              "type": "blur",
+              "at": 1792554083252,
+              "sinceLoadMs": 942.8999999999651,
+              "visibility": "visible",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554083254,
+              "sinceLoadMs": 944.7000000000116,
+              "visibility": "visible",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554093464,
+              "sinceLoadMs": 11154.700000000012,
+              "visibility": "hidden"
+            },
+            {
+              "type": "blur",
+              "at": 1792554093465,
+              "sinceLoadMs": 11155.599999999977,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554093566,
+              "sinceLoadMs": 11256.799999999988,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554093567,
+              "sinceLoadMs": 11257.599999999977,
+              "visibility": "visible"
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554093669,
+              "sinceLoadMs": 11359.899999999965,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554093671,
+              "sinceLoadMs": 11361.599999999977,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554093671,
+              "sinceLoadMs": 11361.599999999977,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "status": "resolved"
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554093672,
+              "sinceLoadMs": 11363.099999999977,
+              "visibility": "visible",
+              "label": "control-after-2",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554093674,
+              "sinceLoadMs": 11364.599999999977,
+              "visibility": "visible",
+              "label": "control-after-2",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554093674,
+              "sinceLoadMs": 11364.599999999977,
+              "visibility": "visible",
+              "label": "control-after-2",
+              "status": "resolved"
+            }
+          ]
+        }
+      },
+      {
+        "label": "control-after-3",
+        "status": "resolved",
+        "value": "0x1",
+        "startedAt": "2026-10-21T03:41:33.675Z",
+        "finishedAt": "2026-10-21T03:41:33.676Z",
+        "elapsedMs": 1.400000000023283,
+        "snapshot": {
+          "loadId": "d0f5833b-5b9a-4ff9-a6a5-6f31a3983893",
+          "standalone": false,
+          "href": "http://127.0.0.1:41967/",
+          "navigationType": "navigate",
+          "visibility": "visible",
+          "wasDiscarded": false,
+          "hasRabby": true,
+          "isConnected": true,
+          "waitingCount": 0,
+          "waitingMethods": [],
+          "channel": {
+            "readable": true,
+            "writable": true,
+            "destroyed": false
+          },
+          "events": [
+            {
+              "type": "boot",
+              "at": 1792554082487,
+              "sinceLoadMs": 178,
+              "visibility": "visible"
+            },
+            {
+              "type": "pageshow",
+              "at": 1792554082489,
+              "sinceLoadMs": 179.79999999998836,
+              "visibility": "visible",
+              "persisted": false
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554082589,
+              "sinceLoadMs": 279.5,
+              "visibility": "visible",
+              "label": "control-before",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554082591,
+              "sinceLoadMs": 281.3999999999651,
+              "visibility": "visible",
+              "label": "control-before",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554082591,
+              "sinceLoadMs": 281.3999999999651,
+              "visibility": "visible",
+              "label": "control-before",
+              "status": "resolved"
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554083194,
+              "sinceLoadMs": 884.5,
+              "visibility": "hidden"
+            },
+            {
+              "type": "blur",
+              "at": 1792554083194,
+              "sinceLoadMs": 884.7000000000116,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554083251,
+              "sinceLoadMs": 942.0999999999767,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554083251,
+              "sinceLoadMs": 942.2000000000116,
+              "visibility": "visible"
+            },
+            {
+              "type": "blur",
+              "at": 1792554083252,
+              "sinceLoadMs": 942.8999999999651,
+              "visibility": "visible",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554083254,
+              "sinceLoadMs": 944.7000000000116,
+              "visibility": "visible",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554093464,
+              "sinceLoadMs": 11154.700000000012,
+              "visibility": "hidden"
+            },
+            {
+              "type": "blur",
+              "at": 1792554093465,
+              "sinceLoadMs": 11155.599999999977,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "focus",
+              "at": 1792554093566,
+              "sinceLoadMs": 11256.799999999988,
+              "visibility": "hidden",
+              "persisted": null
+            },
+            {
+              "type": "visibilitychange",
+              "at": 1792554093567,
+              "sinceLoadMs": 11257.599999999977,
+              "visibility": "visible"
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554093669,
+              "sinceLoadMs": 11359.899999999965,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554093671,
+              "sinceLoadMs": 11361.599999999977,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554093671,
+              "sinceLoadMs": 11361.599999999977,
+              "visibility": "visible",
+              "label": "control-after-1",
+              "status": "resolved"
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554093672,
+              "sinceLoadMs": 11363.099999999977,
+              "visibility": "visible",
+              "label": "control-after-2",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554093674,
+              "sinceLoadMs": 11364.599999999977,
+              "visibility": "visible",
+              "label": "control-after-2",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554093674,
+              "sinceLoadMs": 11364.599999999977,
+              "visibility": "visible",
+              "label": "control-after-2",
+              "status": "resolved"
+            },
+            {
+              "type": "requestStarted",
+              "at": 1792554093675,
+              "sinceLoadMs": 11365.399999999965,
+              "visibility": "visible",
+              "label": "control-after-3",
+              "method": "eth_chainId"
+            },
+            {
+              "type": "requestResolved",
+              "at": 1792554093676,
+              "sinceLoadMs": 11366.700000000012,
+              "visibility": "visible",
+              "label": "control-after-3",
+              "value": "0x1"
+            },
+            {
+              "type": "requestFinished",
+              "at": 1792554093676,
+              "sinceLoadMs": 11366.700000000012,
+              "visibility": "visible",
+              "label": "control-after-3",
+              "status": "resolved"
+            }
+          ]
+        }
+      }
+    ],
+    "pageState": {
+      "href": "http://127.0.0.1:41967/",
+      "readyState": "complete",
+      "secure": true,
+      "serviceWorker": true,
+      "title": "Rabby lifecycle probe",
+      "body": "Rabby lifecycle probe\n\nThis local page sends read-only eth_chainId requests. It does not request accounts or signatures.\n\nStarting",
+      "probe": {
+        "loadId": "d0f5833b-5b9a-4ff9-a6a5-6f31a3983893",
+        "standalone": false,
+        "href": "http://127.0.0.1:41967/",
+        "navigationType": "navigate",
+        "visibility": "visible",
+        "wasDiscarded": false,
+        "hasRabby": true,
+        "isConnected": true,
+        "waitingCount": 0,
+        "waitingMethods": [],
+        "channel": {
+          "readable": true,
+          "writable": true,
+          "destroyed": false
+        },
+        "events": [
+          {
+            "type": "boot",
+            "at": 1792554082487,
+            "sinceLoadMs": 178,
+            "visibility": "visible"
+          },
+          {
+            "type": "pageshow",
+            "at": 1792554082489,
+            "sinceLoadMs": 179.79999999998836,
+            "visibility": "visible",
+            "persisted": false
+          }
+        ]
+      }
+    },
+    "before": {
+      "loadId": "d0f5833b-5b9a-4ff9-a6a5-6f31a3983893",
+      "standalone": false,
+      "href": "http://127.0.0.1:41967/",
+      "navigationType": "navigate",
+      "visibility": "visible",
+      "wasDiscarded": false,
+      "hasRabby": true,
+      "isConnected": true,
+      "waitingCount": 0,
+      "waitingMethods": [],
+      "channel": {
+        "readable": true,
+        "writable": true,
+        "destroyed": false
+      },
+      "events": [
+        {
+          "type": "boot",
+          "at": 1792554082487,
+          "sinceLoadMs": 178,
+          "visibility": "visible"
+        },
+        {
+          "type": "pageshow",
+          "at": 1792554082489,
+          "sinceLoadMs": 179.79999999998836,
+          "visibility": "visible",
+          "persisted": false
+        }
+      ]
+    },
+    "retainedDuringWait": true,
+    "afterApplicable": true,
+    "windowBeforeMeasurements": {
+      "windowId": 2097176384,
+      "bounds": {
+        "left": 10,
+        "top": 10,
+        "width": 1050,
+        "height": 1004,
+        "windowState": "normal"
+      }
+    },
+    "restoredVisibility": "visible",
+    "visibleBeforeMeasurementsAt": "2026-10-21T03:41:33.668Z",
+    "beforeMeasurementSnapshot": {
+      "loadId": "d0f5833b-5b9a-4ff9-a6a5-6f31a3983893",
+      "standalone": false,
+      "href": "http://127.0.0.1:41967/",
+      "navigationType": "navigate",
+      "visibility": "visible",
+      "wasDiscarded": false,
+      "hasRabby": true,
+      "isConnected": true,
+      "waitingCount": 0,
+      "waitingMethods": [],
+      "channel": {
+        "readable": true,
+        "writable": true,
+        "destroyed": false
+      },
+      "events": [
+        {
+          "type": "boot",
+          "at": 1792554082487,
+          "sinceLoadMs": 178,
+          "visibility": "visible"
+        },
+        {
+          "type": "pageshow",
+          "at": 1792554082489,
+          "sinceLoadMs": 179.79999999998836,
+          "visibility": "visible",
+          "persisted": false
+        },
+        {
+          "type": "requestStarted",
+          "at": 1792554082589,
+          "sinceLoadMs": 279.5,
+          "visibility": "visible",
+          "label": "control-before",
+          "method": "eth_chainId"
+        },
+        {
+          "type": "requestResolved",
+          "at": 1792554082591,
+          "sinceLoadMs": 281.3999999999651,
+          "visibility": "visible",
+          "label": "control-before",
+          "value": "0x1"
+        },
+        {
+          "type": "requestFinished",
+          "at": 1792554082591,
+          "sinceLoadMs": 281.3999999999651,
+          "visibility": "visible",
+          "label": "control-before",
+          "status": "resolved"
+        },
+        {
+          "type": "visibilitychange",
+          "at": 1792554083194,
+          "sinceLoadMs": 884.5,
+          "visibility": "hidden"
+        },
+        {
+          "type": "blur",
+          "at": 1792554083194,
+          "sinceLoadMs": 884.7000000000116,
+          "visibility": "hidden",
+          "persisted": null
+        },
+        {
+          "type": "focus",
+          "at": 1792554083251,
+          "sinceLoadMs": 942.0999999999767,
+          "visibility": "hidden",
+          "persisted": null
+        },
+        {
+          "type": "visibilitychange",
+          "at": 1792554083251,
+          "sinceLoadMs": 942.2000000000116,
+          "visibility": "visible"
+        },
+        {
+          "type": "blur",
+          "at": 1792554083252,
+          "sinceLoadMs": 942.8999999999651,
+          "visibility": "visible",
+          "persisted": null
+        },
+        {
+          "type": "focus",
+          "at": 1792554083254,
+          "sinceLoadMs": 944.7000000000116,
+          "visibility": "visible",
+          "persisted": null
+        },
+        {
+          "type": "visibilitychange",
+          "at": 1792554093464,
+          "sinceLoadMs": 11154.700000000012,
+          "visibility": "hidden"
+        },
+        {
+          "type": "blur",
+          "at": 1792554093465,
+          "sinceLoadMs": 11155.599999999977,
+          "visibility": "hidden",
+          "persisted": null
+        },
+        {
+          "type": "focus",
+          "at": 1792554093566,
+          "sinceLoadMs": 11256.799999999988,
+          "visibility": "hidden",
+          "persisted": null
+        },
+        {
+          "type": "visibilitychange",
+          "at": 1792554093567,
+          "sinceLoadMs": 11257.599999999977,
+          "visibility": "visible"
+        }
+      ]
+    },
+    "after": {
+      "loadId": "d0f5833b-5b9a-4ff9-a6a5-6f31a3983893",
+      "standalone": false,
+      "href": "http://127.0.0.1:41967/",
+      "navigationType": "navigate",
+      "visibility": "visible",
+      "wasDiscarded": false,
+      "hasRabby": true,
+      "isConnected": true,
+      "waitingCount": 0,
+      "waitingMethods": [],
+      "channel": {
+        "readable": true,
+        "writable": true,
+        "destroyed": false
+      },
+      "events": [
+        {
+          "type": "boot",
+          "at": 1792554082487,
+          "sinceLoadMs": 178,
+          "visibility": "visible"
+        },
+        {
+          "type": "pageshow",
+          "at": 1792554082489,
+          "sinceLoadMs": 179.79999999998836,
+          "visibility": "visible",
+          "persisted": false
+        },
+        {
+          "type": "requestStarted",
+          "at": 1792554082589,
+          "sinceLoadMs": 279.5,
+          "visibility": "visible",
+          "label": "control-before",
+          "method": "eth_chainId"
+        },
+        {
+          "type": "requestResolved",
+          "at": 1792554082591,
+          "sinceLoadMs": 281.3999999999651,
+          "visibility": "visible",
+          "label": "control-before",
+          "value": "0x1"
+        },
+        {
+          "type": "requestFinished",
+          "at": 1792554082591,
+          "sinceLoadMs": 281.3999999999651,
+          "visibility": "visible",
+          "label": "control-before",
+          "status": "resolved"
+        },
+        {
+          "type": "visibilitychange",
+          "at": 1792554083194,
+          "sinceLoadMs": 884.5,
+          "visibility": "hidden"
+        },
+        {
+          "type": "blur",
+          "at": 1792554083194,
+          "sinceLoadMs": 884.7000000000116,
+          "visibility": "hidden",
+          "persisted": null
+        },
+        {
+          "type": "focus",
+          "at": 1792554083251,
+          "sinceLoadMs": 942.0999999999767,
+          "visibility": "hidden",
+          "persisted": null
+        },
+        {
+          "type": "visibilitychange",
+          "at": 1792554083251,
+          "sinceLoadMs": 942.2000000000116,
+          "visibility": "visible"
+        },
+        {
+          "type": "blur",
+          "at": 1792554083252,
+          "sinceLoadMs": 942.8999999999651,
+          "visibility": "visible",
+          "persisted": null
+        },
+        {
+          "type": "focus",
+          "at": 1792554083254,
+          "sinceLoadMs": 944.7000000000116,
+          "visibility": "visible",
+          "persisted": null
+        },
+        {
+          "type": "visibilitychange",
+          "at": 1792554093464,
+          "sinceLoadMs": 11154.700000000012,
+          "visibility": "hidden"
+        },
+        {
+          "type": "blur",
+          "at": 1792554093465,
+          "sinceLoadMs": 11155.599999999977,
+          "visibility": "hidden",
+          "persisted": null
+        },
+        {
+          "type": "focus",
+          "at": 1792554093566,
+          "sinceLoadMs": 11256.799999999988,
+          "visibility": "hidden",
+          "persisted": null
+        },
+        {
+          "type": "visibilitychange",
+          "at": 1792554093567,
+          "sinceLoadMs": 11257.599999999977,
+          "visibility": "visible"
+        },
+        {
+          "type": "requestStarted",
+          "at": 1792554093669,
+          "sinceLoadMs": 11359.899999999965,
+          "visibility": "visible",
+          "label": "control-after-1",
+          "method": "eth_chainId"
+        },
+        {
+          "type": "requestResolved",
+          "at": 1792554093671,
+          "sinceLoadMs": 11361.599999999977,
+          "visibility": "visible",
+          "label": "control-after-1",
+          "value": "0x1"
+        },
+        {
+          "type": "requestFinished",
+          "at": 1792554093671,
+          "sinceLoadMs": 11361.599999999977,
+          "visibility": "visible",
+          "label": "control-after-1",
+          "status": "resolved"
+        },
+        {
+          "type": "requestStarted",
+          "at": 1792554093672,
+          "sinceLoadMs": 11363.099999999977,
+          "visibility": "visible",
+          "label": "control-after-2",
+          "method": "eth_chainId"
+        },
+        {
+          "type": "requestResolved",
+          "at": 1792554093674,
+          "sinceLoadMs": 11364.599999999977,
+          "visibility": "visible",
+          "label": "control-after-2",
+          "value": "0x1"
+        },
+        {
+          "type": "requestFinished",
+          "at": 1792554093674,
+          "sinceLoadMs": 11364.599999999977,
+          "visibility": "visible",
+          "label": "control-after-2",
+          "status": "resolved"
+        },
+        {
+          "type": "requestStarted",
+          "at": 1792554093675,
+          "sinceLoadMs": 11365.399999999965,
+          "visibility": "visible",
+          "label": "control-after-3",
+          "method": "eth_chainId"
+        },
+        {
+          "type": "requestResolved",
+          "at": 1792554093676,
+          "sinceLoadMs": 11366.700000000012,
+          "visibility": "visible",
+          "label": "control-after-3",
+          "value": "0x1"
+        },
+        {
+          "type": "requestFinished",
+          "at": 1792554093676,
+          "sinceLoadMs": 11366.700000000012,
+          "visibility": "visible",
+          "label": "control-after-3",
+          "status": "resolved"
+        }
+      ]
+    },
+    "sameDocument": true,
+    "status": "responses-settled-without-reload"
+  },
+  "httpRequests": [
+    {
+      "at": "2026-10-21T03:41:22.337Z",
+      "url": "/"
+    },
+    {
+      "at": "2026-10-21T03:41:22.493Z",
+      "url": "/sw.js"
+    },
+    {
+      "at": "2026-10-21T03:41:22.516Z",
+      "url": "/manifest.webmanifest"
+    },
+    {
+      "at": "2026-10-21T03:41:22.521Z",
+      "url": "/favicon.ico"
+    },
+    {
+      "at": "2026-10-21T03:41:22.530Z",
+      "url": "/icon-192.png"
+    },
+    {
+      "at": "2026-10-21T03:41:22.617Z",
+      "url": "/"
+    },
+    {
+      "at": "2026-10-21T03:41:22.781Z",
+      "url": "/favicon.ico"
+    },
+    {
+      "at": "2026-10-21T03:41:22.782Z",
+      "url": "/manifest.webmanifest"
+    },
+    {
+      "at": "2026-10-21T03:41:22.786Z",
+      "url": "/icon-192.png"
+    },
+    {
+      "at": "2026-10-21T03:41:22.790Z",
+      "url": "/icon-192.png"
+    },
+    {
+      "at": "2026-10-21T03:41:22.792Z",
+      "url": "/icon-512.png"
+    },
+    {
+      "at": "2026-10-21T03:41:23.189Z",
+      "url": "/?surface=pwa"
+    },
+    {
+      "at": "2026-10-21T03:41:23.230Z",
+      "url": "/manifest.webmanifest"
+    },
+    {
+      "at": "2026-10-21T03:41:23.233Z",
+      "url": "/favicon.ico"
+    },
+    {
+      "at": "2026-10-21T03:41:23.243Z",
+      "url": "/icon-192.png"
+    },
+    {
+      "at": "2026-10-21T03:41:26.090Z",
+      "url": "/sw.js"
+    }
+  ],
+  "installability": {
+    "installabilityErrors": []
+  },
+  "installAttempted": true,
+  "pwaLaunch": {
+    "targetId": "6D3094A9E9B266865C03931F30CAC807"
+  },
+  "pwaPageTarget": {
+    "targetId": "23C6E5DD4F160487B469FB199DF53931",
+    "type": "page",
+    "title": "127.0.0.1:41967/?surface=pwa",
+    "url": "http://127.0.0.1:41967/?surface=pwa",
+    "attached": false,
+    "canAccessOpener": false,
+    "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+  },
+  "before": {
+    "loadId": "44750524-b0ec-469a-9555-ce748701bea2",
+    "standalone": true,
+    "href": "http://127.0.0.1:41967/?surface=pwa",
+    "navigationType": "navigate",
+    "visibility": "visible",
+    "wasDiscarded": false,
+    "hasRabby": true,
+    "isConnected": true,
+    "waitingCount": 4,
+    "waitingMethods": [
+      "tabCheckin",
+      "getProviderState",
+      "rabby:getProviderConfig",
+      "tabCheckin"
+    ],
+    "channel": {
+      "readable": true,
+      "writable": true,
+      "destroyed": false
+    },
+    "events": [
+      {
+        "type": "boot",
+        "at": 1792554083221,
+        "sinceLoadMs": 42.5,
+        "visibility": "visible"
+      },
+      {
+        "type": "pageshow",
+        "at": 1792554083221,
+        "sinceLoadMs": 43.20000000001164,
+        "visibility": "visible",
+        "persisted": false
+      }
+    ]
+  },
+  "extensionWorkersBeforeWait": [
+    {
+      "targetId": "5A8A45A479C3824919476B6FE12FC45A",
+      "type": "service_worker",
+      "title": "Service Worker chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/sw.js",
+      "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/sw.js",
+      "attached": false,
+      "canAccessOpener": false,
+      "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+    }
+  ],
+  "windowBefore": {
+    "windowId": 2097176390,
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1050,
+      "height": 1004,
+      "windowState": "normal"
+    }
+  },
+  "windowMinimized": {
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1050,
+      "height": 1004,
+      "windowState": "minimized"
+    }
+  },
+  "minimizeConfirmed": true,
+  "detachedAt": "2026-10-21T03:41:23.348Z",
+  "stoppedWorkers": [
+    {
+      "target": {
+        "targetId": "5A8A45A479C3824919476B6FE12FC45A",
+        "type": "service_worker",
+        "title": "Service Worker chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/sw.js",
+        "url": "chrome-extension://hhilkglkhokjdanjckpcmfjobhnafpdl/sw.js",
+        "attached": false,
+        "canAccessOpener": false,
+        "browserContextId": "878F6FECED77F5165D59F7E9A153C273"
+      },
+      "closeResult": {
+        "success": true
+      },
+      "targetDestroyedObserved": true
+    }
+  ],
+  "waitStartedAt": "2026-10-21T03:41:23.450Z",
+  "actualDetachedWaitMs": 10001.029153999998,
+  "waitFinishedAt": "2026-10-21T03:41:33.452Z",
+  "windowRestoredBeforeAttachment": {
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1050,
+      "height": 1004,
+      "windowState": "normal"
+    }
+  },
+  "nativeRestoredAt": "2026-10-21T03:41:33.464Z",
+  "reattachedAt": "2026-10-21T03:41:33.466Z",
+  "windowRestored": {
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1050,
+      "height": 1004,
+      "windowState": "normal"
+    }
+  },
+  "restoredVisibility": "visible",
+  "after": {
+    "loadId": "44750524-b0ec-469a-9555-ce748701bea2",
+    "standalone": true,
+    "href": "http://127.0.0.1:41967/?surface=pwa",
+    "navigationType": "navigate",
+    "visibility": "visible",
+    "wasDiscarded": false,
+    "hasRabby": true,
+    "isConnected": true,
+    "waitingCount": 0,
+    "waitingMethods": [],
+    "channel": {
+      "readable": true,
+      "writable": true,
+      "destroyed": false
+    },
+    "events": [
+      {
+        "type": "boot",
+        "at": 1792554083221,
+        "sinceLoadMs": 42.5,
+        "visibility": "visible"
+      },
+      {
+        "type": "pageshow",
+        "at": 1792554083221,
+        "sinceLoadMs": 43.20000000001164,
+        "visibility": "visible",
+        "persisted": false
+      },
+      {
+        "type": "requestStarted",
+        "at": 1792554083233,
+        "sinceLoadMs": 54.90000000002328,
+        "visibility": "visible",
+        "label": "before",
+        "method": "eth_chainId"
+      },
+      {
+        "type": "requestResolved",
+        "at": 1792554083237,
+        "sinceLoadMs": 58.800000000046566,
+        "visibility": "visible",
+        "label": "before",
+        "value": "0x1"
+      },
+      {
+        "type": "requestFinished",
+        "at": 1792554083237,
+        "sinceLoadMs": 58.800000000046566,
+        "visibility": "visible",
+        "label": "before",
+        "status": "resolved"
+      },
+      {
+        "type": "blur",
+        "at": 1792554083249,
+        "sinceLoadMs": 71.20000000001164,
+        "visibility": "visible",
+        "persisted": null
+      },
+      {
+        "type": "focus",
+        "at": 1792554083249,
+        "sinceLoadMs": 71.20000000001164,
+        "visibility": "visible",
+        "persisted": null
+      },
+      {
+        "type": "visibilitychange",
+        "at": 1792554083251,
+        "sinceLoadMs": 73,
+        "visibility": "hidden"
+      },
+      {
+        "type": "blur",
+        "at": 1792554083257,
+        "sinceLoadMs": 78.40000000002328,
+        "visibility": "hidden",
+        "persisted": null
+      },
+      {
+        "type": "focus",
+        "at": 1792554083257,
+        "sinceLoadMs": 78.5,
+        "visibility": "hidden",
+        "persisted": null
+      },
+      {
+        "type": "blur",
+        "at": 1792554083257,
+        "sinceLoadMs": 78.5,
+        "visibility": "hidden",
+        "persisted": null
+      },
+      {
+        "type": "visibilitychange",
+        "at": 1792554093454,
+        "sinceLoadMs": 10275.800000000047,
+        "visibility": "visible"
+      },
+      {
+        "type": "focus",
+        "at": 1792554093465,
+        "sinceLoadMs": 10287.100000000035,
+        "visibility": "visible",
+        "persisted": null
+      },
+      {
+        "type": "requestStarted",
+        "at": 1792554093472,
+        "sinceLoadMs": 10294,
+        "visibility": "visible",
+        "label": "after-1",
+        "method": "eth_chainId"
+      },
+      {
+        "type": "requestResolved",
+        "at": 1792554093474,
+        "sinceLoadMs": 10295.700000000012,
+        "visibility": "visible",
+        "label": "after-1",
+        "value": "0x1"
+      },
+      {
+        "type": "requestFinished",
+        "at": 1792554093474,
+        "sinceLoadMs": 10295.700000000012,
+        "visibility": "visible",
+        "label": "after-1",
+        "status": "resolved"
+      },
+      {
+        "type": "requestStarted",
+        "at": 1792554093475,
+        "sinceLoadMs": 10297,
+        "visibility": "visible",
+        "label": "after-2",
+        "method": "eth_chainId"
+      },
+      {
+        "type": "requestResolved",
+        "at": 1792554093477,
+        "sinceLoadMs": 10298.5,
+        "visibility": "visible",
+        "label": "after-2",
+        "value": "0x1"
+      },
+      {
+        "type": "requestFinished",
+        "at": 1792554093477,
+        "sinceLoadMs": 10298.5,
+        "visibility": "visible",
+        "label": "after-2",
+        "status": "resolved"
+      },
+      {
+        "type": "requestStarted",
+        "at": 1792554093477,
+        "sinceLoadMs": 10299.100000000035,
+        "visibility": "visible",
+        "label": "after-3",
+        "method": "eth_chainId"
+      },
+      {
+        "type": "requestResolved",
+        "at": 1792554093478,
+        "sinceLoadMs": 10300.300000000047,
+        "visibility": "visible",
+        "label": "after-3",
+        "value": "0x1"
+      },
+      {
+        "type": "requestFinished",
+        "at": 1792554093478,
+        "sinceLoadMs": 10300.300000000047,
+        "visibility": "visible",
+        "label": "after-3",
+        "status": "resolved"
+      }
+    ]
+  },
+  "sameDocument": true,
+  "status": "responses-settled-without-reload",
+  "screenshot": "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/linux/worker-candidate.json.png",
+  "afterObservationInspection": {
+    "at": "2026-10-21T03:41:33.976Z",
+    "windows": [
+      {
+        "id": 2097176384,
+        "type": "normal",
+        "state": "normal",
+        "focused": true,
+        "tabs": [
+          {
+            "id": 2097176385,
+            "windowId": 2097176384,
+            "active": false,
+            "discarded": false,
+            "url": null
+          },
+          {
+            "id": 2097176387,
+            "windowId": 2097176384,
+            "active": false,
+            "discarded": false,
+            "url": null
+          },
+          {
+            "id": 2097176388,
+            "windowId": 2097176384,
+            "active": false,
+            "discarded": false,
+            "url": "http://127.0.0.1:41967/"
+          },
+          {
+            "id": 2097176392,
+            "windowId": 2097176384,
+            "active": true,
+            "discarded": false,
+            "url": null
+          }
+        ]
+      },
+      {
+        "id": 2097176390,
+        "type": "app",
+        "state": "normal",
+        "focused": false,
+        "tabs": [
+          {
+            "id": 2097176391,
+            "windowId": 2097176390,
+            "active": true,
+            "discarded": false,
+            "url": "http://127.0.0.1:41967/?surface=pwa"
+          }
+        ]
+      }
+    ],
+    "tabsAllUrls": [
+      {
+        "id": 2097176388,
+        "windowId": 2097176384,
+        "active": false,
+        "discarded": false,
+        "url": "http://127.0.0.1:41967/"
+      },
+      {
+        "id": 2097176391,
+        "windowId": 2097176390,
+        "active": true,
+        "discarded": false,
+        "url": "http://127.0.0.1:41967/?surface=pwa"
+      }
+    ],
+    "tabsNormalWindows": [
+      {
+        "id": 2097176388,
+        "windowId": 2097176384,
+        "active": false,
+        "discarded": false,
+        "url": "http://127.0.0.1:41967/"
+      }
+    ],
+    "pwaTabIdsAllUrls": [
+      2097176391
+    ],
+    "pwaTabIdsNormalWindows": []
+  },
+  "finishedAt": "2026-10-21T03:41:34.353Z"
+}

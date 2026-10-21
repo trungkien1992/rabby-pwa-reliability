@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "passed": false,
+  "checkedAt": "2026-10-21T03:41:37.271Z",
+  "checks": 11,
+  "verifierSha256": "3743f77a252562c73121ba3d1272d5bf7b402ed83c9c10ce2b830f3e9a952397",
+  "inputs": [
+    {
+      "file": "worker-baseline.json",
+      "sha256": "b180ae299d1dacbae12dfc83aa7910b2879b395e21cff72504b4fe6898df9330"
+    },
+    {
+      "file": "worker-candidate.json",
+      "sha256": "ddaafbf1806a5b51a7dae905aad3ae416781f856dbf2848beb8ccf0333e458f7"
+    }
+  ],
+  "error": "baseline: detached wait did not reach the configured duration"
+}

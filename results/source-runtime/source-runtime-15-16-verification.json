@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "passed": false,
+  "checkedAt": "2026-10-21T03:40:26.253Z",
+  "checks": 47,
+  "verifierSha256": "3743f77a252562c73121ba3d1272d5bf7b402ed83c9c10ce2b830f3e9a952397",
+  "inputs": [
+    {
+      "file": "source-worker-baseline-15.json",
+      "sha256": "fb066fd36b9ede7c3a582473978f0995a84bd6a7c8bf531151f969386656f38a"
+    },
+    {
+      "file": "source-worker-candidate-16.json",
+      "sha256": "3381c37332c87b595b642c7243984f6c03eba8407ee1ce4eb8e8ee3fb5c9681e"
+    }
+  ],
+  "error": "baseline: regular control did not resolve the matching chain ID cleanly"
+}

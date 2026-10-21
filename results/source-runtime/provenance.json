@@ -1,0 +1,43 @@
+{
+  "recordedAt": "2026-10-21T03:40:48.425187+00:00",
+  "redaction": "Only the absolute local workspace prefix is replaced with <workspace>. Recorded method names, outcomes and timing are unchanged.",
+  "scope": "Source-built-background hybrid observations; neither source pair passes the strict edited-release comparison verifier. These are supplemental observations, not a full extension build or proof of the original natural Linux trigger.",
+  "records": {
+    "source-worker-baseline-13.json": {
+      "originalSha256": "b1f244c6c6b8cf8fc0738d1b74742470267be104fc987e9d12607638754e1694",
+      "publishedSha256": "a8370c18ad94b4cbfb21ce305ed1f34990b9c95df3e935949e90bebf3141e020",
+      "originalBytes": 56033,
+      "publishedBytes": 55802
+    },
+    "source-worker-candidate-14.json": {
+      "originalSha256": "f45a0a0f7a8ebb502964e78a1913dbba564408ab44469cbe9e4ce3d81666ccee",
+      "publishedSha256": "49a9e1148d5c6cfbd519135514c55c5fd5ad9c1013063d5fdcedaa9cbd33b82e",
+      "originalBytes": 55796,
+      "publishedBytes": 55565
+    },
+    "source-background-runtime-verification.json": {
+      "originalSha256": "b8df083de2fdea494686193798e167a764500b99b7eec830c46306e0a3493938",
+      "publishedSha256": "b8df083de2fdea494686193798e167a764500b99b7eec830c46306e0a3493938",
+      "originalBytes": 588,
+      "publishedBytes": 588
+    },
+    "source-worker-baseline-15.json": {
+      "originalSha256": "fb066fd36b9ede7c3a582473978f0995a84bd6a7c8bf531151f969386656f38a",
+      "publishedSha256": "dfc076101ad23c065d8d9a33bbef7ee0bbd1d2c3d1657b60312262da7bda3ad9",
+      "originalBytes": 76526,
+      "publishedBytes": 76295
+    },
+    "source-worker-candidate-16.json": {
+      "originalSha256": "3381c37332c87b595b642c7243984f6c03eba8407ee1ce4eb8e8ee3fb5c9681e",
+      "publishedSha256": "90b01d4aadaa889c4d4bb5ce650483195149119e3740f5c7d897ccb01e6dbe4b",
+      "originalBytes": 76144,
+      "publishedBytes": 75913
+    },
+    "source-runtime-15-16-verification.json": {
+      "originalSha256": "089762083f17776462804106f08dd81175cb8481aefe64876ba239f3fa6cc42d",
+      "publishedSha256": "089762083f17776462804106f08dd81175cb8481aefe64876ba239f3fa6cc42d",
+      "originalBytes": 577,
+      "publishedBytes": 577
+    }
+  }
+}
