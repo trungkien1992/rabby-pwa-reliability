@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "passed": true,
+  "checkedAt": "2026-10-21T11:17:11.190Z",
+  "checks": 405,
+  "verifierSha256": "3743f77a252562c73121ba3d1272d5bf7b402ed83c9c10ce2b830f3e9a952397",
+  "inputs": [
+    {
+      "file": "pair-1-baseline.json",
+      "sha256": "78023303e953ca00e30d53e7ce00da594674e4c4838442ae5ee99cd3c96394e9"
+    },
+    {
+      "file": "pair-1-candidate.json",
+      "sha256": "040e30ea09229de2e7e9df3d8789dbb73052a0b28155079f039ec6b8292d1374"
+    }
+  ],
+  "baseline": {
+    "status": "request-failure-observed",
+    "platform": "linux",
+    "browser": "Chrome/151.0.7922.34",
+    "extensionVersion": "0.94.12",
+    "chainId": "0x1",
+    "afterRequestMs": [
+      5000.4,
+      5000.4,
+      5000.4
+    ],
+    "afterRequestOutcomes": [
+      "deadline",
+      "deadline",
+      "deadline"
+    ],
+    "afterWaitingCounts": [
+      1,
+      2,
+      3
+    ],
+    "controlAfterRequestMs": [
+      2,
+      1.3,
+      1.2
+    ],
+    "workerDestroyed": "6C936AB349401A221B2D618568CEE227",
+    "replacementWorker": "FA221C91CADFE9B6E74E1E9558E240D1",
+    "replacementCreatedAt": "2026-10-21T11:16:21.997Z",
+    "replacementRelativeToPwaReattachment": "before",
+    "replacementUpperBound": {
+      "at": "2026-10-21T11:16:42.689Z",
+      "source": "absolute-final-PWA-request-finishedAt"
+    },
+    "measurementEndBound": {
+      "at": "2026-10-21T11:16:42.689Z",
+      "source": "absolute-final-PWA-request-finishedAt"
+    },
+    "destructionTimingSource": "explicit-destruction-before-waitStartedAt",
+    "destroyedToPwaReattachmentMs": 10103,
+    "explicitRequestTimestamps": true,
+    "workerDebuggerAttachments": 0,
+    "standalone": true,
+    "sameDocument": true,
+    "pwaWindowType": "app",
+    "pwaIncludedInAllUrlQuery": true,
+    "pwaExcludedFromNormalWindowQuery": true,
+    "nativeMinimizeConfirmed": true,
+    "pwaUninstallAcknowledged": true,
+    "browserChildExitCode": 0
+  },
+  "candidate": {
+    "status": "responses-settled-without-reload",
+    "platform": "linux",
+    "browser": "Chrome/151.0.7922.34",
+    "extensionVersion": "0.94.12",
+    "chainId": "0x1",
+    "afterRequestMs": [
+      2.2,
+      4.2,
+      0.8
+    ],
+    "afterRequestOutcomes": [
+      "resolved",
+      "resolved",
+      "resolved"
+    ],
+    "afterWaitingCounts": [
+      0,
+      0,
+      0
+    ],
+    "controlAfterRequestMs": [
+      1.6,
+      1.1,
+      1
+    ],
+    "workerDestroyed": "6EBFF56FAA4D79FD2437F871ACD7069B",
+    "replacementWorker": "F7C7C95F8DF86236E5B814E802A40ACA",
+    "replacementCreatedAt": "2026-10-21T11:17:02.461Z",
+    "replacementRelativeToPwaReattachment": "before",
+    "replacementUpperBound": {
+      "at": "2026-10-21T11:17:07.598Z",
+      "source": "first-successful-PWA-requestResolved-event"
+    },
+    "measurementEndBound": {
+      "at": "2026-10-21T11:17:07.604Z",
+      "source": "absolute-final-PWA-request-finishedAt"
+    },
+    "destructionTimingSource": "explicit-destruction-before-waitStartedAt",
+    "destroyedToPwaReattachmentMs": 10103,
+    "explicitRequestTimestamps": true,
+    "workerDebuggerAttachments": 0,
+    "standalone": true,
+    "sameDocument": true,
+    "pwaWindowType": "app",
+    "pwaIncludedInAllUrlQuery": true,
+    "pwaExcludedFromNormalWindowQuery": true,
+    "nativeMinimizeConfirmed": true,
+    "pwaUninstallAcknowledged": true,
+    "browserChildExitCode": 0
+  },
+  "scope": "One paired Linux standalone-PWA worker-stop experiment. Native minimization was confirmed; worker termination was still forced. Verifies recorded outcomes only; no natural Linux minimize/resume or production performance claim."
+}

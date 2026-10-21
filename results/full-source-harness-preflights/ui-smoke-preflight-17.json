@@ -1,0 +1,671 @@
+{
+  "schema": 1,
+  "startedAt": "2026-10-21T10:53:26.930Z",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "node": "v24.19.0",
+  "mode": "worker-stop",
+  "waitMs": 10000,
+  "requestTimeoutMs": 5000,
+  "initialSetupTimeoutMs": 5000,
+  "uiSmoke": {
+    "requested": true,
+    "passed": false,
+    "startedAt": "2026-10-21T10:53:36.368Z",
+    "timeoutMs": 30000,
+    "samples": [
+      {
+        "at": "2026-10-21T10:53:37.035Z",
+        "href": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/",
+        "hash": "#/",
+        "readyState": "loading",
+        "visibility": "visible",
+        "title": "",
+        "dashboardVisible": false,
+        "watchAddressVisible": false,
+        "enabledPanelsVisible": 0,
+        "errorHeadings": [],
+        "elapsedMs": 41.91191700000127
+      },
+      {
+        "at": "2026-10-21T10:53:37.176Z",
+        "href": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/",
+        "hash": "#/",
+        "readyState": "interactive",
+        "visibility": "visible",
+        "title": "Rabby Wallet",
+        "dashboardVisible": false,
+        "watchAddressVisible": false,
+        "enabledPanelsVisible": 0,
+        "errorHeadings": [],
+        "elapsedMs": 145.4593330000007
+      },
+      {
+        "at": "2026-10-21T10:53:37.279Z",
+        "href": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/",
+        "hash": "#/",
+        "readyState": "interactive",
+        "visibility": "visible",
+        "title": "Rabby Wallet",
+        "dashboardVisible": false,
+        "watchAddressVisible": false,
+        "enabledPanelsVisible": 0,
+        "errorHeadings": [],
+        "elapsedMs": 247.08645800000158
+      },
+      {
+        "at": "2026-10-21T10:53:37.604Z",
+        "href": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/",
+        "hash": "#/",
+        "readyState": "interactive",
+        "visibility": "visible",
+        "title": "Rabby Wallet",
+        "dashboardVisible": false,
+        "watchAddressVisible": false,
+        "enabledPanelsVisible": 0,
+        "errorHeadings": [],
+        "elapsedMs": 572.3305
+      },
+      {
+        "at": "2026-10-21T10:53:37.742Z",
+        "href": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/dashboard",
+        "hash": "#/dashboard",
+        "readyState": "complete",
+        "visibility": "visible",
+        "title": "Rabby Wallet",
+        "dashboardVisible": true,
+        "watchAddressVisible": true,
+        "enabledPanelsVisible": 12,
+        "errorHeadings": [],
+        "elapsedMs": 712.4712920000002
+      }
+    ],
+    "uncaughtExceptions": [],
+    "consoleErrors": [],
+    "closedUiTargets": [
+      {
+        "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+        "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/dashboard",
+        "closeResult": {
+          "success": true
+        }
+      },
+      {
+        "targetId": "807FF6FFD6848D70789468DC98BE3204",
+        "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/new-user/guide",
+        "closeResult": {
+          "success": true
+        }
+      }
+    ],
+    "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+    "finalSnapshot": {
+      "at": "2026-10-21T10:53:37.770Z",
+      "href": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/dashboard",
+      "hash": "#/dashboard",
+      "readyState": "complete",
+      "visibility": "visible",
+      "title": "Rabby Wallet",
+      "dashboardVisible": true,
+      "watchAddressVisible": true,
+      "enabledPanelsVisible": 12,
+      "errorHeadings": [],
+      "bodyText": "Watch-only 1\n0x000000...000001\n$0.00\nSwap\nSend\nBridge\nReceive\nTransactions\nApprovals\nPerps\n$0.00\nStaking\nMobile Sync\nDapps\nConvert Dust\nRabby Points\nNo Dapp found\n0% Swap Fee For\n\nSupport 30+ Stablecoins on 40+ Chains\n\nGo to Swap"
+    },
+    "renderedAt": "2026-10-21T10:53:37.745Z",
+    "dom": "<workspace>/outputs/rabby-repro/ui-smoke-preflight-17.json.ui-smoke.html",
+    "screenshot": "<workspace>/outputs/rabby-repro/ui-smoke-preflight-17.json.ui-smoke.png",
+    "remainingUiTargets": [
+      {
+        "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+        "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/dashboard"
+      },
+      {
+        "targetId": "807FF6FFD6848D70789468DC98BE3204",
+        "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/new-user/guide"
+      }
+    ],
+    "cleanupError": "Error: Wallet UI page remained open before lifecycle measurement",
+    "finishedAt": "2026-10-21T10:53:40.887Z"
+  },
+  "observationTimingSchema": 1,
+  "walletState": "isolated watch-only account 0x0000000000000000000000000000000000000001; no signing key",
+  "proofScope": "Controlled browser lifecycle fault; not a natural Linux PWA reproduction.",
+  "browserExecutable": "<workspace>/work/rabby-browser-cache/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+  "extensionPath": "<workspace>/work/rabby-repro/release-candidate",
+  "observations": [],
+  "browserEvents": [
+    {
+      "at": "2026-10-21T10:53:30.713Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "8CCA67F90A52E111DF71E7065DB186C5",
+          "type": "browser_ui",
+          "title": "",
+          "url": "chrome://webui-toolbar.top-chrome/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:30.725Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "92F50C4BB7AF1BC72365A89A3CEDEA6B",
+          "type": "page",
+          "title": "",
+          "url": "about:blank",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:30.883Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "8CCA67F90A52E111DF71E7065DB186C5",
+          "type": "browser_ui",
+          "title": "chrome://webui-toolbar.top-chrome",
+          "url": "chrome://webui-toolbar.top-chrome/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:30.907Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "92F50C4BB7AF1BC72365A89A3CEDEA6B",
+          "type": "page",
+          "title": "about:blank",
+          "url": "about:blank",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.027Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "07C2B27C643DA1DDA7ED04C094924748",
+          "type": "service_worker",
+          "title": "Service Worker chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/thunk.js",
+          "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/thunk.js",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.246Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "C8DD7E2F99957B1D671C6AA791DD0142",
+          "type": "service_worker",
+          "title": "Service Worker chrome-extension://admccjkmockfdflocgggjfgdacdodkdf/background.js",
+          "url": "chrome-extension://admccjkmockfdflocgggjfgdacdodkdf/background.js",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.258Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "F45316152A25BE01036162E3CA903188",
+          "type": "service_worker",
+          "title": "Service Worker chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/sw.js",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/sw.js",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.484Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "8A0783B59E5AFA9C5632DF4385771EC6",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/reliability-probe.html",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.589Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "8A0783B59E5AFA9C5632DF4385771EC6",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/reliability-probe.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.589Z",
+      "method": "Target.attachedToTarget",
+      "params": {
+        "sessionId": "7EA4C820FEC5EA94AECB44B4DC1A0687",
+        "targetInfo": {
+          "targetId": "8A0783B59E5AFA9C5632DF4385771EC6",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/reliability-probe.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        },
+        "waitingForDebugger": false
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.614Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "8A0783B59E5AFA9C5632DF4385771EC6",
+          "type": "page",
+          "title": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/reliability-probe.html",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/reliability-probe.html",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.857Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "B095AF3854C06F1BDD16FBA065F160C3",
+          "type": "other",
+          "title": "",
+          "url": "",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:31.928Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "B095AF3854C06F1BDD16FBA065F160C3",
+          "type": "background_page",
+          "title": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/offscreen.html",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/offscreen.html",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:34.158Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "807FF6FFD6848D70789468DC98BE3204",
+          "type": "page",
+          "title": "",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/new-user/guide",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:34.240Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "807FF6FFD6848D70789468DC98BE3204",
+          "type": "page",
+          "title": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/new-user/guide",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/new-user/guide",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:36.325Z",
+      "method": "Target.detachedFromTarget",
+      "params": {
+        "sessionId": "7EA4C820FEC5EA94AECB44B4DC1A0687",
+        "targetId": "8A0783B59E5AFA9C5632DF4385771EC6"
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:36.339Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "8A0783B59E5AFA9C5632DF4385771EC6",
+          "type": "page",
+          "title": "Local Rabby test setup",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/reliability-probe.html",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:36.428Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "8A0783B59E5AFA9C5632DF4385771EC6"
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:36.538Z",
+      "method": "Target.targetCreated",
+      "params": {
+        "targetInfo": {
+          "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+          "type": "page",
+          "title": "",
+          "url": "about:blank",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:36.850Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+          "type": "page",
+          "title": "about:blank",
+          "url": "about:blank",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:36.858Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+          "type": "page",
+          "title": "about:blank",
+          "url": "about:blank",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:36.858Z",
+      "method": "Target.attachedToTarget",
+      "params": {
+        "sessionId": "DE439D111F625F9973B8EBA5FFA54745",
+        "targetInfo": {
+          "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+          "type": "page",
+          "title": "about:blank",
+          "url": "about:blank",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        },
+        "waitingForDebugger": false
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:37.010Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+          "type": "page",
+          "title": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:37.661Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+          "type": "page",
+          "title": "Rabby Wallet",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/dashboard",
+          "attached": true,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:40.878Z",
+      "method": "Target.detachedFromTarget",
+      "params": {
+        "sessionId": "DE439D111F625F9973B8EBA5FFA54745",
+        "targetId": "255C6E1402090AB0A5E2B5DE1C21668D"
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:40.879Z",
+      "method": "Target.targetInfoChanged",
+      "params": {
+        "targetInfo": {
+          "targetId": "255C6E1402090AB0A5E2B5DE1C21668D",
+          "type": "page",
+          "title": "Rabby Wallet",
+          "url": "chrome-extension://inijliboknpkpfedchdcjoojjcchcohn/index.html#/dashboard",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "1652ABB1397FE1141049243B6D50C119"
+        }
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:40.901Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "255C6E1402090AB0A5E2B5DE1C21668D"
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:40.940Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "807FF6FFD6848D70789468DC98BE3204"
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:40.963Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "92F50C4BB7AF1BC72365A89A3CEDEA6B"
+      }
+    },
+    {
+      "at": "2026-10-21T10:53:40.981Z",
+      "method": "Target.targetDestroyed",
+      "params": {
+        "targetId": "8CCA67F90A52E111DF71E7065DB186C5"
+      }
+    }
+  ],
+  "cleanup": {
+    "profileIsolated": true,
+    "browserCloseRequested": true,
+    "childExit": {
+      "at": "2026-10-21T10:53:41.522Z",
+      "code": 0,
+      "signal": null
+    },
+    "childExitObserved": true
+  },
+  "extensionManifest": {
+    "manifest_version": 3,
+    "name": "__MSG_appName__",
+    "short_name": "__MSG_appName__",
+    "version": "0.94.12",
+    "default_locale": "en",
+    "description": "__MSG_appDescription__",
+    "icons": {
+      "16": "images/icon-16.png",
+      "19": "images/icon-19.png",
+      "32": "images/icon-32.png",
+      "38": "images/icon-38.png",
+      "48": "images/icon-48.png",
+      "64": "images/icon-64.png",
+      "128": "images/icon-128.png",
+      "512": "images/icon-512.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "images/icon-16.png",
+        "19": "images/icon-19.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      },
+      "default_title": "Rabby",
+      "default_popup": "popup.html"
+    },
+    "author": "https://rabby.io/",
+    "background": {
+      "service_worker": "sw.js"
+    },
+    "content_scripts": [
+      {
+        "all_frames": true,
+        "js": [
+          "webextension-polyfill.js",
+          "content-script.js"
+        ],
+        "matches": [
+          "file://*/*",
+          "http://*/*",
+          "https://*/*"
+        ],
+        "run_at": "document_start"
+      },
+      {
+        "matches": [
+          "*://connect.trezor.io/*/popup.html*",
+          "https://connect.onekey.so/popup.html"
+        ],
+        "js": [
+          "vendor/trezor/trezor-content-script.js"
+        ]
+      }
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; frame-ancestors 'none'"
+    },
+    "permissions": [
+      "scripting",
+      "storage",
+      "unlimitedStorage",
+      "alarms",
+      "activeTab",
+      "notifications",
+      "offscreen",
+      "contextMenus",
+      "webRequest"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "pageProvider.js"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ],
+    "externally_connectable": {
+      "ids": []
+    }
+  },
+  "origin": "http://127.0.0.1:60469",
+  "manifestId": "http://127.0.0.1:60469/",
+  "profile": "<workspace>/work/rabby-pwa-reliability/scripts/profile/run-3lkEuK",
+  "browserFlags": [
+    "--user-data-dir=<workspace>/work/rabby-pwa-reliability/scripts/profile/run-3lkEuK",
+    "--remote-debugging-pipe",
+    "--enable-devtools-pwa-handler",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--disable-extensions-except=<workspace>/work/rabby-repro/release-candidate",
+    "--load-extension=<workspace>/work/rabby-repro/release-candidate",
+    "about:blank"
+  ],
+  "browserVersion": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/151.0.7922.34",
+    "revision": "@782af9cb30a53f54487e5d2e44738645a8ec457c",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+    "jsVersion": "15.1.206.8"
+  },
+  "extensionId": "inijliboknpkpfedchdcjoojjcchcohn",
+  "providerRegisteredBeforeNavigation": true,
+  "watchOnlySetup": {
+    "alreadyBooted": false,
+    "accounts": [
+      {
+        "address": "0x0000000000000000000000000000000000000001",
+        "type": "Watch Address",
+        "brandName": "Watch Address"
+      }
+    ]
+  },
+  "status": "harness-error",
+  "error": "Error: Wallet UI page remained open before lifecycle measurement\n    at file://<workspace>/work/rabby-pwa-reliability/scripts/probe.mjs:372:52\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+  "finishedAt": "2026-10-21T10:53:41.523Z"
+}

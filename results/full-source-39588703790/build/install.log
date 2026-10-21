@@ -1,0 +1,538 @@
+[94m➤[39m YN0000: · Yarn 4.14.1
+[94m➤[39m [90mYN0000[39m: ┌ Resolution step
+::group::Resolution step
+::endgroup::
+[94m➤[39m [90mYN0000[39m: └ Completed
+[94m➤[39m [90mYN0000[39m: ┌ Post-resolution validation
+::group::Post-resolution validation
+[93m➤[39m YN0060: │ [38;5;166m@zxing/[39m[38;5;173mlibrary[39m is listed by your project with version [38;5;111m0.8.0[39m ([38;5;111mp5f322a[39m), which doesn't satisfy what [38;5;166m@zxing/[39m[38;5;173mbrowser[39m requests ([38;5;37m~0.18.5[39m).
+[93m➤[39m YN0060: │ [38;5;173meslint[39m is listed by your project with version [38;5;111m8.57.0[39m ([38;5;111mp98651c[39m), which doesn't satisfy what [38;5;173meslint-plugin-react[39m and other dependencies request ([91mbut they have non-overlapping ranges![39m).
+[93m➤[39m YN0060: │ [38;5;173mreact[39m is listed by your project with version [38;5;111m18.3.1[39m ([38;5;111mpbca6e7[39m), which doesn't satisfy what [38;5;173mreact-use[39m and other dependencies request ([91mbut they have non-overlapping ranges![39m).
+[93m➤[39m YN0060: │ [38;5;173mreact-dom[39m is listed by your project with version [38;5;111m18.3.1[39m ([38;5;111mp885b0a[39m), which doesn't satisfy what [38;5;173mreact-use[39m and other dependencies request ([38;5;37m^16.11.0 || ^17.0.0[39m).
+[93m➤[39m YN0060: │ [38;5;173mtypescript[39m is listed by your project with version [38;5;111m5.3.3[39m ([38;5;111mp7a6525[39m), which doesn't satisfy what [38;5;173mtypescript-plugin-styled-components[39m and other dependencies request ([91mbut they have non-overlapping ranges![39m).
+[93m➤[39m YN0002: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m doesn't provide [38;5;173mprop-types[39m ([38;5;111mpf4ab73[39m), requested by [38;5;173mrecharts[39m.
+[93m➤[39m YN0002: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m doesn't provide [38;5;173mreact-is[39m ([38;5;111mp3a2b7a[39m), requested by [38;5;173mstyled-components[39m.
+[93m➤[39m YN0002: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m doesn't provide [38;5;173mripple-keypairs[39m ([38;5;111mpc5a6ce[39m), requested by [38;5;166m@onekeyfe/[39m[38;5;173mhd-core[39m.
+[93m➤[39m YN0002: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m doesn't provide [38;5;173mtslib[39m ([38;5;111mp312bc5[39m), requested by [38;5;166m@trezor/[39m[38;5;173mconnect-web[39m and other dependencies.
+[93m➤[39m YN0086: │ Some peer dependencies are incorrectly met by your project; run [38;5;111myarn explain peer-requirements <hash>[39m for details, where [38;5;111m<hash>[39m is the six-letter p-prefixed code.
+[93m➤[39m YN0086: │ Some peer dependencies are incorrectly met by dependencies; run [38;5;111myarn explain peer-requirements[39m for details.
+::endgroup::
+[94m➤[39m [90mYN0000[39m: └ Completed
+[94m➤[39m [90mYN0000[39m: ┌ Fetch step
+::group::Fetch step
+[94m➤[39m YN0013: │ [38;5;220m2418[39m packages were added to the project ([38;5;160m+ 989.05 MiB[39m).
+::endgroup::
+[94m➤[39m [90mYN0000[39m: └ Completed in 13s 430ms
+[94m➤[39m [90mYN0000[39m: ┌ Link step
+::group::Link step
+[94m➤[39m YN0007: │ [38;5;166m@opensea/[39m[38;5;173mseaport-js[39m[38;5;111m@[39m[38;5;111mnpm:4.0.5[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mstyled-components[39m[38;5;111m@[39m[38;5;111mnpm:5.3.5 [a2d01][39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mkeccak[39m[38;5;111m@[39m[38;5;111mnpm:3.0.4[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:4.0.4[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mcore-js-pure[39m[38;5;111m@[39m[38;5;111mnpm:3.49.0[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:5.0.1[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mprotobufjs[39m[38;5;111m@[39m[38;5;111mnpm:6.11.5[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;166m@sentry/[39m[38;5;173mcli[39m[38;5;111m@[39m[38;5;111mnpm:2.58.6[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mprotobufjs[39m[38;5;111m@[39m[38;5;111mnpm:7.4.0[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mbufferutil[39m[38;5;111m@[39m[38;5;111mnpm:4.1.0[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mutf-8-validate[39m[38;5;111m@[39m[38;5;111mnpm:6.0.6[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173musb[39m[38;5;111m@[39m[38;5;111mnpm:2.17.0[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mblake-hash[39m[38;5;111m@[39m[38;5;111mnpm:2.0.0[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m must be built because it never has been before or the last one failed
+[94m➤[39m YN0007: │ [38;5;173mes5-ext[39m[38;5;111m@[39m[38;5;111mnpm:0.10.64[39m must be built because it never has been before or the last one failed
+[94m➤[39m [90mYN0000[39m: │ [38;5;166m@opensea/[39m[38;5;173mseaport-js[39m[38;5;111m@[39m[38;5;111mnpm:4.0.5[39m [31mSTDERR[39m command not found: husky
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m 
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m > secp256k1@3.8.1 rebuild
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m > node-gyp rebuild
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m 
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info it worked if it ends with ok
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info using node-gyp@12.3.0
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info using node@24.21.0 | linux | x64
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info find Python using Python version 3.12.3 found at "/usr/bin/python3"
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m 
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m > tiny-secp256k1@1.1.7 build
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m > node-gyp rebuild
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m 
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info it worked if it ends with ok
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info using node-gyp@12.3.0
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info using node@24.21.0 | linux | x64
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m 
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp http GET https://nodejs.org/download/release/v24.21.0/node-v24.21.0-headers.tar.gz
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info find Python using Python version 3.12.3 found at "/usr/bin/python3"
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp http 200 https://nodejs.org/download/release/v24.21.0/node-v24.21.0-headers.tar.gz
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m 
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp http GET https://nodejs.org/download/release/v24.21.0/node-v24.21.0-headers.tar.gz
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp http 200 https://nodejs.org/download/release/v24.21.0/node-v24.21.0-headers.tar.gz
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp http GET https://nodejs.org/download/release/v24.21.0/SHASUMS256.txt
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp http 200 https://nodejs.org/download/release/v24.21.0/SHASUMS256.txt
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp http GET https://nodejs.org/download/release/v24.21.0/SHASUMS256.txt
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp http 200 https://nodejs.org/download/release/v24.21.0/SHASUMS256.txt
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn /usr/bin/python3
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args [
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/node-gyp/gyp/gyp_main.py',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args 'binding.gyp',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-f',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args 'make',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-I',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/hdkey/node_modules/secp256k1/build/config.gypi',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-I',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/node-gyp/addon.gypi',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-I',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '/home/runner/.cache/node-gyp/24.21.0/include/node/common.gypi',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-Dlibrary=shared_library',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-Dvisibility=default',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-Dnode_root_dir=/home/runner/.cache/node-gyp/24.21.0',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-Dnode_gyp_dir=/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/node-gyp',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-Dnode_lib_file=/home/runner/.cache/node-gyp/24.21.0/<(target_arch)/node.lib',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-Dmodule_root_dir=/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/hdkey/node_modules/secp256k1',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-Dnode_engine=v8',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '--depth=.',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '--no-parallel',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '--generator-output',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args 'build',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args '-Goutput_dir=.'
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args ]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn make
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m make: Entering directory '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/hdkey/node_modules/secp256k1/build'
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CXX(target) Release/obj.target/secp256k1/src/addon.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn /usr/bin/python3
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args [
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/node-gyp/gyp/gyp_main.py',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args 'binding.gyp',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-f',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args 'make',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-I',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/tiny-secp256k1/build/config.gypi',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-I',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/node-gyp/addon.gypi',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-I',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '/home/runner/.cache/node-gyp/24.21.0/include/node/common.gypi',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-Dlibrary=shared_library',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-Dvisibility=default',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-Dnode_root_dir=/home/runner/.cache/node-gyp/24.21.0',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-Dnode_gyp_dir=/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/node-gyp',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-Dnode_lib_file=/home/runner/.cache/node-gyp/24.21.0/<(target_arch)/node.lib',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-Dmodule_root_dir=/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/tiny-secp256k1',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-Dnode_engine=v8',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '--depth=.',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '--no-parallel',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '--generator-output',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args 'build',
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args '-Goutput_dir=.'
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args ]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn make
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m make: Entering directory '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/tiny-secp256k1/build'
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m   CXX(target) Release/obj.target/secp256k1/native/addon.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m In file included from ../src/addon.cc:1:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m /home/runner/.cache/node-gyp/24.21.0/include/node/node.h:1374:7: warning: cast between incompatible function types from ‘void (*)(Nan::ADDON_REGISTER_FUNCTION_ARGS_TYPE)’ {aka ‘void (*)(v8::Local<v8::Object>)’} to ‘node::addon_register_func’ {aka ‘void (*)(v8::Local<v8::Object>, v8::Local<v8::Value>, void*)’} [-Wcast-function-type]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m  1374 |       (node::addon_register_func) (regfunc),                          \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m /home/runner/.cache/node-gyp/24.21.0/include/node/node.h:1408:3: note: in expansion of macro ‘NODE_MODULE_X’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m  1408 |   NODE_MODULE_X(modname, regfunc, NULL, 0)  // NOLINT (readability/null_usage)
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m       |   ^~~~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m ../src/addon.cc:50:1: note: in expansion of macro ‘NODE_MODULE’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m    50 | NODE_MODULE(secp256k1, Init)
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m       | ^~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m In file included from ../../nan/nan.h:67,
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m                  from ../native/addon.cpp:4:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m /home/runner/.cache/node-gyp/24.21.0/include/node/node.h:1374:7: warning: cast between incompatible function types from ‘void (*)(Nan::ADDON_REGISTER_FUNCTION_ARGS_TYPE)’ {aka ‘void (*)(v8::Local<v8::Object>)’} to ‘node::addon_register_func’ {aka ‘void (*)(v8::Local<v8::Object>, v8::Local<v8::Value>, void*)’} [-Wcast-function-type]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m  1374 |       (node::addon_register_func) (regfunc),                          \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m /home/runner/.cache/node-gyp/24.21.0/include/node/node.h:1408:3: note: in expansion of macro ‘NODE_MODULE_X’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m  1408 |   NODE_MODULE_X(modname, regfunc, NULL, 0)  // NOLINT (readability/null_usage)
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |   ^~~~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp:372:1: note: in expansion of macro ‘NODE_MODULE’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   372 | NODE_MODULE(secp256k1, Init)
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       | ^~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp: In instantiation of ‘unsigned int {anonymous}::assumeCompression(const I&, const A&) [with long unsigned int index = 2; I = Nan::FunctionCallbackInfo<v8::Value>; A = v8::Local<v8::Object>]’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp:151:41:   required from here
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp:80:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    80 |                 if (info.Length() <= index || info[index]->IsUndefined()) {
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                     ~~~~~~~~~~~~~~^~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp: In instantiation of ‘unsigned int {anonymous}::assumeCompression(const I&, const A&) [with long unsigned int index = 1; I = Nan::FunctionCallbackInfo<v8::Value>; A = v8::Local<v8::Object>]’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp:183:41:   required from here
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp:80:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp: In instantiation of ‘unsigned int {anonymous}::assumeCompression(const I&) [with long unsigned int index = 1; I = Nan::FunctionCallbackInfo<v8::Value>]’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp:198:41:   required from here
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp:92:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    92 |                 if (info.Length() <= index) return SECP256K1_EC_COMPRESSED;
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                     ~~~~~~~~~~~~~~^~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CXX(target) Release/obj.target/secp256k1/src/privatekey.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp: In function ‘Nan::NAN_METHOD_RETURN_TYPE eccPrivateSub(Nan::NAN_METHOD_ARGS_TYPE)’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/addon.cpp:249:36: warning: ignoring return value of ‘int secp256k1_ec_privkey_negate(const secp256k1_context*, unsigned char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   249 |         secp256k1_ec_privkey_negate(context, tweak_negated); // returns 1 always
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m   CC(target) Release/obj.target/secp256k1/native/secp256k1/src/secp256k1.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m In file included from ../native/secp256k1/src/assumptions.h:12,
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m                  from ../native/secp256k1/src/secp256k1.c:10:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_context_preallocated_clone’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘prealloc’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:168:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   168 |     ARG_CHECK(prealloc != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_pubkey_parse’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubkey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:283:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   283 |     ARG_CHECK(pubkey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘input’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:285:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   285 |     ARG_CHECK(input != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_pubkey_serialize’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘output’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:307:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   307 |     ARG_CHECK(output != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘outputlen’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:303:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   303 |     ARG_CHECK(outputlen != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubkey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:309:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   309 |     ARG_CHECK(pubkey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ecdsa_signature_parse_der’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘sig’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:348:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   348 |     ARG_CHECK(sig != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘input’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:349:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   349 |     ARG_CHECK(input != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ecdsa_signature_parse_compact’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘sig’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:366:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   366 |     ARG_CHECK(sig != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘input64’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:367:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   367 |     ARG_CHECK(input64 != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ecdsa_signature_serialize_der’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘output’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:385:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   385 |     ARG_CHECK(output != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘outputlen’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:386:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   386 |     ARG_CHECK(outputlen != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘sig’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:387:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   387 |     ARG_CHECK(sig != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ecdsa_signature_serialize_compact’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘output64’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:397:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   397 |     ARG_CHECK(output64 != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘sig’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:398:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   398 |     ARG_CHECK(sig != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ecdsa_signature_normalize’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘sigin’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:411:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   411 |     ARG_CHECK(sigin != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ecdsa_verify’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘sig’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:432:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   432 |     ARG_CHECK(sig != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘msg32’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:431:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   431 |     ARG_CHECK(msg32 != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubkey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:433:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   433 |     ARG_CHECK(pubkey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ecdsa_sign’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘signature’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:542:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   542 |     ARG_CHECK(signature != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘msg32’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:541:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   541 |     ARG_CHECK(msg32 != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘seckey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:543:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   543 |     ARG_CHECK(seckey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_seckey_verify’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘seckey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:554:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   554 |     ARG_CHECK(seckey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_pubkey_create’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubkey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:578:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   578 |     ARG_CHECK(pubkey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘seckey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:581:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   581 |     ARG_CHECK(seckey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_seckey_negate’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘seckey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:595:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   595 |     ARG_CHECK(seckey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_pubkey_negate’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubkey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:614:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   614 |     ARG_CHECK(pubkey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_seckey_tweak_add’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘seckey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:641:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   641 |     ARG_CHECK(seckey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘tweak’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:642:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   642 |     ARG_CHECK(tweak != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_pubkey_tweak_add’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubkey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:669:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   669 |     ARG_CHECK(pubkey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘tweak’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:670:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   670 |     ARG_CHECK(tweak != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_seckey_tweak_mul’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘seckey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:688:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   688 |     ARG_CHECK(seckey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘tweak’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:689:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   689 |     ARG_CHECK(tweak != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_pubkey_tweak_mul’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubkey’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:713:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   713 |     ARG_CHECK(pubkey != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘tweak’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:714:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   714 |     ARG_CHECK(tweak != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c: In function ‘secp256k1_ec_pubkey_combine’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubnonce’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:743:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   743 |     ARG_CHECK(pubnonce != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:30:16: warning: ‘nonnull’ argument ‘pubnonces’ compared to NULL [-Wnonnull-compare]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    30 |     if (EXPECT(!(cond), 0)) { \
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/util.h:41:39: note: in definition of macro ‘EXPECT’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m    41 | #define EXPECT(x,c) __builtin_expect((x),(c))
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |                                       ^
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m ../native/secp256k1/src/secp256k1.c:746:5: note: in expansion of macro ‘ARG_CHECK’
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m   746 |     ARG_CHECK(pubnonces != NULL);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m       |     ^~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m ../src/privatekey.cc: In function ‘Nan::NAN_METHOD_RETURN_TYPE privateKeyNegate(Nan::NAN_METHOD_ARGS_TYPE)’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m ../src/privatekey.cc:73:30: warning: ignoring return value of ‘int secp256k1_ec_privkey_negate(const secp256k1_context*, unsigned char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m    73 |   secp256k1_ec_privkey_negate(secp256k1ctx, &private_key[0]);
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m       |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CXX(target) Release/obj.target/secp256k1/src/publickey.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m   SOLINK_MODULE(target) Release/obj.target/secp256k1.node
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m   COPY Release/secp256k1.node
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [32mSTDOUT[39m make: Leaving directory '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/tiny-secp256k1/build'
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mtiny-secp256k1[39m[38;5;111m@[39m[38;5;111mnpm:1.1.7[39m [31mSTDERR[39m gyp info ok 
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CXX(target) Release/obj.target/secp256k1/src/signature.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CXX(target) Release/obj.target/secp256k1/src/ecdsa.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m ../src/ecdsa.cc: In function ‘Nan::NAN_METHOD_RETURN_TYPE sign(Nan::NAN_METHOD_ARGS_TYPE)’:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m ../src/ecdsa.cc:88:11: warning: ignoring return value of ‘v8::Maybe<bool> v8::Object::Set(v8::Local<v8::Context>, v8::Local<v8::Value>, v8::Local<v8::Value>)’, declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m    88 |   obj->Set(info.GetIsolate()->GetCurrentContext(), Nan::New<v8::String>("signature").ToLocalChecked(), COPY_BUFFER(&output[0], 64));
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m       |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m In file included from /home/runner/.cache/node-gyp/24.21.0/include/node/v8-array-buffer.h:14,
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m                  from /home/runner/.cache/node-gyp/24.21.0/include/node/v8.h:24,
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m                  from /home/runner/.cache/node-gyp/24.21.0/include/node/node.h:74,
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m                  from ../src/ecdsa.cc:1:
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m /home/runner/.cache/node-gyp/24.21.0/include/node/v8-object.h:239:37: note: declared here
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m   239 |   V8_WARN_UNUSED_RESULT Maybe<bool> Set(Local<Context> context,
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m       |                                     ^~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m ../src/ecdsa.cc:89:11: warning: ignoring return value of ‘v8::Maybe<bool> v8::Object::Set(v8::Local<v8::Context>, v8::Local<v8::Value>, v8::Local<v8::Value>)’, declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m    89 |   obj->Set(info.GetIsolate()->GetCurrentContext(), Nan::New<v8::String>("recovery").ToLocalChecked(), Nan::New<v8::Number>(recid));
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m       |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m /home/runner/.cache/node-gyp/24.21.0/include/node/v8-object.h:239:37: note: declared here
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m   239 |   V8_WARN_UNUSED_RESULT Maybe<bool> Set(Local<Context> context,
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m       |                                     ^~~
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CXX(target) Release/obj.target/secp256k1/src/ecdh.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CC(target) Release/obj.target/secp256k1/src/secp256k1-src/src/secp256k1.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CC(target) Release/obj.target/secp256k1/src/secp256k1-src/contrib/lax_der_parsing.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   CC(target) Release/obj.target/secp256k1/src/secp256k1-src/contrib/lax_der_privatekey_parsing.o
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   SOLINK_MODULE(target) Release/obj.target/secp256k1.node
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m   COPY Release/secp256k1.node
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [32mSTDOUT[39m make: Leaving directory '/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/node_modules/hdkey/node_modules/secp256k1/build'
+[94m➤[39m [90mYN0000[39m: │ [38;5;173msecp256k1[39m[38;5;111m@[39m[38;5;111mnpm:3.8.1[39m [31mSTDERR[39m gyp info ok 
+[94m➤[39m YN0007: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m must be built because it never has been before or the last one failed
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m patch-package 6.4.7
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m Applying patches...
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @coinbase/wallet-sdk@3.8.0-beta.3 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @debank/common@0.3.60 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @ethereumjs/tx@5.4.0 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @ledgerhq/context-module@2.1.0 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @ledgerhq/device-signer-kit-ethereum@1.16.0 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @metamask/eth-sig-util@7.0.1 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @rabby-wallet/eth-trezor-keyring@2.6.5 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @rabby-wallet/eth-walletconnect-keyring@2.1.7 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m @trezor/connect-web@9.6.4 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m dom-align@1.12.4 ✔
+[94m➤[39m [90mYN0000[39m: │ [38;5;173mrabby[39m[38;5;111m@[39m[38;5;111mworkspace:.[39m [32mSTDOUT[39m typescript-plugin-styled-components@2.0.0 ✔
+::endgroup::
+[94m➤[39m [90mYN0000[39m: └ Completed in 34s 874ms
+[93m➤[39m YN0000: · Done with warnings in 48s 753ms

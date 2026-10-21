@@ -1,0 +1,1 @@
+const c=require("/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/jest.config.js");c.rootDir="/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source";for(const x of Object.values(c.transform)){if(Array.isArray(x)&&x[0]==='ts-jest')x[1]={...x[1],isolatedModules:true,diagnostics:false}};module.exports=c;

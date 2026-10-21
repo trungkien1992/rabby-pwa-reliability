@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-10-21T11:10:17.024042+00:00",
+  "scope": "Ancillary macOS harness preflights on the existing edited-release candidate, not a full-source test. Native minimization was unconfirmed. Run17 retained a UI-closure harness failure; run18 validated the diagnosed asynchronous-closure correction, initialization barriers, rendered wallet UI and actual asset hashes.",
+  "redaction": "Only literal and URL-encoded absolute workspace prefixes are replaced with <workspace>. Images are byte-identical. Outcomes and timing are unchanged.",
+  "records": {
+    "ui-smoke-preflight-17.json": {
+      "originalSha256": "d0718b505e17c2b6bb45eb5d05f004616c7fe13c9e0a9ef7aab1f537b0209b23",
+      "publishedSha256": "3d95fdce2cdf25339d2e382f7216b4eed21b8f9a2a88a8d4e6c4de0b8cf947ec",
+      "originalBytes": 22112,
+      "publishedBytes": 21813
+    },
+    "ui-smoke-preflight-17.json.ui-smoke.html": {
+      "originalSha256": "5157f95b01a653dbf5109645a46e64f009164754a2164e2d14ec2d470aa4dd0c",
+      "publishedSha256": "5157f95b01a653dbf5109645a46e64f009164754a2164e2d14ec2d470aa4dd0c",
+      "originalBytes": 1403378,
+      "publishedBytes": 1403378
+    },
+    "ui-smoke-preflight-17.json.ui-smoke.png": {
+      "originalSha256": "6ee7356e427b03cb104a12d57752bda92596c259742c76219f1f70d32a3fb1b2",
+      "publishedSha256": "6ee7356e427b03cb104a12d57752bda92596c259742c76219f1f70d32a3fb1b2",
+      "originalBytes": 151464,
+      "publishedBytes": 151464
+    },
+    "ui-smoke-preflight-18.json": {
+      "originalSha256": "52f3a9b15b8b347726d041be30745b117b9386542a33531e2075c80eb03bb36a",
+      "publishedSha256": "181d711f4b595fa27eea5d21a09bdd28711a59f2cd4ca25f8e08ce1e1acd277d",
+      "originalBytes": 93943,
+      "publishedBytes": 93613
+    },
+    "ui-smoke-preflight-18.expected-assets.json": {
+      "originalSha256": "5757581b14b7422021e3cf5c6871514f90952b76b82c73d493287a54c7808fca",
+      "publishedSha256": "5757581b14b7422021e3cf5c6871514f90952b76b82c73d493287a54c7808fca",
+      "originalBytes": 183003,
+      "publishedBytes": 183003
+    },
+    "ui-smoke-preflight-18.json.ui-smoke.html": {
+      "originalSha256": "ba9c43f71b3a409fe64942c4b214ccc7c6bccedd5c00479aaa8418ec9026611b",
+      "publishedSha256": "ba9c43f71b3a409fe64942c4b214ccc7c6bccedd5c00479aaa8418ec9026611b",
+      "originalBytes": 1084086,
+      "publishedBytes": 1084086
+    },
+    "ui-smoke-preflight-18.json.ui-smoke.png": {
+      "originalSha256": "359a6c1c344ca770012a333261ec94a9ac5e460e5e8c16429fdb79a4d43c8924",
+      "publishedSha256": "359a6c1c344ca770012a333261ec94a9ac5e460e5e8c16429fdb79a4d43c8924",
+      "originalBytes": 155320,
+      "publishedBytes": 155320
+    }
+  }
+}

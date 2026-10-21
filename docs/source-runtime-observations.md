@@ -59,3 +59,14 @@ Those earlier raw observations and their original failed check are preserved in
 the same result directory. They remain supplemental observations, not passing
 comparison records. Runs 15/16 added absolute request timestamps and method-only
 pending-queue snapshots to identify the remaining concurrency explicitly.
+
+## Later complete source-built comparison
+
+The historical observations above remain a **failed** comparison. On 2026-10-21,
+a separate [complete production build comparison](full-source-validation.md)
+passed three fresh Linux pairs with the same strict verifier. Initial setup now
+observes provider initialization and requires an empty queue before the first
+control; immediate measured snapshots remain unchanged. Both variants require
+confirmed native minimization and exact runtime-file identity. No failed queue
+snapshot above has been replaced or excused. The natural resume trigger remains
+unconfirmed.

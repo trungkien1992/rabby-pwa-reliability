@@ -1,0 +1,16 @@
+{
+  "command": [
+    "node",
+    "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/.yarn/releases/yarn-4.14.1.cjs",
+    "test",
+    "--config",
+    "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/full-source/build/jest-full-source.cjs",
+    "__tests__/utils/sendReadyMessageToTabs.test.ts",
+    "__tests__/utils/portMessage.test.ts",
+    "--runInBand",
+    "--watchman=false"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 2.074421196000003,
+  "logSha256": "1f5a1b56bbb97ffaca12e4da7b0ee27a1317904403af6507cda5a46d24fde013"
+}

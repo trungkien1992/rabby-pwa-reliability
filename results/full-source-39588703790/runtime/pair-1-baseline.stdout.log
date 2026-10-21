@@ -1,0 +1,4 @@
+{"stage":"watch-only-setup-complete","at":"2026-10-21T11:16:15.373Z"}
+{"stage":"real-wallet-ui-smoke-complete","at":"2026-10-21T11:16:16.712Z"}
+{"stage":"detached-minimized-wait","mode":"worker-stop","waitMs":10000,"at":"2026-10-21T11:16:17.667Z"}
+{"status":"request-failure-observed","mode":"worker-stop","output":"/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/full-source/runtime/pair-1-baseline.json","observations":[{"label":"before","status":"resolved","elapsedMs":1.599999999976717},{"label":"after-1","status":"deadline","elapsedMs":5000.400000000023},{"label":"after-2","status":"deadline","elapsedMs":5000.400000000023},{"label":"after-3","status":"deadline","elapsedMs":5000.400000000023}],"error":null}

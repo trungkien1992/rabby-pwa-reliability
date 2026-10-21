@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Read-only inspection of the actual upstream production webpack configuration; no compiler is run",
+  "sourceRoot": "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source",
+  "sourceCommit": "c3aed73f4c5f1e7c88c31331b0b0b72c6e8f2f4a",
+  "sourceStatus": "",
+  "nodeVersion": "v24.21.0",
+  "platform": "linux",
+  "architecture": "x64",
+  "availableParallelism": 4,
+  "systemMemoryBytes": 16766414848,
+  "checks": [
+    {
+      "name": "Unexpected FORK_TS_CHECKER environment is absent",
+      "passed": true
+    },
+    {
+      "name": "Unexpected sourcemap environment is absent",
+      "passed": true
+    },
+    {
+      "name": "Unexpected VERSION environment is absent",
+      "passed": true
+    },
+    {
+      "name": "Unexpected NODE_ENV environment is absent",
+      "passed": true
+    },
+    {
+      "name": "Unexpected ETHERSCAN_KEY environment is absent",
+      "passed": true
+    },
+    {
+      "name": "Unexpected RABBY_SENTRY_DSN environment is absent",
+      "passed": true
+    },
+    {
+      "name": "Manifest environment matches yarn build:pro",
+      "passed": true
+    },
+    {
+      "name": "Production mode is enabled",
+      "passed": true
+    },
+    {
+      "name": "Production source maps and watch mode are disabled",
+      "passed": true
+    },
+    {
+      "name": "All five upstream entries are present",
+      "passed": true
+    },
+    {
+      "name": "Original background entry is retained",
+      "passed": true
+    },
+    {
+      "name": "Original content-script entry is retained",
+      "passed": true
+    },
+    {
+      "name": "Original pageProvider entry is retained",
+      "passed": true
+    },
+    {
+      "name": "Original ui entry is retained",
+      "passed": true
+    },
+    {
+      "name": "Original offscreen entry is retained",
+      "passed": true
+    },
+    {
+      "name": "Background asyncChunks remains false",
+      "passed": true
+    },
+    {
+      "name": "Original dist output is retained",
+      "passed": true
+    },
+    {
+      "name": "Production minification is enabled",
+      "passed": true
+    },
+    {
+      "name": "Original Terser minifier is retained",
+      "passed": true
+    },
+    {
+      "name": "Upstream minifier parallel setting is retained",
+      "passed": true
+    },
+    {
+      "name": "Original Terser compression policy is retained",
+      "passed": true
+    },
+    {
+      "name": "Shared WebExtension polyfill splitting is retained",
+      "passed": true
+    },
+    {
+      "name": "Complete upstream production plugin set and styled-components plugin are retained",
+      "passed": true
+    },
+    {
+      "name": "Upstream Provide and Define plugins are retained",
+      "passed": true
+    },
+    {
+      "name": "Production runtime definitions are retained",
+      "passed": true
+    },
+    {
+      "name": "Exactly one upstream Warden plugin is retained",
+      "passed": true
+    },
+    {
+      "name": "Warden production checks fail closed",
+      "passed": true
+    },
+    {
+      "name": "Upstream Warden prototype and require safeguards are retained",
+      "passed": true
+    },
+    {
+      "name": "Original Warden policy paths are retained",
+      "passed": true
+    },
+    {
+      "name": "All six upstream HTML outputs are retained",
+      "passed": true
+    },
+    {
+      "name": "Upstream HTML templates and script injection are retained",
+      "passed": true
+    },
+    {
+      "name": "Original Chrome MV3 Copy plugin and five patterns are retained",
+      "passed": true
+    },
+    {
+      "name": "All raw runtime assets are copied by the original rule",
+      "passed": true
+    },
+    {
+      "name": "Original production manifest copy is retained",
+      "passed": true
+    },
+    {
+      "name": "Copy input exists: _raw",
+      "passed": true
+    },
+    {
+      "name": "Copy input exists: src/manifest/chrome-mv3/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Copy input exists: node_modules/@trezor/connect-webextension/build/content-script.js",
+      "passed": true
+    },
+    {
+      "name": "Copy input exists: node_modules/@trezor/connect-web/lib/webextension/trezor-usb-permissions.js",
+      "passed": true
+    },
+    {
+      "name": "Copy input exists: node_modules/@trezor/connect-web/lib/webextension/trezor-usb-permissions.html",
+      "passed": true
+    },
+    {
+      "name": "Full upstream ESLint checks remain blocking",
+      "passed": true
+    },
+    {
+      "name": "Default non-fork TypeScript build path is retained",
+      "passed": true
+    },
+    {
+      "name": "Original TypeScript checking/transpilation scopes are retained",
+      "passed": true
+    },
+    {
+      "name": "Only the original UI loader uses transpile-only mode",
+      "passed": true
+    },
+    {
+      "name": "Chrome MV3 service-worker manifest is retained",
+      "passed": true
+    },
+    {
+      "name": "Service-worker loader and sensitive-global checks exist",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: webpack",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: webpack",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: terser-webpack-plugin",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: terser-webpack-plugin",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: warden-for-js",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: warden-for-js",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: typescript",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: typescript",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: ts-loader",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: ts-loader",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: html-webpack-plugin",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: html-webpack-plugin",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: copy-webpack-plugin",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: copy-webpack-plugin",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: eslint-webpack-plugin",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: eslint-webpack-plugin",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: typescript-plugin-styled-components",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: typescript-plugin-styled-components",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: webextension-polyfill",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: webextension-polyfill",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: @trezor/connect-web",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: @trezor/connect-web",
+      "passed": true
+    },
+    {
+      "name": "Dependency resolves inside source root: @trezor/connect-webextension",
+      "passed": true
+    },
+    {
+      "name": "Dependency package metadata exists: @trezor/connect-webextension",
+      "passed": true
+    }
+  ],
+  "sourceFileSha256": {
+    "package.json": "73ed627736f921d536ac2a6ae0171a1feaccdca20f3f3af98be6f68e5080b243",
+    "yarn.lock": "b50dde7dd4cadf19d68589d77d5beb7c121fa4cb5cb165a7ddfd7461da365fa7",
+    ".yarnrc.yml": "041c9ec291497864f1ba7e9c51aa840abc92a4b0aa40fe0d3ba92281d71beaa5",
+    ".yarn/releases/yarn-4.14.1.cjs": "5c7a0c5ea1c5b690df603c8e16b3742f87169b814d56bb5e63881145e8a84033",
+    "webpack.config.js": "7ad1be35ef9799f75731e14f82f82b694f5ac1eb74cfe6a5e934af09784f6949",
+    "build/webpack.common.config.js": "dfe0da8cc8bb0fff0cb8965952756e7ae576ae5bab1835b45e93d288faee57ad",
+    "build/webpack.pro.config.js": "6f94951ecbbc4c645d17f8883abaffdf73f952a4fc27875c53d55dc60dd981c7",
+    "build/paths.js": "5f43ea5e079906cab5ced5acd29ef8833e72a20b07ddd5043d9e6655375b7776",
+    "build/manifest-utils.js": "36dca74247a7bae7c555107a37bf15a1441e23ad1ce864f7151048b03563c488",
+    "build/clean.js": "3b9392a7ad24b4ccd26d14efe992a4e926d8050cdfa88d76f72f58775810e292",
+    "scripts/make-theme.js": "34fbc6af54272ab501bae2542d6bfbf8b060bda00a1707563c9a8c07fdc9ea86",
+    "tsconfig.json": "d3e7bfd7e56fe8d8163a15a30d8cd37425c4d78311d247817d98dbb5a3dfeed9",
+    "src/manifest/chrome-mv3/manifest.json": "2c5c426571f1740468032f0a2dacf17afcdb828735f41fa2d32cb0b03f64ffdb",
+    "SecSDK/policy-over.json": "3474c87d13d840027a3b3c11fce10b428bbe929da6bac19dcfead73afe3036e4",
+    "SecSDK/check.json": "f856e78fb65b615f8f4ea823b7477d8578b498e7317a35368e19d679502b08c3",
+    "_raw/sw.js": "a93c2a2bcf71ed1432a36d59095b820507ee9596ffcf0435acba5ec0474bf8d7",
+    "src/utils/message.ts": "96b680e27aa6ffc3f46872d57fade74a33ea4a5761b957a82be1f55d6258d0d8"
+  },
+  "dependencies": {
+    "webpack": {
+      "version": "5.76.0",
+      "packageFile": "node_modules/webpack/package.json",
+      "packageSha256": "036d02f93a48d6c746a63670617867bb90d0fd4aa8bf5ec98f46d8eb651606c8",
+      "entry": "node_modules/webpack/lib/index.js",
+      "entrySha256": "d733bab8af252b9cbb5af5bd56bb8402d5f3d90b8059cb693ebba717fbc06c1f"
+    },
+    "terser-webpack-plugin": {
+      "version": "5.5.0",
+      "packageFile": "node_modules/terser-webpack-plugin/package.json",
+      "packageSha256": "ead7d00b490affa65dfb068e600dd5e838e7754c39f1136adad5471b6c2dc7ae",
+      "entry": "node_modules/terser-webpack-plugin/dist/index.js",
+      "entrySha256": "7f7cbd1e3a5c434905f60657ba58b65fe969cf99c123d235990710b117536eb0"
+    },
+    "warden-for-js": {
+      "version": "3.0.2",
+      "packageFile": "node_modules/warden-for-js/package.json",
+      "packageSha256": "1c346cecc5e0f0abc2a25ea2cb329f177e9c8261cabdf21fe344bf26f7596629",
+      "entry": "node_modules/warden-for-js/dist/index.js",
+      "entrySha256": "60f0cdae72b1375d80dde5d4421f6423198be858d80eb80955b4757e6e1db081"
+    },
+    "typescript": {
+      "version": "5.3.3",
+      "packageFile": "node_modules/typescript/package.json",
+      "packageSha256": "588b407ef9f17afd2d99c47bb67bae14b009a9b79ed058f2e39cb1772fe04226",
+      "entry": "node_modules/typescript/lib/typescript.js",
+      "entrySha256": "7a8478af6f46c3cb4e7cd077a39334344fb01918b4e151ea348dba27cfe11ca1"
+    },
+    "ts-loader": {
+      "version": "9.6.2",
+      "packageFile": "node_modules/ts-loader/package.json",
+      "packageSha256": "18391734b4b9c347d707855b7512500f22cbcc3d3f3a3eb8676634198081b99e",
+      "entry": "node_modules/ts-loader/index.js",
+      "entrySha256": "58d062385fc1be01963694d33f96ca5a1e7c2c3e9b0f430f5ec565d55e8fa9d5"
+    },
+    "html-webpack-plugin": {
+      "version": "5.3.1",
+      "packageFile": "node_modules/html-webpack-plugin/package.json",
+      "packageSha256": "ee5d2e67c1220477c1821870af60845400d8041ec0c0b7bf2cf3495efbc7dd8b",
+      "entry": "node_modules/html-webpack-plugin/index.js",
+      "entrySha256": "9167edc71f5f7338d1342999eadb292a050f18303fae4ab6d6ce208c327219ca"
+    },
+    "copy-webpack-plugin": {
+      "version": "11.0.0",
+      "packageFile": "node_modules/copy-webpack-plugin/package.json",
+      "packageSha256": "255bc84e98bbfbd208fff92709c42dffe6b7537c5e7b47bcfca9b8e2a292b775",
+      "entry": "node_modules/copy-webpack-plugin/dist/index.js",
+      "entrySha256": "92c924b090ced0d4b0eea43c37584ecdaa4b5aca91e8a2e4b7eb69c57d90e6ce"
+    },
+    "eslint-webpack-plugin": {
+      "version": "2.5.4",
+      "packageFile": "node_modules/eslint-webpack-plugin/package.json",
+      "packageSha256": "0f80ad212e6c53758d7fe5827db715a14573207e06d48bca7ba299efdf45eff0",
+      "entry": "node_modules/eslint-webpack-plugin/dist/cjs.js",
+      "entrySha256": "211875b265cf18ed7d76ae4dc2001e644975cd85ca0a94e8d7dbf33e5634b078"
+    },
+    "typescript-plugin-styled-components": {
+      "version": "2.0.0",
+      "packageFile": "node_modules/typescript-plugin-styled-components/package.json",
+      "packageSha256": "7c7801f08a885a0b0fb95a12284d5544a81424a6bf7e02c03d9a13ae8ab73290",
+      "entry": "node_modules/typescript-plugin-styled-components/dist/index.js",
+      "entrySha256": "798209c974042348b70db2c16282edca4ddae84b725b27b355ad6e0cf81f8846"
+    },
+    "webextension-polyfill": {
+      "version": "0.7.0",
+      "packageFile": "node_modules/webextension-polyfill/package.json",
+      "packageSha256": "29a73919f52e8d80b7e45425cbec89dbc9d494e4316252d4b781e668809d42b9",
+      "entry": "node_modules/webextension-polyfill/dist/browser-polyfill.js",
+      "entrySha256": "0d7e5b0198bab9ddac31604842a0090deb10c76001039641483ac22c1ca0ec1a"
+    },
+    "@trezor/connect-web": {
+      "version": "9.6.4",
+      "packageFile": "node_modules/@trezor/connect-web/package.json",
+      "packageSha256": "a0c38def04770d9652ab0a066c79e0515536622da6bb84585071c9ad9a68b243",
+      "entry": "node_modules/@trezor/connect-web/lib/index.js",
+      "entrySha256": "5c67dab84f16b7b09aed0ebacde32653ef70aa558cdaeec4926a6c1411bf662a"
+    },
+    "@trezor/connect-webextension": {
+      "version": "9.6.4",
+      "packageFile": "node_modules/@trezor/connect-webextension/package.json",
+      "packageSha256": "23ae6c92667a78afa390456ce8dae327a0e136fd4c01d9e776f907c3b336edf7",
+      "entry": "node_modules/@trezor/connect-webextension/build/trezor-connect-webextension.js",
+      "entrySha256": "36e84dcdf9495fe049237b8efe4e1934997b39ad7a7838c3bf04073c8ac025f5"
+    }
+  },
+  "configuration": {
+    "mode": "production",
+    "entries": {
+      "background": "src/background/index.ts",
+      "content-script": "src/content-script/index.ts",
+      "pageProvider": "src/content-script/page-provider.ts",
+      "ui": "src/ui/index.tsx",
+      "offscreen": "src/offscreen/scripts/offscreen.ts"
+    },
+    "outputPath": "dist",
+    "minimize": true,
+    "minifier": "TerserPlugin",
+    "plugins": [
+      "ESLintWebpackPlugin",
+      "HtmlWebpackPlugin",
+      "HtmlWebpackPlugin",
+      "HtmlWebpackPlugin",
+      "HtmlWebpackPlugin",
+      "HtmlWebpackPlugin",
+      "HtmlWebpackPlugin",
+      "ProvidePlugin",
+      "DefinePlugin",
+      "CopyPlugin",
+      "Object",
+      "DefinePlugin",
+      "WardenPlugin"
+    ],
+    "htmlOutputs": [
+      "popup.html",
+      "notification.html",
+      "index.html",
+      "desktop.html",
+      "background.html",
+      "offscreen.html"
+    ],
+    "copyPatterns": [
+      {
+        "from": "_raw",
+        "to": "dist"
+      },
+      {
+        "from": "src/manifest/chrome-mv3/manifest.json",
+        "to": "dist/manifest.json"
+      },
+      {
+        "from": "node_modules/@trezor/connect-webextension/build/content-script.js",
+        "to": "dist/vendor/trezor/trezor-content-script.js"
+      },
+      {
+        "from": "node_modules/@trezor/connect-web/lib/webextension/trezor-usb-permissions.js",
+        "to": "dist/vendor/trezor-usb-permissions.js"
+      },
+      {
+        "from": "node_modules/@trezor/connect-web/lib/webextension/trezor-usb-permissions.html",
+        "to": "dist/trezor-usb-permissions.html"
+      }
+    ],
+    "warden": {
+      "dev": false,
+      "policyOverPath": "SecSDK/policy-over.json",
+      "policyOutputPath": "SecSDK/policy.json",
+      "freezePrototypes": true,
+      "prototypeFreezeMode": "compat",
+      "protectWebpackRequire": true,
+      "forceCheck": true
+    },
+    "tsLoaders": [
+      {
+        "location": "module.rules[0].oneOf[0]",
+        "transpileOnly": false,
+        "onlyCompileBundledFiles": false
+      },
+      {
+        "location": "module.rules[0].oneOf[1].use[0]",
+        "transpileOnly": true,
+        "onlyCompileBundledFiles": false
+      },
+      {
+        "location": "module.rules[0].oneOf[2]",
+        "transpileOnly": false,
+        "onlyCompileBundledFiles": false
+      }
+    ],
+    "manifestVersion": 3,
+    "extensionVersion": "0.94.12",
+    "embeddedBuildRevision": "\"c3aed73f\"",
+    "factoryInvocation": {
+      "config": "pro",
+      "MANIFEST_TYPE": "chrome-mv3"
+    },
+    "configurationObjectModified": false
+  },
+  "status": "passed",
+  "sourceFileIdentityAfterInspection": {
+    "SecSDK/policy.json": "830ad612702e06559b7a6cd6305431de5fdeac9715bc332a57cd11a865f866e9",
+    "src/ui/style/cssvars.css": "f0d423a979757eb63f409a96c6fd8195a7a40073cc7ac5af5bc203cf6f82cc08",
+    "src/ui/style/var-defs.ts": "b5d0056714beb07ed2bff31872204f9827ba42de7f619648a4774bba279964c1"
+  },
+  "sourceFilesUnchanged": true
+}

@@ -6,6 +6,11 @@ It records successful builds and their byte-level comparison. The separate
 [browser observations](source-runtime-observations.md) show candidate read
 recovery, with explicit conditions that prevented a strict comparison pass.
 
+A later [complete production comparison](full-source-validation.md) builds all
+extension entries with the original upstream production command and passes three
+fresh Linux browser pairs. The component-build records below remain historical;
+they are not presented as that full extension validation.
+
 ## Recorded build results
 
 Both builds completed with command exit code 0 and `hasErrors: false`. They used

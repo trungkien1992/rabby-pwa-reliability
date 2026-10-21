@@ -6,6 +6,30 @@ Source contribution: [Rabby PR #4189](https://github.com/RabbyHub/Rabby/pull/418
 
 Chrome reported the installed standalone PWA as an `app` window. Rabby's startup notification queries only `normal` windows, so the PWA misses READY after its background worker restarts. Removing that filter repaired the measured case; the injectable-URL filter stays in place.
 
+## Full source-built result
+
+The [complete production comparison passed](https://github.com/trungkien1992/rabby-pwa-reliability/actions/runs/39588703790) on Linux x64, Chrome for Testing **151.0.7922.34**, Xvfb/Openbox. Both extensions were built with upstream `build:pro`, using base `c3aed73` and that same base plus the exact two-file PR patch from `d5ab026`. No released extension files were inputs. Production minification, all five entries, UI/vendor assets and Warden safeguards were retained.
+
+Across **three independent forced worker restarts per variant**, with six fresh profiles:
+
+| Observation | Baseline | Candidate |
+|---|---|---|
+| Three successive `eth_chainId` reads per restart | All nine missed the 5-second deadline | All nine returned `0x1` |
+| Immediate pending counts per restart | 1 / 2 / 3 | 0 / 0 / 0 |
+| Visible regular-tab controls | Passed | Passed |
+| Native minimization | Confirmed in all three runs | Confirmed in all three runs |
+| PWA document | Same document, no reload | Same document, no reload |
+
+The strict verifier is **byte-identical** to the earlier failed comparison. Initial setup now waits for the actual provider initialization state; measured replies still require an immediately empty queue, with no later drain wait. The old failed records remain published as failures.
+
+Real wallet dashboard rendering passed in all six runs, and every tested extension file matched its source-built inventory before and after execution. Of 1,153 compiled files, only `background.js` differs, by deletion of exactly `,windowType:"normal"`. Both manifests, policies and all other compiled files are identical. Each tested package adds the same disclosed setup HTML page. Immutable dependency installation, full lint/type checking and all 10 focused tests passed; build warnings are retained in the logs.
+
+[Results, limits and rerun instructions](docs/full-source-validation.md) · [Raw records and hashes](results/full-source-39588703790/) · [Exact tested build downloads](https://github.com/trungkien1992/rabby-pwa-reliability/releases/tag/full-source-evidence-39588703790)
+
+**Scope:** this confirms recovery after controlled worker restarts. Chrome had already started the replacement worker before PWA reattachment, so the timings are not cold-start measurements. The original natural Linux resume trigger remains unconfirmed. Dashboard rendering does not establish signing, transaction broadcast or full UI-flow correctness.
+
+## Earlier edited-release comparisons
+
 One paired experiment on macOS arm64, Chrome for Testing **151.0.7922.34**, Rabby **0.94.12**:
 
 | Observation after one controlled worker restart | Baseline | One-filter candidate |
@@ -50,7 +74,7 @@ For natural lifecycle investigation, use `--mode natural --wait-ms 180000`. This
 
 [The patch](patches/pwa-ready.patch) targets `RabbyHub/Rabby` commit `c3aed73f4c5f1e7c88c31331b0b0b72c6e8f2f4a`. It removes the window-type restriction and adds READY-delivery tests for app/popup windows, invalid IDs, delivery errors, query errors and empty results. It adds no request retry/replay or changes to account approval, permissions or signing.
 
-The focused tests changed from **2 failed / 8 passed** to **10 passed**. The existing PortMessage disconnect tests are included. Local Jest used isolated TypeScript transpilation; full source lint/type checking is separate. The changed READY helper compiled successfully. A full extension build remains a separate verification step.
+The focused tests changed from **2 failed / 8 passed** to **10 passed**. The existing PortMessage disconnect tests are included. Jest used isolated TypeScript transpilation; full source lint/type checking is separate and passed. The changed READY helper and both complete production extensions compiled successfully; [full-source validation](docs/full-source-validation.md) retains the exact commands and outcomes.
 
 Both `yarn` and the required full `yarn check` (lint and type checking) passed on the final source edit. The repository requires that sequence before committing. From a checkout at the pinned commit, apply the patch, run those checks, then run:
 
@@ -72,6 +96,8 @@ The [first Linux run](results/linux-first-run/run.json) failed its comparison ga
 
 The [second Linux run](results/linux-second-run/run.json) restored the controls correctly and recorded the expected baseline failures and candidate replies. Its strict gate still failed because a 10-second timer woke 0.09 ms early. The harness now enforces the full monotonic wait deadline; the verifier's duration and outcome requirements are unchanged. This run is retained as a failed comparison, with its raw observations.
 
-Both [source background builds](docs/source-background-build.md) also completed successfully; only the intended background code differs. This remains a component/hybrid build, with full UI compatibility a separate check.
+Both earlier [source background builds](docs/source-background-build.md) completed successfully; only the intended background code differs. Those were component/hybrid builds. The later [complete source-built comparison](docs/full-source-validation.md) builds every production entry and includes a real dashboard rendering check.
 
 The [source-background browser observations](docs/source-runtime-observations.md) show three baseline deadline misses and three candidate replies. Their strict comparison did not pass: initialization requests overlapped some successful replies, and native-minimize confirmation differed. The raw observations and failed checks are retained separately from the passing edited-release comparison above.
+
+The [complete production comparison](results/full-source-39588703790/acceptance.json) subsequently passed all three independent pairs with the same strict verifier. It synchronizes initial provider setup, requires confirmed minimization for both variants, and binds all runtime assets to the complete source builds. It does not retroactively pass the earlier hybrid observations.

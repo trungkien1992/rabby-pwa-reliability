@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/.yarn/releases/yarn-4.14.1.cjs",
+    "install",
+    "--immutable"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 49.27479852300001,
+  "logSha256": "6dd87f7dad2a3db285198c51016f112a8e32bd420e197bd41c1149824a51a4ef"
+}

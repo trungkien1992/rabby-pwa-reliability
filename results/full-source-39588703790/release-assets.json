@@ -1,0 +1,31 @@
+{
+  "url": "https://github.com/trungkien1992/rabby-pwa-reliability/releases/tag/full-source-evidence-39588703790",
+  "tag": "full-source-evidence-39588703790",
+  "targetCommitish": "a88382ee46e8b734f79f7fe0db88eece8e001e40",
+  "prerelease": true,
+  "createdAt": "2026-10-21T11:00:11Z",
+  "assets": [
+    {
+      "name": "baseline-tested-extension.zip",
+      "size": 16868864,
+      "digest": "sha256:28b7223c2b254ea920007985f37a905495c2cd79d7ac5ddd4694d8b612dc1f7f",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/trungkien1992/rabby-pwa-reliability/releases/download/full-source-evidence-39588703790/baseline-tested-extension.zip"
+    },
+    {
+      "name": "candidate-tested-extension.zip",
+      "size": 16868857,
+      "digest": "sha256:2b4d35dee968a3e304c69fd5d81e91e45f98894d8946bd6a53a4a2441e31daf8",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/trungkien1992/rabby-pwa-reliability/releases/download/full-source-evidence-39588703790/candidate-tested-extension.zip"
+    },
+    {
+      "name": "full-source-builds-SHA256SUMS.txt",
+      "size": 193,
+      "digest": "sha256:37d6ce5f021dce4e13ab85ae28a7458fcc98c16d88fb8c2c3e12fb8ecac0af11",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/trungkien1992/rabby-pwa-reliability/releases/download/full-source-evidence-39588703790/full-source-builds-SHA256SUMS.txt"
+    }
+  ],
+  "serverDigestsMatchLocalFiles": true
+}

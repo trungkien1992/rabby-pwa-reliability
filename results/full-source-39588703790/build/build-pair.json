@@ -1,0 +1,57 @@
+{
+  "baseCommit": "c3aed73f4c5f1e7c88c31331b0b0b72c6e8f2f4a",
+  "fixCommitWhosePatchIsApplied": "d5ab02625b402364d09e556bcfb6c3bfe081831a",
+  "candidateMethod": "Same checkout with HEAD at base commit; apply exact two-file PR patch. Build revision metadata therefore stays equal.",
+  "patchSha256": "6ad6155e40541972dfa7b3d18027f1d3c49cf75861f025f15342d499f4fab895",
+  "variants": {
+    "baseline": {
+      "build": {
+        "command": [
+          "node",
+          "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/.yarn/releases/yarn-4.14.1.cjs",
+          "build:pro"
+        ],
+        "exitCode": 0,
+        "elapsedSeconds": 406.57401482,
+        "logSha256": "ad29c869f36ace72ca4b0af094872c1a95cd4f11c13c0a4dba676689b9f8644e"
+      },
+      "compiledFiles": 1153,
+      "testedFiles": 1154,
+      "onlyTestAddition": "reliability-probe.html",
+      "archiveSha256": "28b7223c2b254ea920007985f37a905495c2cd79d7ac5ddd4694d8b612dc1f7f",
+      "testedExtension": "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/full-source-baseline-extension",
+      "manifestUnchanged": true,
+      "generatedPolicySha256": "830ad612702e06559b7a6cd6305431de5fdeac9715bc332a57cd11a865f866e9"
+    },
+    "candidate": {
+      "build": {
+        "command": [
+          "node",
+          "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source/.yarn/releases/yarn-4.14.1.cjs",
+          "build:pro"
+        ],
+        "exitCode": 0,
+        "elapsedSeconds": 391.18688820700004,
+        "logSha256": "99237ea9792f6618d380f514e3dad39a1c8bfaa1f2881c66422f09870c413346"
+      },
+      "compiledFiles": 1153,
+      "testedFiles": 1154,
+      "onlyTestAddition": "reliability-probe.html",
+      "archiveSha256": "2b4d35dee968a3e304c69fd5d81e91e45f98894d8946bd6a53a4a2441e31daf8",
+      "testedExtension": "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/full-source-candidate-extension",
+      "manifestUnchanged": true,
+      "generatedPolicySha256": "830ad612702e06559b7a6cd6305431de5fdeac9715bc332a57cd11a865f866e9"
+    }
+  },
+  "nodeVersion": "v24.21.0",
+  "yarnVersion": "4.14.1",
+  "lockSha256": "b50dde7dd4cadf19d68589d77d5beb7c121fa4cb5cb165a7ddfd7461da365fa7",
+  "assetComparison": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      "background.js"
+    ]
+  },
+  "completed": true
+}

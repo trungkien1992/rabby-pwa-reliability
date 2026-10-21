@@ -1,0 +1,2 @@
+28b7223c2b254ea920007985f37a905495c2cd79d7ac5ddd4694d8b612dc1f7f  baseline-tested-extension.zip
+2b4d35dee968a3e304c69fd5d81e91e45f98894d8946bd6a53a4a2441e31daf8  candidate-tested-extension.zip

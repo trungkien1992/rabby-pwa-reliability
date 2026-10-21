@@ -1,0 +1,12 @@
+{
+  "gitHead": "c3aed73f4c5f1e7c88c31331b0b0b72c6e8f2f4a",
+  "changedTracked": [
+    "src/utils/message.ts"
+  ],
+  "untracked": [
+    "__tests__/utils/sendReadyMessageToTabs.test.ts"
+  ],
+  "inputPolicySha256": "830ad612702e06559b7a6cd6305431de5fdeac9715bc332a57cd11a865f866e9",
+  "helperSha256": "181059d4edb4130b9f8b83ec12943097c35aeb7768b7492dae734427a4c90718",
+  "lockSha256": "b50dde7dd4cadf19d68589d77d5beb7c121fa4cb5cb165a7ddfd7461da365fa7"
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/scripts/inspect-production-config.cjs",
+    "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/rabby-source",
+    "/home/runner/work/rabby-pwa-reliability/rabby-pwa-reliability/artifacts/full-source/build/baseline/production-config.json"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 0.7799865899999929,
+  "logSha256": "ba743acaff075fd8b7057cde2e9370239555abbca9bdf8f4198c0f2d92575599"
+}

@@ -1,0 +1,4 @@
+Name: Openbox
+Class: 
+PID: N/A
+Window manager's "showing the desktop" mode: N/A

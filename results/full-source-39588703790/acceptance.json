@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "pairsRequired": 3,
+  "pairs": [
+    {
+      "pair": 1,
+      "strictComparisonPassed": true,
+      "comparisonSha256": "9f2c7cbb4e86401f807c012521c7b619c20f1074ea985fda32006bf0144ff00b"
+    },
+    {
+      "pair": 2,
+      "strictComparisonPassed": true,
+      "comparisonSha256": "ec08e282ac6c2d36365adbe5f2fa5709eaeab0ab40df55be0e619de8726205ed"
+    },
+    {
+      "pair": 3,
+      "strictComparisonPassed": true,
+      "comparisonSha256": "f3825c246a5d39eef1b568bdc6a94b1148e0fad80f30d3f5cf959154499a6122"
+    }
+  ],
+  "strictVerifierSha256": "3743f77a252562c73121ba3d1272d5bf7b402ed83c9c10ce2b830f3e9a952397",
+  "buildPairSha256": "f7b542bf8212d980cc9ee76274f5d999be512db34c2f32eff72942e06ee8ed09",
+  "scope": "Three independent controlled worker restarts per variant on complete source-built production extensions. No natural-resume or production-performance claim."
+}

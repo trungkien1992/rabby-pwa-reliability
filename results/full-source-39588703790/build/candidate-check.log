@@ -1,0 +1,8 @@
+
+> rabby@0.94.12 lint
+> eslint --ext .js,.jsx,.ts,.tsx ./src
+
+
+> rabby@0.94.12 typecheck
+> tsc --noEmit --skipLibCheck --pretty false
+
