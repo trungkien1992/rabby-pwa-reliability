@@ -15,7 +15,7 @@ const requireThat = (condition, message) => {
   if (!condition) throw new Error(message);
 };
 const timestamp = value => {
-  const parsed = Date.parse(value);
+  const parsed = typeof value === 'number' ? value : Date.parse(value);
   requireThat(Number.isFinite(parsed), 'Missing or invalid recorded timestamp: ' + String(value));
   return parsed;
 };
@@ -44,6 +44,8 @@ function inspectRun(run, role) {
   check(finiteDuration(run.waitMs) && run.waitMs > 0 && finiteDuration(run.actualDetachedWaitMs) && run.actualDetachedWaitMs >= run.waitMs, 'detached wait did not reach the configured duration');
   check(finiteDuration(run.requestTimeoutMs) && run.requestTimeoutMs > 0, 'missing request deadline');
   const observations = run.observations;
+  check(run.observationTimingSchema === undefined || run.observationTimingSchema === 1, 'unknown observation timing schema');
+  const hasRequestTimestamps = run.observationTimingSchema === 1;
   check(Array.isArray(observations) && observations.length === 4, 'expected one baseline plus three post-restart PWA observations');
   check(observations.map(item => item.label).join(',') === 'before,after-1,after-2,after-3', 'unexpected PWA observation labels or ordering');
   const baseline = observations[0];
@@ -78,7 +80,26 @@ function inspectRun(run, role) {
   check(Array.isArray(control.observations) && control.observations.length === 4 && control.observations.map(item => item.label).join(',') === 'control-before,control-after-1,control-after-2,control-after-3', 'expected four ordered control observations');
   for (const item of control.observations) {
     check(item.status === 'resolved' && item.value === baseline.value && finiteDuration(item.elapsedMs) && item.elapsedMs < run.requestTimeoutMs && item.snapshot?.waitingCount === 0, 'regular control did not resolve the matching chain ID cleanly');
-    check(item.snapshot.standalone === false && item.snapshot.loadId === control.before.loadId, 'control stopped being a separate regular document');
+    check(item.snapshot.standalone === false && item.snapshot.loadId === control.before.loadId && item.snapshot.visibility === 'visible', 'control stopped being a separate visible regular document');
+  }
+  if (hasRequestTimestamps) {
+    check(control.restoredVisibility === 'visible' && control.beforeMeasurementSnapshot?.visibility === 'visible', 'control visibility was not established before post-restart reads');
+    const visibleAt = timestamp(control.visibleBeforeMeasurementsAt);
+    check(visibleAt <= timestamp(control.observations[1].startedAt), 'control request started before visible-state confirmation');
+    for (const item of [...observations, ...control.observations]) {
+      const startedAt = timestamp(item.startedAt);
+      const finishedAt = timestamp(item.finishedAt);
+      check(finishedAt >= startedAt, 'request finish predates its start');
+      const starts = item.snapshot.events?.filter(event => event.type === 'requestStarted' && event.label === item.label);
+      const finishes = item.snapshot.events?.filter(event => event.type === 'requestFinished' && event.label === item.label);
+      check(starts?.length === 1 && finishes?.length === 1 && timestamp(starts[0].at) >= startedAt && timestamp(finishes[0].at) <= finishedAt && timestamp(finishes[0].at) >= timestamp(starts[0].at) && finishes[0].status === item.status, 'request start/finish event evidence is incomplete or inconsistent');
+      if (item.status === 'deadline') {
+        const deadlines = item.snapshot.events.filter(event => event.type === 'requestDeadline' && event.label === item.label);
+        check(deadlines.length === 1 && deadlines[0].deadlineMs === run.requestTimeoutMs && timestamp(deadlines[0].at) >= startedAt + run.requestTimeoutMs && timestamp(deadlines[0].at) <= finishedAt, 'request deadline event is missing or inconsistent');
+      }
+    }
+  } else {
+    check([...observations, ...control.observations].every(item => item.startedAt === undefined && item.finishedAt === undefined), 'legacy observation timestamps are partial or lack their schema marker');
   }
   const events = run.browserEvents;
   check(Array.isArray(events) && events.length > 0, 'browser target-event evidence is missing');
@@ -102,6 +123,26 @@ function inspectRun(run, role) {
   check(run.restoredVisibility === 'visible' && run.windowRestored?.bounds?.windowState === 'normal', 'PWA was not visible and restored before request measurements');
   const controlAttachmentsDuringWait = events.filter(event => event.method === 'Target.attachedToTarget' && sourceEvent(event)?.targetId === control.targetId && timestamp(event.at) > detachedAt && timestamp(event.at) < firstReattachment);
   check(controlAttachmentsDuringWait.length === 0, 'control debugger attached during the measured wait');
+  const postPwaControlAttachments = events.filter(event => event.method === 'Target.attachedToTarget' && sourceEvent(event)?.targetId === control.targetId && timestamp(event.at) > firstReattachment);
+  check(postPwaControlAttachments.length > 0, 'post-PWA control attachment bound is missing');
+  const controlAttachmentAt = timestamp(postPwaControlAttachments[0].at);
+  const firstReplies = observations[1].snapshot.events?.filter(event => event.type === 'requestResolved' && event.label === observations[1].label && event.value === baseline.value) ?? [];
+  let firstReplyAt;
+  if (role === 'candidate') {
+    check(firstReplies.length === 1, 'candidate first successful PWA reply event is missing or ambiguous');
+    firstReplyAt = timestamp(firstReplies[0].at);
+    check(firstReplyAt >= firstReattachment && firstReplyAt < controlAttachmentAt, 'candidate first reply was outside the PWA measurement phase');
+  }
+  let measurementEndAt = controlAttachmentAt;
+  let measurementEndSource = 'legacy-post-PWA-control-attachment-upper-bound';
+  if (hasRequestTimestamps) {
+    measurementEndAt = timestamp(observations.at(-1).finishedAt);
+    measurementEndSource = 'absolute-final-PWA-request-finishedAt';
+    check(timestamp(observations[1].startedAt) >= firstReattachment && measurementEndAt < controlAttachmentAt, 'PWA measurements overlap the regular-control attachment');
+    for (let index = 1; index < observations.length; index++) {
+      check(timestamp(observations[index].startedAt) >= timestamp(observations[index - 1].finishedAt), 'PWA request intervals are not sequential');
+    }
+  }
   const stopped = run.stoppedWorkers;
   check(Array.isArray(stopped) && stopped.length === 1, 'expected exactly one stopped Rabby worker');
   const worker = stopped[0];
@@ -111,8 +152,17 @@ function inspectRun(run, role) {
   check(Array.isArray(beforeWorkers) && beforeWorkers.length === 1 && beforeWorkers[0].targetId === worker.target.targetId && beforeWorkers[0].attached === false, 'stopped worker does not match the pre-wait Rabby worker');
   const destroyed = events.find(event => event.method === 'Target.targetDestroyed' && event.params?.targetId === worker.target.targetId && timestamp(event.at) >= timestamp(lastDetach.at) && timestamp(event.at) < firstReattachment);
   check(!!destroyed, 'exact stopped worker target was not destroyed during the detached interval');
-  const restarted = events.find(event => event.method === 'Target.targetCreated' && sourceEvent(event)?.type === 'service_worker' && sourceEvent(event).url === expectedWorkerUrl && sourceEvent(event).targetId !== worker.target.targetId && timestamp(event.at) >= timestamp(destroyed.at) && timestamp(event.at) < firstReattachment);
-  check(!!restarted && sourceEvent(restarted).attached === false, 'a distinct unattached Rabby worker was not restarted before measurements');
+  const destroyedAt = timestamp(destroyed.at);
+  check(firstReattachment - destroyedAt >= run.waitMs, 'a full configured detached interval after worker destruction was not observed');
+  let destructionTimingSource = 'legacy-destruction-to-reattachment-detached-gap';
+  if (hasRequestTimestamps) {
+    check(destroyedAt <= timestamp(run.waitStartedAt) && timestamp(run.waitFinishedAt) - timestamp(run.waitStartedAt) >= run.waitMs && timestamp(run.waitFinishedAt) <= firstReattachment, 'worker destruction or explicit wait interval ordering is invalid');
+    destructionTimingSource = 'explicit-destruction-before-waitStartedAt';
+  }
+  const replacementUpperBound = role === 'candidate' ? Math.min(firstReplyAt, measurementEndAt) : measurementEndAt;
+  const restarted = events.find(event => event.method === 'Target.targetCreated' && sourceEvent(event)?.type === 'service_worker' && sourceEvent(event).url === expectedWorkerUrl && sourceEvent(event).targetId !== worker.target.targetId && timestamp(event.at) >= destroyedAt && timestamp(event.at) < replacementUpperBound);
+  check(!!restarted && sourceEvent(restarted).attached === false, 'a distinct unattached Rabby worker was not created before the bounded PWA measurement outcome');
+  const replacementAt = timestamp(restarted.at);
   const query = run.afterObservationInspection;
   check(query && Array.isArray(query.windows) && Array.isArray(query.tabsAllUrls) && Array.isArray(query.tabsNormalWindows), 'window/tab query evidence is incomplete');
   const actualPwaTabs = query.tabsAllUrls.filter(tab => tab.url === run.before.href);
@@ -139,6 +189,13 @@ function inspectRun(run, role) {
     controlAfterRequestMs: control.observations.slice(1).map(item => round(item.elapsedMs)),
     workerDestroyed: worker.target.targetId,
     replacementWorker: sourceEvent(restarted).targetId,
+    replacementCreatedAt: restarted.at,
+    replacementRelativeToPwaReattachment: replacementAt < firstReattachment ? 'before' : 'at-or-after',
+    replacementUpperBound: {at: new Date(replacementUpperBound).toISOString(), source: role === 'candidate' ? 'first-successful-PWA-requestResolved-event' : measurementEndSource},
+    measurementEndBound: {at: new Date(measurementEndAt).toISOString(), source: measurementEndSource},
+    destructionTimingSource,
+    destroyedToPwaReattachmentMs: firstReattachment - destroyedAt,
+    explicitRequestTimestamps: hasRequestTimestamps,
     workerDebuggerAttachments: 0,
     standalone: true,
     sameDocument: true,

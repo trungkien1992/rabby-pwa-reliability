@@ -1,0 +1,7 @@
+{
+  "url": "https://github.com/trungkien1992/rabby-pwa-reliability/actions/runs/39538053964",
+  "commit": "b1236b3fcf797429e5c5e31e1fd15d693fd77ba2",
+  "conclusion": "failure",
+  "reason": "Strict comparison rejected hidden regular-tab controls. The provider intentionally waits for page visibility; the harness did not restore the control before requesting. This run is not a valid passing baseline/candidate comparison.",
+  "naturalObservation": "One 180-second native minimize/restoration cycle completed with three correct post-resume responses. This is a bounded non-reproduction of the natural trigger."
+}

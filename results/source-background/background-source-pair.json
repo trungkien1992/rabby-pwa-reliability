@@ -1,0 +1,8 @@
+{
+  "sameSourceRoot": "<workspace>/work/rabby-baseline-source",
+  "onlyChangedFile": "src/utils/message.ts",
+  "baselineHelperSha256": "96b680e27aa6ffc3f46872d57fade74a33ea4a5761b957a82be1f55d6258d0d8",
+  "candidateHelperSha256": "181059d4edb4130b9f8b83ec12943097c35aeb7768b7492dae734427a4c90718",
+  "candidateMatchesMainSource": true,
+  "sourceDiffSha256": "00b1a087bb485a808659625562244113f0a273f1f4ee51f38574b63dd9957045"
+}

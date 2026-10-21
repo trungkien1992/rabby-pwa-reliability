@@ -1,0 +1,6 @@
+{
+  "natural": "success",
+  "baseline": "success",
+  "candidate": "success",
+  "verify": "failure"
+}

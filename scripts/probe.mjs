@@ -30,6 +30,7 @@ const result = {
   mode,
   waitMs,
   requestTimeoutMs,
+  observationTimingSchema: 1,
   walletState: 'isolated watch-only account 0x0000000000000000000000000000000000000001; no signing key',
   proofScope: mode === 'natural' ? 'Local installed standalone PWA with native window minimization; platform recorded separately.' : 'Controlled browser lifecycle fault; not a natural Linux PWA reproduction.',
   browserExecutable: path.resolve(flags.browser),
@@ -86,21 +87,27 @@ const pageSource = `<!doctype html>
     let connected = null;
     try { connected = p?.isConnected?.() ?? p?._isConnected ?? null; } catch {}
     const channel = p?._bcm?._channel;
-    return {loadId, standalone: matchMedia('(display-mode: standalone)').matches, href: location.href, navigationType: performance.getEntriesByType('navigation')[0]?.type ?? null, visibility: document.visibilityState, wasDiscarded: document.wasDiscarded, hasRabby: !!p, isConnected: connected, waitingCount: p?._bcm?._waitingMap?.size ?? null, channel: channel ? {readable: channel.readable, writable: channel.writable, destroyed: channel.destroyed} : null, events: [...events]};
+    const waitingMap = p?._bcm?._waitingMap;
+    const waitingMethods = typeof waitingMap?.values === 'function' ? Array.from(waitingMap.values(), entry => entry?.data?.method).filter(method => typeof method === 'string') : null;
+    return {loadId, standalone: matchMedia('(display-mode: standalone)').matches, href: location.href, navigationType: performance.getEntriesByType('navigation')[0]?.type ?? null, visibility: document.visibilityState, wasDiscarded: document.wasDiscarded, hasRabby: !!p, isConnected: connected, waitingCount: waitingMap?.size ?? null, waitingMethods, channel: channel ? {readable: channel.readable, writable: channel.writable, destroyed: channel.destroyed} : null, events: [...events]};
   };
   window.__rabbyProbe = {snapshot, async request(label, timeoutMs) {
     const p = provider();
     if (!p) throw new Error('No Rabby injected provider found');
     const start = performance.now();
+    const startedAt = new Date().toISOString();
+    record('requestStarted', {label, method: 'eth_chainId'});
     let timer;
     const pending = Promise.resolve().then(() => p.request({method: 'eth_chainId'}));
     pending.then(value => record('requestResolved', {label, value}), error => record('requestRejected', {label, message: String(error?.message || error), code: error?.code ?? null}));
     const outcome = await Promise.race([
       pending.then(value => ({status: 'resolved', value}), error => ({status: 'rejected', error: {message: String(error?.message || error), code: error?.code ?? null}})),
-      new Promise(resolve => { timer = setTimeout(() => resolve({status: 'deadline', deadlineMs: timeoutMs}), timeoutMs); }),
+      new Promise(resolve => { timer = setTimeout(() => { record('requestDeadline', {label, deadlineMs: timeoutMs}); resolve({status: 'deadline', deadlineMs: timeoutMs}); }, timeoutMs); }),
     ]);
     clearTimeout(timer);
-    const observation = {label, ...outcome, elapsedMs: performance.now() - start, snapshot: snapshot()};
+    record('requestFinished', {label, status: outcome.status});
+    const finishedAt = new Date().toISOString();
+    const observation = {label, ...outcome, startedAt, finishedAt, elapsedMs: performance.now() - start, snapshot: snapshot()};
     document.querySelector('#state').textContent = JSON.stringify(observation, null, 2);
     return observation;
   }};
@@ -350,9 +357,11 @@ try {
     }
   }
   console.log(JSON.stringify({stage:'detached-minimized-wait', mode, waitMs, at:new Date().toISOString()}));
+  result.waitStartedAt = new Date().toISOString();
   const waitedAt = performance.now();
   await sleep(waitMs);
   result.actualDetachedWaitMs = performance.now() - waitedAt;
+  result.waitFinishedAt = new Date().toISOString();
   await cdp.send('Browser.setWindowBounds', {windowId: windowInfo.windowId, bounds: {windowState: 'normal'}});
   for (let attempt = 0; attempt < 30; attempt++) {
     result.windowRestoredBeforeAttachment = await cdp.send('Browser.getWindowBounds', {windowId: windowInfo.windowId});
@@ -384,6 +393,17 @@ try {
   let controlSessionId;
   if (result.regularControl.afterApplicable) try {
     controlSessionId = (await cdp.send('Target.attachToTarget', {targetId: normalTarget.targetId, flatten: true})).sessionId;
+    result.regularControl.windowBeforeMeasurements = await cdp.send('Browser.getWindowForTarget', {targetId: normalTarget.targetId});
+    await cdp.send('Browser.setWindowBounds', {windowId: result.regularControl.windowBeforeMeasurements.windowId, bounds: {windowState: 'normal'}});
+    await cdp.send('Page.bringToFront', {}, controlSessionId);
+    for (let attempt = 0; attempt < 30; attempt++) {
+      result.regularControl.restoredVisibility = await cdp.evaluate('document.visibilityState', controlSessionId);
+      if (result.regularControl.restoredVisibility === 'visible') break;
+      await sleep(100);
+    }
+    if (result.regularControl.restoredVisibility !== 'visible') throw new Error('Regular control was not visible before measuring');
+    result.regularControl.visibleBeforeMeasurementsAt = new Date().toISOString();
+    result.regularControl.beforeMeasurementSnapshot = await cdp.evaluate('window.__rabbyProbe.snapshot()', controlSessionId);
     for (let n = 1; n <= 3; n++) result.regularControl.observations.push(await cdp.evaluate('window.__rabbyProbe.request("control-after-' + n + '", ' + requestTimeoutMs + ')', controlSessionId, requestTimeoutMs + 5000));
     result.regularControl.after = await cdp.evaluate('window.__rabbyProbe.snapshot()', controlSessionId);
     result.regularControl.sameDocument = result.regularControl.before.loadId === result.regularControl.after.loadId;

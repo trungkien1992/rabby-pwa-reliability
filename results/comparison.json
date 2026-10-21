@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "passed": true,
-  "checkedAt": "2026-10-21T03:19:45.249Z",
-  "checks": 209,
-  "verifierSha256": "ed3db3e40233d21b3cab71e127ff394b8a12a50578844c1b1459016b97be177c",
+  "checkedAt": "2026-10-21T03:30:35.969Z",
+  "checks": 228,
+  "verifierSha256": "3743f77a252562c73121ba3d1272d5bf7b402ed83c9c10ce2b830f3e9a952397",
   "inputs": [
     {
       "file": "release-worker-11.json",
@@ -42,6 +42,19 @@
     ],
     "workerDestroyed": "B26AFA96FA1902B179F641786C4AE62D",
     "replacementWorker": "B604E4D74C5FD88C7B9FB076D4012473",
+    "replacementCreatedAt": "2026-10-21T02:44:20.016Z",
+    "replacementRelativeToPwaReattachment": "before",
+    "replacementUpperBound": {
+      "at": "2026-10-21T02:44:48.429Z",
+      "source": "legacy-post-PWA-control-attachment-upper-bound"
+    },
+    "measurementEndBound": {
+      "at": "2026-10-21T02:44:48.429Z",
+      "source": "legacy-post-PWA-control-attachment-upper-bound"
+    },
+    "destructionTimingSource": "legacy-destruction-to-reattachment-detached-gap",
+    "destroyedToPwaReattachmentMs": 11229,
+    "explicitRequestTimestamps": false,
     "workerDebuggerAttachments": 0,
     "standalone": true,
     "sameDocument": true,
@@ -80,6 +93,19 @@
     ],
     "workerDestroyed": "39FCAEA0C9DF7D43DA3507775AEC8DFE",
     "replacementWorker": "A55CB6B367AC88E6EDB05BA65D0CB004",
+    "replacementCreatedAt": "2026-10-21T02:48:31.228Z",
+    "replacementRelativeToPwaReattachment": "before",
+    "replacementUpperBound": {
+      "at": "2026-10-21T02:48:42.868Z",
+      "source": "first-successful-PWA-requestResolved-event"
+    },
+    "measurementEndBound": {
+      "at": "2026-10-21T02:48:43.432Z",
+      "source": "legacy-post-PWA-control-attachment-upper-bound"
+    },
+    "destructionTimingSource": "legacy-destruction-to-reattachment-detached-gap",
+    "destroyedToPwaReattachmentMs": 11379,
+    "explicitRequestTimestamps": false,
     "workerDebuggerAttachments": 0,
     "standalone": true,
     "sameDocument": true,

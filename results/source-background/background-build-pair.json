@@ -1,0 +1,32 @@
+{
+  "baselineCommandExitCode": 0,
+  "candidateCommandExitCode": 0,
+  "baselineCompilerSuccess": true,
+  "candidateCompilerSuccess": true,
+  "sameSourceRoot": "<workspace>/work/rabby-baseline-source/src/background/index.ts",
+  "compilationConfigurationMatchesExceptOutputAndIntendedHelperHash": true,
+  "changedSourceFiles": [
+    "src/utils/message.ts"
+  ],
+  "emittedAssetCountEach": 304,
+  "changedAssets": [
+    {
+      "name": "background.js",
+      "baseline": {
+        "name": "background.js",
+        "bytes": 53452199,
+        "sha256": "bfd3ac59fbe4b6db0b557bc13bdf929f63fdb95c978286d71e90895f9f415c58"
+      },
+      "candidate": {
+        "name": "background.js",
+        "bytes": 53452247,
+        "sha256": "b1962d9ff6b515e2d243fffc0ac9cf5b9ff22e23ca0186c051d80b6c5b163aac"
+      }
+    }
+  ],
+  "unchangedAssetCount": 303,
+  "generatedWardenPoliciesIdentical": true,
+  "sourcePolicyUnchangedBothBuilds": true,
+  "candidateMatchesMainHelper": true,
+  "candidateCompileTimeLine": "webpack compiled in 260940 ms"
+}

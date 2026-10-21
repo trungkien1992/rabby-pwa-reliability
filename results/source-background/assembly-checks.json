@@ -1,0 +1,8 @@
+{
+  "scope": "Small synthetic filesystem fixture validating assembly only; no browser or wallet behavior tested.",
+  "scriptSha256": "6bf417d76513931d234341e2eaf44a18a170f3f5ef9136ca6a7eb17c5463e230",
+  "syntaxParse": "passed",
+  "copiesEveryCompiledAssetAndRetainsManifestAndUi": "passed",
+  "rejectsExistingOutputWithoutOverwriting": "passed",
+  "rejectsBackgroundOutputReplacingRetainedUiEntry": "passed"
+}

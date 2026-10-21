@@ -63,3 +63,7 @@ The source-build scripts take absolute source/output directories. `build-ready-h
 The next useful check is the reporter's natural Linux suspend/resume case, with exact Chrome/Rabby versions and repeated cycles. [Proposed paid assessment scope](docs/assessment-scope.md) describes the deliverables and acceptance criteria.
 
 The [Linux workflow](.github/workflows/reproduce.yml) runs a fresh worker-restart comparison and one three-minute natural minimize/resume observation on Ubuntu 24.04 with Xvfb/Openbox. Its natural outcome is recorded separately: completing that experiment without a failure is a bounded non-reproduction, not proof that the reporter's configuration is unaffected.
+
+The [first Linux run](results/linux-first-run/run.json) failed its comparison gate because the regular-tab controls were hidden. Their requests were held by the provider's visibility gate. The corrected harness restores each control before measuring it; the original failure records are retained. The natural three-minute observation completed without reproducing the hang in that one configuration.
+
+Both [source background builds](docs/source-background-build.md) also completed successfully; only the intended background code differs. This remains a component/hybrid build, with full UI compatibility a separate check.

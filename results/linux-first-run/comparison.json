@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "passed": false,
+  "checkedAt": "2026-10-21T03:26:13.884Z",
+  "checks": 43,
+  "verifierSha256": "ed3db3e40233d21b3cab71e127ff394b8a12a50578844c1b1459016b97be177c",
+  "inputs": [
+    {
+      "file": "worker-baseline.json",
+      "sha256": "d62e5cd27b473bf4128dbc1f2080f45c4e05943ca9d6dcfdf200468245259a08"
+    },
+    {
+      "file": "worker-candidate.json",
+      "sha256": "67a51687359cf9aa9ceb72375bc14fbb7c8eaeb05ecb245bd69b77cdedad1d50"
+    }
+  ],
+  "error": "baseline: regular-tab control was incomplete or failed"
+}

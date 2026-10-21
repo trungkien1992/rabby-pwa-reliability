@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-10-21T03:17:16.344083+00:00",
+  "baselineCommandExitCode": 0,
+  "baselineForcedCleanup": false,
+  "baselineCompilerSuccess": true,
+  "candidateBuildUsesSameSourceRootAndCompilationConfiguration": true,
+  "onlyCompilationSourceChange": "src/utils/message.ts",
+  "cliLifecycleChange": "Explicitly flush stdout/stderr and exit only after compiler.close and source policy identity check. This changes process cleanup, not webpack compilation inputs.",
+  "scriptSha256": "db3db4424995e9577356f42d6bb9f6f1cf918068fdb1eb56b13933c729006ed0",
+  "evidenceScript": "scripts/build-background.cjs",
+  "candidateLaunchCleanup": "Explicit stdout flush before process exit; stderr shares the same redirected log file. An additional explicit stderr flush was added to the saved rerun script while compilation was active.",
+  "baselineExit": "Exited naturally with status 0 after compiler.close; no forced cleanup was used."
+}

@@ -1,0 +1,74 @@
+{
+  "recordedAt": "2026-10-21T03:28:08.811833+00:00",
+  "sourceCommit": "c3aed73f4c5f1e7c88c31331b0b0b72c6e8f2f4a",
+  "releaseTag": "v0.94.12",
+  "releaseTagCommit": "baf640e0afff0db2402bf275825721f22fff7c7e",
+  "releaseZipSha256": "e1132d749d4f34d3c7a870dfcfc07ecfef1b6030a1c386c28747e8e16417aa39",
+  "redaction": "Only the absolute local workspace prefix was replaced with <workspace>. Asset/source digests, timings, statuses, and recorded outcomes are unchanged.",
+  "scope": "Final source background build evidence only; browser behavior is verified separately. Bundles and dependencies are omitted.",
+  "records": {
+    "baseline-background-build.log": {
+      "originalLocalRecord": "outputs/rabby-repro/baseline-background-build.log",
+      "originalSha256": "7158dc8d4339611f960b1659c12fba33e264b66f28457c14673db851eff80a85",
+      "originalBytes": 51554,
+      "publishedSha256": "d07b1b9648dbbfb926865a292dd2462f6c31995347e46a36565220217d30871a",
+      "publishedBytes": 51422
+    },
+    "candidate-background-build.log": {
+      "originalLocalRecord": "outputs/rabby-repro/candidate-background-build.log",
+      "originalSha256": "e27a25f0a2aa3e141e351af4b99a1504aa90107b1806d302d2693caac7af8c4a",
+      "originalBytes": 51556,
+      "publishedSha256": "c95f30c4c4e2e87bc0c848ce5a94a878fbe1102a68b6ac7b09a02f2767e9c529",
+      "publishedBytes": 51424
+    },
+    "baseline-background-build-manifest.json": {
+      "originalLocalRecord": "outputs/rabby-repro/baseline-background-build-manifest.json",
+      "originalSha256": "61ae9fb12af7a7f6c6e8b365118d770596bd20a52957866f9b6c98ceaa1ac67c",
+      "originalBytes": 57720,
+      "publishedSha256": "61772b138f50ff360e39b3b76e0152b12ea3f2b6e2a78a72a5eabdef1e273abf",
+      "publishedBytes": 57588
+    },
+    "candidate-background-build-manifest.json": {
+      "originalLocalRecord": "outputs/rabby-repro/candidate-background-build-manifest.json",
+      "originalSha256": "22022d788484714cff223540f20e78aa2fc6b6594d5a06ac1f9b545054898569",
+      "originalBytes": 57722,
+      "publishedSha256": "db9fc841fcda72c4d5145d97255f6d39704a196b0bf02314c4d3536c1ca0116f",
+      "publishedBytes": 57590
+    },
+    "background-build-pair.json": {
+      "originalLocalRecord": "outputs/rabby-repro/background-build-pair.json",
+      "originalSha256": "b0ce12d29ef07bfc8ebe6ba941e2c806bd5126e4ee4c81592b06eea8e6ffb92d",
+      "originalBytes": 1059,
+      "publishedSha256": "e78e4f0a62843dc1ee3cb9d3a5ae2e6ff508aecc738d785aa2e2170232720794",
+      "publishedBytes": 1026
+    },
+    "background-source-pair.json": {
+      "originalLocalRecord": "outputs/rabby-repro/background-source-pair.json",
+      "originalSha256": "c161c7025e06c3f10d79f989ffee61bde54fd245fba95c1ac7c82aeec7ac3b93",
+      "originalBytes": 460,
+      "publishedSha256": "f56f4f2afb6283cf91f67f5383640ad521ff1d07e9139895a68449396fac390c",
+      "publishedBytes": 427
+    },
+    "background-cli-cleanup.json": {
+      "originalLocalRecord": "outputs/rabby-repro/background-cli-cleanup.json",
+      "originalSha256": "62025c64946653eb96ee2cef36749c0705753fc3ff49fd7441cae3b712a961fd",
+      "originalBytes": 933,
+      "publishedSha256": "62025c64946653eb96ee2cef36749c0705753fc3ff49fd7441cae3b712a961fd",
+      "publishedBytes": 933
+    },
+    "background-compiled.diff": {
+      "originalLocalRecord": "outputs/rabby-repro/background-compiled.diff",
+      "originalSha256": "25ebbf47078fc25367cbbfb4d386316ad035800b7b8e3327c606fe74df7d4150",
+      "originalBytes": 679,
+      "publishedSha256": "5270bb1631c89ed5a2f4a2961f1b1e671107a3ceca86b1c952ca4befa70f80bc",
+      "publishedBytes": 613
+    },
+    "candidate-background-source.diff": {
+      "originalLocalRecord": "outputs/rabby-repro/candidate-background-source.diff",
+      "originalSha256": "00b1a087bb485a808659625562244113f0a273f1f4ee51f38574b63dd9957045",
+      "originalBytes": 605,
+      "publishedSha256": "00b1a087bb485a808659625562244113f0a273f1f4ee51f38574b63dd9957045",
+      "publishedBytes": 605
+    }
+  }
+}
