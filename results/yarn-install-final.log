@@ -1,0 +1,21 @@
+➤ YN0000: · Yarn 4.14.1
+➤ YN0000: ┌ Resolution step
+➤ YN0000: └ Completed in 1s 110ms
+➤ YN0000: ┌ Post-resolution validation
+➤ YN0060: │ @zxing/library is listed by your project with version 0.8.0 (p5f322a), which doesn't satisfy what @zxing/browser requests (~0.18.5).
+➤ YN0060: │ eslint is listed by your project with version 8.57.0 (p98651c), which doesn't satisfy what eslint-plugin-react and other dependencies request (but they have non-overlapping ranges!).
+➤ YN0060: │ react is listed by your project with version 18.3.1 (pbca6e7), which doesn't satisfy what react-use and other dependencies request (but they have non-overlapping ranges!).
+➤ YN0060: │ react-dom is listed by your project with version 18.3.1 (p885b0a), which doesn't satisfy what react-use and other dependencies request (^16.11.0 || ^17.0.0).
+➤ YN0060: │ typescript is listed by your project with version 5.3.3 (p7a6525), which doesn't satisfy what typescript-plugin-styled-components and other dependencies request (but they have non-overlapping ranges!).
+➤ YN0002: │ rabby@workspace:. doesn't provide prop-types (pf4ab73), requested by recharts.
+➤ YN0002: │ rabby@workspace:. doesn't provide react-is (p3a2b7a), requested by styled-components.
+➤ YN0002: │ rabby@workspace:. doesn't provide ripple-keypairs (pc5a6ce), requested by @onekeyfe/hd-core.
+➤ YN0002: │ rabby@workspace:. doesn't provide tslib (p312bc5), requested by @trezor/connect-web and other dependencies.
+➤ YN0086: │ Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+➤ YN0086: │ Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0000: └ Completed in 6s 429ms
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed in 6s 289ms
+➤ YN0000: · Done with warnings in 15s 499ms

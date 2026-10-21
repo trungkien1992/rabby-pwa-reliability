@@ -1,0 +1,23 @@
+{
+  "baseCommit": "c3aed73f4c5f1e7c88c31331b0b0b72c6e8f2f4a",
+  "releaseSourceCommit": "baf640e0afff0db2402bf275825721f22fff7c7e",
+  "release": "v0.94.12",
+  "releaseZipSha256": "e1132d749d4f34d3c7a870dfcfc07ecfef1b6030a1c386c28747e8e16417aa39",
+  "runtimeComparison": "Official release with one static internal setup page; candidate removes exactly one READY query filter in background.js. This is not a full source build.",
+  "recordRedactions": {
+    "release-worker-11.json": {
+      "originalLocalSha256": "5b81fd7f4915d32cd267a6bedcfc0c1223400581c9c75650bc6bb72210bea215",
+      "publishedSha256": "98a77a96c0f6fc069691c5e685c7241eea157da4fbecec5b5fc936fb65e4978c",
+      "redaction": "Only the absolute local workspace prefix is replaced with <workspace>; observations are unchanged."
+    },
+    "candidate-worker-12.json": {
+      "originalLocalSha256": "f840d646ddb39da7cf413d61e000cd8fbf1a319e1dfde21b52ef7df10cd63b24",
+      "publishedSha256": "c7e8c549da69882d49c02f40ef0ddd971373eec896b9c2795d8027c5d141dd0b",
+      "redaction": "Only the absolute local workspace prefix is replaced with <workspace>; observations are unchanged."
+    }
+  },
+  "sourceHelperBaselineSha256": "96b680e27aa6ffc3f46872d57fade74a33ea4a5761b957a82be1f55d6258d0d8",
+  "sourceHelperCandidateSha256": "181059d4edb4130b9f8b83ec12943097c35aeb7768b7492dae734427a4c90718",
+  "fixCommit": "d5ab02625b402364d09e556bcfb6c3bfe081831a",
+  "fixBranch": "https://github.com/trungkien1992/Rabby/tree/fix/pwa-ready-window-filter"
+}

@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "passed": true,
+  "checkedAt": "2026-10-21T03:19:45.249Z",
+  "checks": 209,
+  "verifierSha256": "ed3db3e40233d21b3cab71e127ff394b8a12a50578844c1b1459016b97be177c",
+  "inputs": [
+    {
+      "file": "release-worker-11.json",
+      "sha256": "98a77a96c0f6fc069691c5e685c7241eea157da4fbecec5b5fc936fb65e4978c"
+    },
+    {
+      "file": "candidate-worker-12.json",
+      "sha256": "c7e8c549da69882d49c02f40ef0ddd971373eec896b9c2795d8027c5d141dd0b"
+    }
+  ],
+  "baseline": {
+    "status": "request-failure-observed",
+    "platform": "darwin",
+    "browser": "Chrome/151.0.7922.34",
+    "extensionVersion": "0.94.12",
+    "chainId": "0x1",
+    "afterRequestMs": [
+      5127.1,
+      5041.7,
+      5057.2
+    ],
+    "afterRequestOutcomes": [
+      "deadline",
+      "deadline",
+      "deadline"
+    ],
+    "afterWaitingCounts": [
+      1,
+      2,
+      3
+    ],
+    "controlAfterRequestMs": [
+      262.4,
+      5.6,
+      7.2
+    ],
+    "workerDestroyed": "B26AFA96FA1902B179F641786C4AE62D",
+    "replacementWorker": "B604E4D74C5FD88C7B9FB076D4012473",
+    "workerDebuggerAttachments": 0,
+    "standalone": true,
+    "sameDocument": true,
+    "pwaWindowType": "app",
+    "pwaIncludedInAllUrlQuery": true,
+    "pwaExcludedFromNormalWindowQuery": true,
+    "nativeMinimizeConfirmed": false,
+    "pwaUninstallAcknowledged": true,
+    "browserChildExitCode": 0
+  },
+  "candidate": {
+    "status": "responses-settled-without-reload",
+    "platform": "darwin",
+    "browser": "Chrome/151.0.7922.34",
+    "extensionVersion": "0.94.12",
+    "chainId": "0x1",
+    "afterRequestMs": [
+      31.8,
+      4,
+      8.5
+    ],
+    "afterRequestOutcomes": [
+      "resolved",
+      "resolved",
+      "resolved"
+    ],
+    "afterWaitingCounts": [
+      0,
+      0,
+      0
+    ],
+    "controlAfterRequestMs": [
+      31.7,
+      4.2,
+      1.6
+    ],
+    "workerDestroyed": "39FCAEA0C9DF7D43DA3507775AEC8DFE",
+    "replacementWorker": "A55CB6B367AC88E6EDB05BA65D0CB004",
+    "workerDebuggerAttachments": 0,
+    "standalone": true,
+    "sameDocument": true,
+    "pwaWindowType": "app",
+    "pwaIncludedInAllUrlQuery": true,
+    "pwaExcludedFromNormalWindowQuery": true,
+    "nativeMinimizeConfirmed": false,
+    "pwaUninstallAcknowledged": true,
+    "browserChildExitCode": 0
+  },
+  "scope": "One paired macOS standalone-PWA worker-stop experiment. Native minimization was unconfirmed. Verifies recorded outcomes only; no natural Linux minimize/resume or production performance claim."
+}

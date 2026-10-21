@@ -1,0 +1,8 @@
+PASS __tests__/utils/sendReadyMessageToTabs.test.ts
+PASS __tests__/utils/portMessage.test.ts
+
+Test Suites: 2 passed, 2 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        3.399 s
+Ran all test suites matching /__tests__\/utils\/sendReadyMessageToTabs.test.ts|__tests__\/utils\/portMessage.test.ts/i.

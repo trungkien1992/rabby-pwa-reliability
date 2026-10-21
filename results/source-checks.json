@@ -1,0 +1,12 @@
+{
+  "yarn": 0,
+  "yarnCheck": 0,
+  "focusedTests": {
+    "passed": 10,
+    "failed": 0,
+    "compilation": "isolated TypeScript transpilation; full source lint/type checks separately passed"
+  },
+  "sourceHelperBuild": 0,
+  "sourceHelperSha256": "181059d4edb4130b9f8b83ec12943097c35aeb7768b7492dae734427a4c90718",
+  "fixCommit": "d5ab02625b402364d09e556bcfb6c3bfe081831a"
+}

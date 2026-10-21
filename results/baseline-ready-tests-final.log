@@ -1,0 +1,54 @@
+FAIL __tests__/utils/sendReadyMessageToTabs.test.ts
+  ● sendReadyMessageToTabs › notifies injectable tabs in app windows as well as normal windows
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    - Expected
+    + Received
+
+    - 22,
+    + 11,
+      {"name": "RABBY_EXTENSION_READY"},
+
+    Number of calls: 1
+
+      49 |       await sendReadyMessageToTabs();
+      50 |
+    > 51 |       expect(mockSendMessage).toHaveBeenCalledWith(22, {
+         |                               ^
+      52 |         name: EXTENSION_MESSAGES.READY,
+      53 |       });
+      54 |       expect(mockSendMessage).toHaveBeenCalledWith(11, {
+
+      at __tests__/utils/sendReadyMessageToTabs.test.ts:51:31
+
+  ● sendReadyMessageToTabs › notifies injectable tabs in popup windows as well as normal windows
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    - Expected
+    + Received
+
+    - 22,
+    + 11,
+      {"name": "RABBY_EXTENSION_READY"},
+
+    Number of calls: 1
+
+      49 |       await sendReadyMessageToTabs();
+      50 |
+    > 51 |       expect(mockSendMessage).toHaveBeenCalledWith(22, {
+         |                               ^
+      52 |         name: EXTENSION_MESSAGES.READY,
+      53 |       });
+      54 |       expect(mockSendMessage).toHaveBeenCalledWith(11, {
+
+      at __tests__/utils/sendReadyMessageToTabs.test.ts:51:31
+
+PASS __tests__/utils/portMessage.test.ts
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       2 failed, 8 passed, 10 total
+Snapshots:   0 total
+Time:        4.091 s, estimated 5 s
+Ran all test suites matching /__tests__\/utils\/sendReadyMessageToTabs.test.ts|__tests__\/utils\/portMessage.test.ts/i.

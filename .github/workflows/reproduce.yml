@@ -1,0 +1,174 @@
+name: Linux browser reproduction
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      DISPLAY: ':99'
+      XDG_CURRENT_DESKTOP: OPENBOX
+      XDG_SESSION_TYPE: x11
+      RABBY_TEST_CHROME_VERSION: '151.0.7922.34'
+    steps:
+      - name: Check out evidence
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4, same pin as Rabby build.yml
+        with:
+          persist-credentials: false
+
+      - name: Set up Node 24
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4, same pin as Rabby build.yml
+        with:
+          node-version: '24'
+
+      - name: Install display tools
+        run: |
+          mkdir -p artifacts/linux "$RUNNER_TEMP/rabby-repro-assets"
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends openbox xvfb x11-utils wmctrl xdg-utils dbus-x11 fonts-liberation unzip curl python3
+
+      - name: Download pinned Chrome for Testing
+        run: |
+          curl --fail --location --retry 2 "https://googlechromelabs.github.io/chrome-for-testing/${RABBY_TEST_CHROME_VERSION}.json" --output artifacts/linux/cft-metadata.json
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const expected = process.env.RABBY_TEST_CHROME_VERSION;
+          const metadata = JSON.parse(fs.readFileSync('artifacts/linux/cft-metadata.json', 'utf8'));
+          if (metadata.version !== expected) throw new Error('Unexpected Chrome metadata version');
+          const matches = metadata.downloads?.chrome?.filter(item => item.platform === 'linux64');
+          if (matches?.length !== 1) throw new Error('Expected exactly one linux64 Chrome download');
+          const url = new URL(matches[0].url);
+          if (url.protocol !== 'https:' || url.hostname !== 'storage.googleapis.com' || url.pathname !== `/chrome-for-testing-public/${expected}/linux64/chrome-linux64.zip` || url.search || url.hash) throw new Error('Unexpected Chrome download URL');
+          fs.writeFileSync('artifacts/linux/cft-linux64-url.txt', url.href + '\n');
+          JS
+          read -r rabby_test_chrome_url < artifacts/linux/cft-linux64-url.txt
+          curl --fail --location --retry 2 "$rabby_test_chrome_url" --output "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64.zip"
+          sha256sum artifacts/linux/cft-metadata.json "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64.zip" > artifacts/linux/cft-download-sha256.txt
+          unzip -q "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64.zip" -d "$RUNNER_TEMP/rabby-repro-assets"
+          test -s "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64/deb.deps"
+          while IFS= read -r rabby_test_dependency; do
+            if [[ -z "$rabby_test_dependency" || "$rabby_test_dependency" == \#* ]]; then continue; fi
+            sudo apt-get satisfy -y --no-install-recommends "$rabby_test_dependency"
+          done < "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64/deb.deps"
+          "$RUNNER_TEMP/rabby-repro-assets/chrome-linux64/chrome" --version > artifacts/linux/chrome-version.txt
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const version = fs.readFileSync('artifacts/linux/chrome-version.txt', 'utf8');
+          if (!version.includes(process.env.RABBY_TEST_CHROME_VERSION)) throw new Error('Chrome executable version mismatch');
+          fs.appendFileSync(process.env.GITHUB_ENV, `RABBY_TEST_BROWSER=${process.env.RUNNER_TEMP}/rabby-repro-assets/chrome-linux64/chrome\n`);
+          JS
+
+      - name: Prepare pinned Rabby variants
+        run: |
+          curl --fail --location --retry 2 https://github.com/RabbyHub/Rabby/releases/download/v0.94.12/Rabby_v0.94.12.zip --output "$RUNNER_TEMP/rabby-repro-assets/rabby.zip"
+          printf '%s  %s\n' e1132d749d4f34d3c7a870dfcfc07ecfef1b6030a1c386c28747e8e16417aa39 "$RUNNER_TEMP/rabby-repro-assets/rabby.zip" | sha256sum --check --strict
+          sha256sum "$RUNNER_TEMP/rabby-repro-assets/rabby.zip" > artifacts/linux/rabby-download-sha256.txt
+          python3 scripts/prepare-release.py --zip "$RUNNER_TEMP/rabby-repro-assets/rabby.zip" --output "$RUNNER_TEMP/rabby-repro-assets/baseline" --variant baseline > artifacts/linux/baseline-root.txt
+          python3 scripts/prepare-release.py --zip "$RUNNER_TEMP/rabby-repro-assets/rabby.zip" --output "$RUNNER_TEMP/rabby-repro-assets/candidate" --variant candidate > artifacts/linux/candidate-root.txt
+          cp "$RUNNER_TEMP/rabby-repro-assets/baseline.manifest.json" artifacts/linux/baseline.manifest.json
+          cp "$RUNNER_TEMP/rabby-repro-assets/candidate.manifest.json" artifacts/linux/candidate.manifest.json
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          for (const variant of ['baseline', 'candidate']) {
+            const root = fs.readFileSync(`artifacts/linux/${variant}-root.txt`, 'utf8').trim();
+            if (!path.isAbsolute(root) || !root.startsWith(process.env.RUNNER_TEMP + '/rabby-repro-assets/') || !fs.existsSync(path.join(root, 'manifest.json'))) throw new Error('Invalid prepared extension path');
+            fs.appendFileSync(process.env.GITHUB_ENV, `RABBY_TEST_${variant.toUpperCase()}=${root}\n`);
+          }
+          JS
+
+      - name: Start headed X11 desktop
+        run: |
+          Xvfb "$DISPLAY" -screen 0 1280x1024x24 -nolisten tcp > artifacts/linux/xvfb.log 2>&1 &
+          printf '%s\n' "$!" > artifacts/linux/xvfb.pid
+          for rabby_test_attempt in {1..50}; do
+            if xdpyinfo -display "$DISPLAY" > artifacts/linux/display.txt 2>&1; then break; fi
+            sleep 0.1
+          done
+          xdpyinfo -display "$DISPLAY" > artifacts/linux/display.txt
+          openbox --sm-disable > artifacts/linux/openbox.log 2>&1 &
+          printf '%s\n' "$!" > artifacts/linux/openbox.pid
+          for rabby_test_attempt in {1..50}; do
+            if wmctrl -m > artifacts/linux/window-manager.txt 2>&1; then break; fi
+            sleep 0.1
+          done
+          wmctrl -m > artifacts/linux/window-manager.txt
+
+      - name: Observe natural minimize and restoration
+        id: natural
+        continue-on-error: true
+        run: |
+          set +e
+          node scripts/probe.mjs --browser "$RABBY_TEST_BROWSER" --extension "$RABBY_TEST_BASELINE" --output "$PWD/artifacts/linux/natural-baseline.json" --mode natural --wait-ms 180000 --request-timeout-ms 5000 --no-sandbox true > artifacts/linux/natural-baseline.stdout.log 2>&1
+          rabby_test_exit=$?
+          set -e
+          printf '%s\n' "$rabby_test_exit" > artifacts/linux/natural-baseline.exitcode
+          RABBY_TEST_EXIT="$rabby_test_exit" node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const result = JSON.parse(fs.readFileSync('artifacts/linux/natural-baseline.json', 'utf8'));
+          if (process.env.RABBY_TEST_EXIT !== '0' || result.status === 'harness-error' || result.error) throw new Error('Natural lifecycle harness did not complete; inspect raw artifacts');
+          if (result.platform !== 'linux' || result.mode !== 'natural' || result.minimizeConfirmed !== true || result.windowMinimized?.bounds?.windowState !== 'minimized' || result.actualDetachedWaitMs < 180000 || result.observations?.length !== 4 || result.stoppedWorkers?.length) throw new Error('Natural lifecycle evidence is incomplete');
+          if (!['responses-settled-without-reload', 'request-failure-observed', 'document-reloaded'].includes(result.status)) throw new Error('Unexpected natural lifecycle outcome');
+          if (result.before?.standalone !== true || result.cleanup?.pwaUninstalled !== true || result.cleanup?.childExit?.code !== 0 || result.cleanup?.childExit?.signal !== null) throw new Error('Natural lifecycle setup or cleanup is incomplete');
+          const summary = {experimentCompleted:true, walletOutcome:result.status, nativeMinimizeConfirmed:result.minimizeConfirmed, sameDocument:result.sameDocument, requests:result.observations.map(({label,status,value,elapsedMs})=>({label,status,value,elapsedMs})), scope:'One observed Linux Xvfb/Openbox minimize/restoration cycle; success does not establish that the original reporter configuration is unaffected.'};
+          fs.writeFileSync('artifacts/linux/natural-summary.json', JSON.stringify(summary,null,2)+'\n');
+          JS
+
+      - name: Run controlled worker-restart baseline
+        id: baseline
+        continue-on-error: true
+        run: |
+          node scripts/probe.mjs --browser "$RABBY_TEST_BROWSER" --extension "$RABBY_TEST_BASELINE" --output "$PWD/artifacts/linux/worker-baseline.json" --mode worker-stop --wait-ms 10000 --request-timeout-ms 5000 --no-sandbox true > artifacts/linux/worker-baseline.stdout.log 2>&1
+
+      - name: Run controlled worker-restart candidate
+        id: candidate
+        continue-on-error: true
+        run: |
+          node scripts/probe.mjs --browser "$RABBY_TEST_BROWSER" --extension "$RABBY_TEST_CANDIDATE" --output "$PWD/artifacts/linux/worker-candidate.json" --mode worker-stop --wait-ms 10000 --request-timeout-ms 5000 --no-sandbox true > artifacts/linux/worker-candidate.stdout.log 2>&1
+
+      - name: Verify paired controlled outcomes
+        id: verify
+        continue-on-error: true
+        run: |
+          node scripts/verify-results.mjs artifacts/linux/worker-baseline.json artifacts/linux/worker-candidate.json > artifacts/linux/comparison.json
+
+      - name: Require completed experiments and verified comparison
+        if: always()
+        env:
+          RABBY_TEST_NATURAL_OUTCOME: ${{ steps.natural.outcome }}
+          RABBY_TEST_BASELINE_OUTCOME: ${{ steps.baseline.outcome }}
+          RABBY_TEST_CANDIDATE_OUTCOME: ${{ steps.candidate.outcome }}
+          RABBY_TEST_VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const outcomes = Object.fromEntries(['NATURAL','BASELINE','CANDIDATE','VERIFY'].map(name => [name.toLowerCase(), process.env[`RABBY_TEST_${name}_OUTCOME`]]));
+          fs.mkdirSync('artifacts/linux',{recursive:true});
+          fs.writeFileSync('artifacts/linux/workflow-outcomes.json',JSON.stringify(outcomes,null,2)+'\n');
+          if (Object.values(outcomes).some(value => value !== 'success')) throw new Error('A harness, setup or comparison step failed; raw artifacts retain the failure. Natural non-reproduction alone is not a failure.');
+          JS
+
+      - name: Stop test display
+        if: always()
+        run: |
+          for rabby_test_pid_file in artifacts/linux/openbox.pid artifacts/linux/xvfb.pid; do
+            if [[ -f "$rabby_test_pid_file" ]]; then
+              read -r rabby_test_pid < "$rabby_test_pid_file"
+              if [[ "$rabby_test_pid" =~ ^[0-9]+$ ]]; then kill "$rabby_test_pid" 2>/dev/null || true; fi
+            fi
+          done
+
+      - name: Upload raw observations and failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4, same pin as Rabby build.yml
+        with:
+          name: linux-browser-reproduction-${{ github.run_id }}-${{ github.run_attempt }}
+          path: artifacts/linux
+          if-no-files-found: error
+          retention-days: 14

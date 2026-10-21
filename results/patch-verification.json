@@ -1,0 +1,8 @@
+{
+  "appliesToBase": true,
+  "candidateFilesMatch": [
+    "src/utils/message.ts",
+    "__tests__/utils/sendReadyMessageToTabs.test.ts"
+  ],
+  "patchSha256": "6ad6155e40541972dfa7b3d18027f1d3c49cf75861f025f15342d499f4fab895"
+}

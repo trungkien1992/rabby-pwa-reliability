@@ -1,0 +1,9 @@
+{"purpose":"Controlled source-derived READY helper; not a full extension build","source":"<workspace>/work/rabby/src/utils/message.ts","sourceSha256":"181059d4edb4130b9f8b83ec12943097c35aeb7768b7492dae734427a4c90718","output":"<workspace>/work/rabby-repro/helper-candidate","exportedGlobal":"RabbyReadyProbe","retainedPlugins":["ProvidePlugin","DefinePlugin","Object","DefinePlugin","WardenPlugin"],"removedPlugins":["ESLintWebpackPlugin","HtmlWebpackPlugin","HtmlWebpackPlugin","HtmlWebpackPlugin","HtmlWebpackPlugin","HtmlWebpackPlugin","HtmlWebpackPlugin","CopyPlugin"],"wardenPolicyOutput":"<workspace>/work/rabby-repro/helper-candidate/SecSDK/policy.json","sourcePolicySha256":"830ad612702e06559b7a6cd6305431de5fdeac9715bc332a57cd11a865f866e9","checks":"TypeScript transpilation only; full type/lint checks are separate"}
+Skipping instrumentation for node_modules/@metamask/post-message-stream/dist/window/WindowPostMessageStream.js as per policy.
+Skipping instrumentation for node_modules/buffer/index.js as per policy.
+asset ready-helper.js 665 KiB [emitted] (name: readyProbe)
+asset warden-policy-runtime.js 21.8 KiB [emitted]
+asset warden-prototype-freeze.js 21.8 KiB [emitted]
+webpack compiled in 4270 ms
+{"emittedFiles":[{"name":"ready-helper.js","bytes":680667,"sha256":"c9ede466e24b19ebb5888fc2d8a7654400eca35fb338b47cd9fe323b62067faf"},{"name":"warden-prototype-freeze.js","bytes":22275,"sha256":"3559579898870e88b00bf180ee4cd26f3f3690155a2ffef2a861a4b887cdd22c"},{"name":"warden-policy-runtime.js","bytes":22339,"sha256":"34f426873c572012a73e251586b8589f5c8bfa1104cd794de157c4e5acf6afe0"}],"hasErrors":false}
+{"sourcePolicyUnchanged":true}
